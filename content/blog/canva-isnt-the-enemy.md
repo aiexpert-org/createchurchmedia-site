@@ -1,6 +1,6 @@
 ---
 title: "Canva isn't the enemy. Inconsistency is."
-description: "Most pastors I talk to feel guilty about using Canva. They shouldn't. The problem isn't the tool — it's that nobody is the keeper of the brand."
+description: "Most pastors I talk to feel guilty about using Canva. They shouldn't. The problem isn't the tool. It's that nobody is the keeper of the brand."
 date: "2025-10-03"
 tags: ["brand", "design strategy"]
 ---
@@ -11,7 +11,7 @@ The problem is that *nobody is the keeper of the brand.*
 
 ## The actual failure mode
 
-Here's the pattern I see at maybe 80% of mid-sized churches I look at:
+Here's the pattern I see at maybe 80% of mid-sized churches I look at.
 
 - The sermon series graphic is made by the comms director, in Canva, using a template they bought last year.
 - The kids ministry flyer is made by the kids pastor, in Canva, using a different template they downloaded last week.
@@ -25,7 +25,7 @@ That's the failure mode. It's not Canva. It's not the budget. It's not even tast
 
 ## Why this is normal (and not your fault)
 
-Churches don't fail at brand consistency because they don't care. They fail because:
+Churches don't fail at brand consistency because they don't care. They fail because of structure.
 
 1. **Nobody on staff has design as their primary job.** It's always someone's secondary or tertiary responsibility.
 2. **The people making graphics are working in different tools at different times under different pressures.** Of course they drift.
@@ -34,20 +34,20 @@ Churches don't fail at brand consistency because they don't care. They fail beca
 
 This is structural. It's not a moral failing of your team.
 
-## The fix isn't a tool — it's an owner
+## The fix is an owner
 
-The fix isn't to switch from Canva to Adobe. (That'll actually make it worse — fewer people on staff can use it.) The fix is to have *one person* who owns the visual system. Who decides what the brand is. Who pushes back when someone wants to use a one-off font for a one-off flyer.
+The fix isn't to switch from Canva to Adobe. (That'll actually make it worse. Fewer people on staff can use it.) The fix is to have one person who owns the visual system. Who decides what the brand is. Who pushes back when someone wants to use a one-off font for a one-off flyer.
 
-In big churches, that's a full-time in-house designer. In most churches, that hire isn't realistic. The middle path — and yes, this is what Create Media Group does — is a part-time relationship with a single designer who owns the brand from the outside.
+In big churches, that's a full-time in-house designer. In most churches, that hire isn't realistic. The middle path (and yes, this is what Create Media Group does) is a part-time relationship with a single designer who owns the brand from the outside.
 
-What you stop having: ten people on staff making ten slightly-different versions of your church.
+What you stop having is ten people on staff making ten slightly different versions of your church.
 
-What you start having: ten people on staff who all hand things off to one person, who keeps the visual system consistent.
+What you start having is ten people on staff who all hand things off to one person, who keeps the visual system consistent.
 
 That's the whole shift. The tools barely matter.
 
 ## Permission to keep using Canva
 
-So: if you're still using Canva for your weekly slides, that's fine. Use Canva. What matters is whether somebody is paying attention to the through-line. If they are, your church looks like one church across every surface. If they're not, no amount of expensive software will save you.
+So if you're still using Canva for your weekly slides, that's fine. Use Canva. What matters is whether somebody is paying attention to the through-line. If they are, your church looks like one church across every surface. If they're not, no amount of expensive software will save you.
 
 Canva isn't the enemy. Inconsistency is.

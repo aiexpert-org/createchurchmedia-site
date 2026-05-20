@@ -15,7 +15,7 @@ export default function NotFound() {
             Page not found.
           </h1>
           <p className="mt-4 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
-            This page doesn&rsquo;t exist — or doesn&rsquo;t yet. We&rsquo;re
+            This page doesn&rsquo;t exist, or doesn&rsquo;t yet. We&rsquo;re
             shipping new pages weekly while the site rolls out.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">

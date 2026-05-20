@@ -37,8 +37,8 @@ export default function BlogIndexPage() {
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
               Sermon series art, brand consistency, comms director burnout,
-              subscription versus freelance — what we&rsquo;re learning across
-              the churches I design for.
+              subscription versus freelance. What I&rsquo;m learning across the
+              churches I design for.
             </p>
           </div>
         </Container>

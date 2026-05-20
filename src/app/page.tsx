@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 
 const homeFaqs = [
   {
-    q: "What's the difference between Create Media Group and a design service like Penji or DesignJoy?",
-    a: "Those are queues. You drop in a ticket and a different designer picks it up each time. Create Media Group is one designer — Emily — building your church's brand the way an in-house hire would. After a month she knows your sermon cadence, your pastor's voice, your kids ministry color palette, and your printer's file specs.",
+    q: "What's the difference between Create Media Group and a service like Penji or DesignJoy?",
+    a: "Those are queues. You drop in a ticket and a different designer picks it up each time. Create Media Group is one designer (Emily) building your church's brand the way an in-house hire would. After a month she knows your sermon cadence, your pastor's voice, your kids ministry color palette, and your printer's file specs.",
   },
   {
     q: "How much does it cost?",
-    a: `$800 per month, flat, with no per-project pricing. If you prepay for a year it's $8,800 — twelve months for the price of eleven.`,
+    a: `$800 a month, flat, with no per-project pricing. If you prepay for a year it's $8,800, which is twelve months for the price of eleven.`,
   },
   {
     q: "What can I request?",
@@ -29,7 +29,7 @@ const homeFaqs = [
   },
   {
     q: "Where are you based?",
-    a: `${siteConfig.location.city}, ${siteConfig.location.region}. We serve churches in the ${siteConfig.location.metro} metro and nationwide — most of the work is remote, and Emily becomes a part of your team the same way a remote staff designer would.`,
+    a: `${siteConfig.location.city}, ${siteConfig.location.region}. We serve churches in the ${siteConfig.location.metro} metro and nationwide. Most of the work is remote, and Emily becomes part of your team the same way a remote staff designer would.`,
   },
 ];
 
@@ -43,20 +43,20 @@ export default function HomePage() {
       <Section className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20">
         <Container>
           <div className="max-w-4xl">
-            <Eyebrow>Graphic design subscription for churches</Eyebrow>
+            <Eyebrow>Graphic design for churches</Eyebrow>
             <h1 className="mt-5 font-serif text-[clamp(2.75rem,6.5vw,5.5rem)] leading-[0.98] tracking-tight text-[color:var(--color-ink)]">
-              Your church&rsquo;s designer.
-              <br />
+              Unlimited graphic design for{" "}
               <span className="font-serif-italic text-[color:var(--color-accent)]">
-                Not a design queue.
+                pastors and churches.
               </span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              Unlimited graphic design for pastors and churches — sermon series,
-              social, signage, kids and youth, announcements, brand.{" "}
-              <span className="text-[color:var(--color-ink)]">$800/month, flat.</span>{" "}
-              One designer. No tickets. No per-project pricing. Essentially your
-              remote staff designer.
+              Your church&rsquo;s design team, on a monthly subscription.
+              Same-day rush available. Sermon series, social, signage, kids and
+              youth, announcements, brand.{" "}
+              <span className="text-[color:var(--color-ink)]">
+                $800 a month, flat.
+              </span>
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <ButtonLink href="/subscription" variant="primary" size="lg" withArrow>
@@ -103,20 +103,20 @@ export default function HomePage() {
             <div className="space-y-5 text-lg leading-relaxed text-[color:var(--color-ink-soft)]">
               <p>
                 Every Sunday a sermon series needs art. Every week the
-                announcements slide needs to be on-brand. Every Tuesday the kids
+                announcement slide needs to be on-brand. Every Tuesday the kids
                 ministry has a new flyer that has to look like it came from the
                 same church as last week&rsquo;s.
               </p>
               <p>
-                And it all lands on one person — usually you. You&rsquo;re in
-                Canva at 11 PM Saturday, the worship lead just texted you a new
-                logo idea, the senior pastor wants the bulletin redesigned, and
-                a parent volunteer is asking for camp shirt mockups by Friday.
+                It all lands on one person. Usually you. You&rsquo;re in Canva
+                at 11 PM Saturday, the worship lead just texted you a new logo
+                idea, the senior pastor wants the bulletin redesigned, and a
+                parent volunteer is asking for camp shirt mockups by Friday.
               </p>
               <p>
-                The two ways out have always been: hire a full-time designer
-                (~$65k+/yr you don&rsquo;t have), or hire a freelancer per
-                project (slow, expensive, never quite gets your voice).
+                The two ways out have always been hiring a full-time designer
+                you can&rsquo;t afford, or hiring a freelancer per project who
+                never quite gets your voice.
               </p>
               <p className="text-[color:var(--color-ink)] font-medium">
                 There&rsquo;s a third way.
@@ -134,13 +134,13 @@ export default function HomePage() {
             <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
               One designer. Flat monthly fee.
               <br />
-              <span className="font-serif-italic">Essentially in-house — without the in-house hire.</span>
+              <span className="font-serif-italic">In-house, without the in-house hire.</span>
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-ink-soft)] leading-relaxed max-w-2xl">
-              Emily Farmer designs for your church on a flat $800/month
+              Emily Farmer designs for your church on a flat $800 a month
               subscription. She onboards once, learns your voice, your visual
-              system, your team&rsquo;s pace — and then she just designs. The way
-              an on-staff designer would, if you had an on-staff designer.
+              system, your team&rsquo;s pace. Then she just designs. The way an
+              on-staff designer would, if you had an on-staff designer.
             </p>
           </div>
 
@@ -149,27 +149,27 @@ export default function HomePage() {
               {
                 title: "Unlimited requests",
                 body:
-                  "Send as many as you need. One designer, one queue, one round-trip — not a ticketing system.",
+                  "Send as many as you need. One designer, one queue, one round-trip. There&rsquo;s no ticketing system.",
               },
               {
                 title: "Unlimited revisions",
                 body:
-                  "Until it&rsquo;s right. No upcharge, no project-manager-mediated scope arguments.",
+                  "Until it&rsquo;s right. No upcharge. No project-manager-mediated scope arguments.",
+              },
+              {
+                title: "Same-day rush",
+                body:
+                  "When something has to ship today, it ships today. Available on small requests when you flag the urgency.",
+              },
+              {
+                title: "Flat monthly fee",
+                body:
+                  "$800 a month. Predictable, budgetable, doesn&rsquo;t spike when you launch a new series or rebrand a ministry.",
               },
               {
                 title: "One dedicated designer",
                 body:
                   "Emily. Every project. After a month she knows your church better than most agencies ever will.",
-              },
-              {
-                title: "Flat monthly fee",
-                body:
-                  "$800/month. Predictable, budgetable, doesn&rsquo;t spike when you launch a new series or rebrand a ministry.",
-              },
-              {
-                title: "Same-week turnarounds",
-                body:
-                  "Small things often same day. Sermon series and brand work get the runway they need.",
               },
               {
                 title: "Pause or cancel anytime",
@@ -276,7 +276,7 @@ export default function HomePage() {
                 church: "Faith Christian Fellowship",
                 location: "Trussville, AL",
                 blurb:
-                  "A small-team church gets the design ops of a much larger one — without the headcount.",
+                  "A small-team church gets the design ops of a much larger one. Without the headcount.",
               },
               {
                 slug: "newspring",
@@ -356,8 +356,8 @@ export default function HomePage() {
                     </p>
                     {i === 1 && (
                       <p className="mt-1 text-sm text-[color:var(--color-accent)]">
-                        ~${siteConfig.pricing.annual.perMonth}/mo · save $
-                        {siteConfig.pricing.annual.savings}
+                        ~${siteConfig.pricing.annual.perMonth}/mo. Save $
+                        {siteConfig.pricing.annual.savings}.
                       </p>
                     )}
                     <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">

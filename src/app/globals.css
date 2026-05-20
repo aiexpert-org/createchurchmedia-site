@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* Create Media Group — warm, designer-led, light.
-     Cream background, deep charcoal foreground, single clay accent.
-     Aesthetic note: light touch. We are the designer, not the agency. */
+  /* Create Media Group. Warm, designer-led, light.
+     Cream background, deep charcoal foreground, single clay accent. */
   --color-background: #faf7f2;
   --color-foreground: #1a1916;
   --color-muted: #6b6864;
@@ -19,13 +18,13 @@
   --color-ink-soft: #2c2b27;
   --color-sage: #5a6b4d;
 
-  /* Type — wired in src/app/layout.tsx via next/font CSS variables. */
+  /* Type. Wired in src/app/layout.tsx via next/font CSS variables. */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
   --font-serif: var(--font-fraunces), Georgia, "Times New Roman",
     Cambria, serif;
 
-  /* Type scale — generous, editorial. */
+  /* Type scale. Generous, editorial. */
   --text-display: clamp(2.5rem, 6vw, 5rem);
   --text-h1: clamp(2rem, 4.2vw, 3.5rem);
   --text-h2: clamp(1.625rem, 2.8vw, 2.375rem);
@@ -57,7 +56,7 @@ body {
   color: var(--color-accent-foreground);
 }
 
-/* Display serif utility — for hero h1s and editorial section heads. */
+/* Display serif utility for hero h1s and editorial section heads. */
 .font-serif {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -85,7 +84,7 @@ body {
   border-color: var(--color-border);
 }
 
-/* Prose styles — for blog post bodies and case studies. */
+/* Prose styles for blog post bodies and case studies. */
 .prose {
   font-size: 18px;
   line-height: 1.75;

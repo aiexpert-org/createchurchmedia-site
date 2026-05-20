@@ -54,7 +54,7 @@ export default function ContactPage() {
                   <Field
                     label="Your role"
                     name="role"
-                    placeholder="Lead Pastor / Comms Director / ..."
+                    placeholder="Lead Pastor, Comms Director, etc."
                   />
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
@@ -65,7 +65,7 @@ export default function ContactPage() {
                     required
                   />
                   <Field
-                    label="City + state"
+                    label="City and state"
                     name="location"
                     placeholder="Trussville, AL"
                   />
@@ -132,7 +132,7 @@ export default function ContactPage() {
               />
               <ContactCard
                 icon={<Phone className="h-4 w-4" />}
-                label="Phone / text"
+                label="Phone or text"
                 primary={siteConfig.contact.phone}
                 href={`tel:${siteConfig.contact.phoneE164}`}
               />

@@ -1,26 +1,28 @@
 # Create Media Group — Website
 
-Next.js 16 marketing site for Create Media Group (Emily Farmer) — an unlimited graphic-design subscription for pastors and churches.
+Next.js 16 marketing site for Create Media Group (Emily Farmer). Unlimited graphic design for pastors and churches.
 
-**Positioning:** Your church's designer. Not a design queue.
+**Tagline:** Unlimited graphic design for pastors and churches.
 
-**Pricing:** $800/mo standard, or $8,800/year annual prepay (12 months for the price of 11).
+**Subhead:** Your church's design team, on a monthly subscription. Same-day rush available.
+
+**Pricing:** $800 a month, or $8,800 a year (twelve months for the price of eleven).
 
 ## Stack
 
-- Next.js 16 (App Router) · TypeScript · React 19
+- Next.js 16 (App Router), TypeScript, React 19
 - Tailwind v4 (`@theme` tokens in `src/app/globals.css`)
-- `next/font/google` — Fraunces (display serif), Inter (body / UI)
+- `next/font/google` Fraunces (display serif) and Inter (body and UI)
 - Server Components by default
-- Markdown blog rendered with `gray-matter` + `remark`
-- JSON-LD structured data on every page (Organization, LocalBusiness, Service, FAQPage, BlogPosting+Speakable)
+- Markdown blog rendered with `gray-matter` and `remark`
+- JSON-LD structured data on every page (Organization, LocalBusiness, Service, FAQPage, BlogPosting plus Speakable)
 
 ## Local dev
 
 ```sh
 npm install
 npm run dev
-# → http://localhost:3000
+# http://localhost:3000
 ```
 
 ## Deploy
@@ -36,9 +38,15 @@ Set `NEXT_PUBLIC_SITE_URL` in Vercel env vars to the production URL once known.
 
 - Pages in `src/app/*/page.tsx`
 - Blog posts in `content/blog/*.md` (frontmatter: `title`, `date`, `description`, `tags`)
-- Case studies in `content/case-studies/*.md`
+- Case study narratives live in `src/app/case-studies/page.tsx` (will move to `content/case-studies/*.md` once permissions confirmed)
+
+## Copy rules
+
+- No em dashes anywhere in user-facing copy. Use periods or commas.
+- No "X, not Y" / "X. Not Y." contrast pattern.
+- Banned AI tells: essentially, fundamentally, leverage, ecosystem, navigate the landscape, in today's [X], comprehensive solution, robust, seamless, empower, elevate.
 
 ## Contact
 
-- Emily Farmer · emilyfarmer808@gmail.com · 317-502-7443
+- Emily Farmer. emilyfarmer808@gmail.com. 317-502-7443.
 - Repo owner: Brett Moore (brett@brettkmoore.com)

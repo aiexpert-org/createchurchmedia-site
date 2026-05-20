@@ -3,13 +3,13 @@ import { siteConfig } from "@/lib/site-config";
 /**
  * JSON-LD structured data for Create Media Group.
  *
- * Multiple components so pages can compose only the schema they need:
- *   - OrganizationJsonLd       — root identity (sitewide)
- *   - LocalBusinessJsonLd      — local SEO (Noblesville / Indianapolis service area)
- *   - ServiceJsonLd            — pricing tiers
- *   - FaqJsonLd                — FAQ pages
- *   - BlogPostingJsonLd        — blog post pages
- *   - BreadcrumbJsonLd         — nested pages
+ * Components compose only the schema each page needs:
+ *   OrganizationJsonLd       sitewide root identity
+ *   LocalBusinessJsonLd      local SEO (Noblesville / Indianapolis service area)
+ *   ServiceJsonLd            pricing tiers
+ *   FaqJsonLd                FAQ pages
+ *   BlogPostingJsonLd        blog post pages
+ *   BreadcrumbJsonLd         nested pages
  */
 
 function jsonScript(data: unknown) {
@@ -83,7 +83,7 @@ export function ServiceJsonLd() {
     serviceType: "Graphic design subscription",
     areaServed: { "@type": "Country", name: "United States" },
     description:
-      "Unlimited graphic design requests and revisions for pastors and churches — sermon series, social media, announcements, youth and kids, logos and branding, signage and print. One dedicated designer, flat monthly fee.",
+      "Unlimited graphic design requests and revisions for pastors and churches. Sermon series, social media, announcements, youth and kids, logos and branding, signage and print. One dedicated designer, flat monthly fee, same-day rush available.",
     offers: [
       {
         "@type": "Offer",

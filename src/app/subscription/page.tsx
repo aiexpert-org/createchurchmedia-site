@@ -7,19 +7,19 @@ import { siteConfig } from "@/lib/site-config";
 import { Check, Sparkle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Subscription + pricing",
-  description: `Unlimited graphic design for churches — flat $${siteConfig.pricing.monthly.amount}/month, or $${siteConfig.pricing.annual.amount.toLocaleString()}/year (twelve for the price of eleven). Sermon series, social, signage, kids + youth, announcements, brand.`,
+  title: "Subscription and pricing",
+  description: `Unlimited graphic design for churches. Flat $${siteConfig.pricing.monthly.amount} a month, or $${siteConfig.pricing.annual.amount.toLocaleString()} a year (twelve for the price of eleven). Sermon series, social, signage, kids and youth, announcements, brand.`,
   alternates: { canonical: "/subscription" },
 };
 
 const subscriptionFaqs = [
   {
     q: "What does “unlimited” actually mean?",
-    a: "Unlimited requests, unlimited revisions, no point system, no per-project pricing. There's a single shared queue with one designer (Emily). She works the queue one item at a time — most small requests go same week, often same day. Larger pieces like full sermon series or brand systems get the runway they need.",
+    a: "Unlimited requests, unlimited revisions, no point system, no per-project pricing. There's a single shared queue with one designer (Emily). She works the queue one item at a time. Most small requests go same week, often same day. Same-day rush is available when you flag the urgency. Larger pieces like full sermon series or brand systems get the runway they need.",
   },
   {
     q: "Is there a contract?",
-    a: "Month-to-month for the monthly tier — pause or cancel anytime, your files are yours. The annual prepay tier is 12 months upfront for the price of 11.",
+    a: "Month-to-month for the monthly tier. Pause or cancel anytime. Your files are yours. The annual prepay tier is 12 months upfront for the price of 11.",
   },
   {
     q: "What if I have a slow month?",
@@ -27,7 +27,7 @@ const subscriptionFaqs = [
   },
   {
     q: "What about file ownership?",
-    a: "You own everything I make for you — final files, source files, Figma, brand assets. They live in a shared folder you control. If we ever part ways, you keep the library.",
+    a: "You own everything I make for you. Final files, source files, Figma, brand assets. They live in a shared folder you control. If we ever part ways, you keep the library.",
   },
   {
     q: "Will I work with the same designer every time?",
@@ -39,7 +39,7 @@ const subscriptionFaqs = [
   },
   {
     q: "How do I send requests?",
-    a: "However works for your team. Most churches use a shared Notion or Google Doc; some just text or Slack me. I'll match your pace — what matters is one place to see the queue, not a specific app.",
+    a: "However works for your team. Most churches use a shared Notion or Google Doc. Some just text or Slack me. I'll match your pace. What matters is one place to see the queue, not a specific app.",
   },
   {
     q: "What happens if you take on too many churches?",
@@ -126,8 +126,8 @@ export default function SubscriptionPage() {
                 </span>
               </p>
               <p className="mt-1 text-sm text-[color:var(--color-accent)]">
-                ~${siteConfig.pricing.annual.perMonth}/month · twelve months for
-                the price of eleven
+                ~${siteConfig.pricing.annual.perMonth} a month. Twelve months
+                for the price of eleven.
               </p>
               <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
                 {siteConfig.pricing.annual.blurb}
@@ -229,8 +229,8 @@ export default function SubscriptionPage() {
               Ready to subscribe?
             </h2>
             <p className="mt-5 text-[color:var(--color-background)]/75 leading-relaxed">
-              Send me a note about your church and I&rsquo;ll reply within a day.
-              Onboarding usually takes a week.
+              Send me a note about your church and I&rsquo;ll reply within a
+              day. Onboarding usually takes a week.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
@@ -249,9 +249,9 @@ function Includes() {
     "One dedicated designer (Emily)",
     "Unlimited requests",
     "Unlimited revisions",
-    "Same-week turnarounds (small things often same day)",
+    "Same-week turnarounds. Same-day rush available.",
     "All six service categories included",
-    "Source files + brand library",
+    "Source files and brand library",
     "Pause anytime",
   ];
   return (

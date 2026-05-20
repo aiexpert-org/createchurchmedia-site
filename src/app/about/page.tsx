@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Emily",
   description:
-    "Emily Farmer designs for churches. One designer, one subscription, one steady creative partner — built around the fact that most churches can't afford an in-house designer but desperately need one.",
+    "Emily Farmer designs for churches. One designer, one subscription, one steady creative partner. Built for churches that can't afford a full-time in-house designer but need one.",
   alternates: { canonical: "/about" },
 };
 
@@ -24,10 +24,10 @@ export default function AboutPage() {
               <span className="font-serif-italic">I design for churches.</span>
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              Create Media Group is a quiet idea: that a church should get the
-              design quality of a 10-person agency without the agency
-              price, the agency posturing, or the agency project manager who
-              never picks up the phone.
+              Create Media Group is a quiet idea. A church should get the design
+              quality of a ten-person agency without the agency price, the
+              agency posturing, or the agency project manager who never picks
+              up the phone.
             </p>
           </div>
         </Container>
@@ -39,32 +39,31 @@ export default function AboutPage() {
             <div className="space-y-6 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
               <p>
                 I started Create Media Group because most of the churches I
-                wanted to help couldn&rsquo;t afford to hire me full-time.
-                A full-time church designer in the U.S. runs $55,000 to $75,000
-                a year plus benefits — that&rsquo;s out of reach for a 400-person
+                wanted to help couldn&rsquo;t afford to hire me full-time. A
+                full-time church designer in the U.S. runs $55,000 to $75,000 a
+                year plus benefits. That&rsquo;s out of reach for a 400-person
                 congregation that&rsquo;s already stretched the comms director
                 across three other ministries.
               </p>
               <p>
-                But those same churches were spending more than that, in
-                aggregate, on a rotating cast of freelancers — none of whom
-                stayed long enough to learn the brand. The result was the look I
-                kept seeing: a sermon series graphic that didn&rsquo;t match the
+                Those same churches were spending more than that, in aggregate,
+                on a rotating cast of freelancers. None of whom stayed long
+                enough to learn the brand. The result was the look I kept
+                seeing. A sermon series graphic that didn&rsquo;t match the
                 kids ministry palette that didn&rsquo;t match the bulletin font
                 that didn&rsquo;t match the lobby sign.
               </p>
               <p>
-                One designer, one subscription, one steady creative partner —
-                priced so a mid-sized church can actually afford it. That&rsquo;s
-                the whole idea. After a month I know your church the way an
-                in-house hire would. The brand starts to feel like one brand,
-                because one person is making it.
+                One designer, one subscription, one steady creative partner.
+                Priced so a mid-sized church can actually afford it.
+                That&rsquo;s the whole idea. After a month I know your church
+                the way an in-house hire would. The brand starts to feel like
+                one brand, because one person is making it.
               </p>
               <p>
                 I work with a small number of churches at a time on purpose. The
-                model only works if I&rsquo;m actually present in your work — not
-                if I&rsquo;m queuing your requests behind fifty other clients&rsquo;
-                tickets.
+                model only works if I&rsquo;m actually present in your work, not
+                queuing your requests behind fifty other clients&rsquo; tickets.
               </p>
             </div>
 
@@ -94,7 +93,7 @@ export default function AboutPage() {
                 <div>
                   <dt className="text-sm text-[color:var(--color-muted)]">Focus</dt>
                   <dd className="mt-1 text-[color:var(--color-ink)]">
-                    Sermon series · brand identity · social · signage · ministry
+                    Sermon series, brand identity, social, signage, ministry
                     sub-brands
                   </dd>
                 </div>
@@ -131,11 +130,11 @@ export default function AboutPage() {
                 Saturday night.
               </p>
               <p>
-                <span className="font-serif-italic text-[color:var(--color-ink)]">Design serves the message — not the other way around.</span>{" "}
-                If the graphic is louder than the sermon, the graphic
-                lost. The goal isn&rsquo;t to win design awards. It&rsquo;s
-                to make sure nothing in the visual layer gets in the way of
-                people hearing what your pastor is preaching.
+                <span className="font-serif-italic text-[color:var(--color-ink)]">Design serves the message.</span>{" "}
+                If the graphic is louder than the sermon, the graphic lost. The
+                goal isn&rsquo;t to win design awards. It&rsquo;s to make sure
+                nothing in the visual layer gets in the way of people hearing
+                what your pastor is preaching.
               </p>
             </div>
           </div>
@@ -152,8 +151,8 @@ export default function AboutPage() {
                 </h2>
                 <p className="mt-4 text-[color:var(--color-background)]/75 leading-relaxed max-w-xl">
                   I&rsquo;m taking on a small number of new churches this
-                  quarter. Send me a note about your church and what you&rsquo;re
-                  trying to build.
+                  quarter. Send me a note about your church and what
+                  you&rsquo;re trying to build.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">

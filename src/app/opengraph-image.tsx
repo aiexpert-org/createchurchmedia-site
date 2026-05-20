@@ -2,13 +2,12 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site-config";
 
 /**
- * Default OG image for Create Media Group — 1200x630.
- *
- * Built from brand tokens (cream BG + clay accent + serif type).
+ * Default OG image for Create Media Group, 1200x630.
+ * Built from brand tokens (cream BG, clay accent, serif type).
  * Replace with a branded version once Emily has finished assets.
  */
 export const runtime = "edge";
-export const alt = `${siteConfig.name} — ${siteConfig.tagline}`;
+export const alt = `${siteConfig.name}. ${siteConfig.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -42,19 +41,19 @@ export default async function OpenGraphImage() {
           <span style={{ fontFamily: "Georgia, serif" }}>
             Create Media Group
           </span>
-          <span style={{ color: "#b85c38" }}>$800/mo · flat</span>
+          <span style={{ color: "#b85c38" }}>$800/mo. flat.</span>
         </div>
 
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 20,
+            gap: 18,
           }}
         >
           <div
             style={{
-              fontSize: 92,
+              fontSize: 84,
               lineHeight: 1.0,
               fontWeight: 400,
               letterSpacing: -2,
@@ -62,20 +61,22 @@ export default async function OpenGraphImage() {
               fontFamily: "Georgia, serif",
             }}
           >
-            Your church&rsquo;s designer.
+            Unlimited graphic design for{" "}
+            <span style={{ fontStyle: "italic", color: "#b85c38" }}>
+              pastors and churches.
+            </span>
           </div>
           <div
             style={{
-              fontSize: 76,
-              lineHeight: 1.0,
+              fontSize: 30,
+              lineHeight: 1.3,
               fontWeight: 400,
-              fontStyle: "italic",
-              letterSpacing: -1,
-              color: "#b85c38",
-              fontFamily: "Georgia, serif",
+              color: "#2c2b27",
+              maxWidth: 980,
             }}
           >
-            Not a design queue.
+            Your church&rsquo;s design team, on a monthly subscription.
+            Same-day rush available.
           </div>
         </div>
 
@@ -90,7 +91,7 @@ export default async function OpenGraphImage() {
             color: "#6b6864",
           }}
         >
-          <span>Unlimited church graphic design subscription</span>
+          <span>Sermon series. Social. Signage. Brand.</span>
           <span
             style={{
               letterSpacing: 4,

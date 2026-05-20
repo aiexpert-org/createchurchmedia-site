@@ -18,9 +18,9 @@ const footerNav = [
       { href: "/subscription#sermon-series", label: "Sermon series" },
       { href: "/subscription#social-media", label: "Social media" },
       { href: "/subscription#announcements", label: "Announcements" },
-      { href: "/subscription#youth-and-kids", label: "Youth + kids" },
-      { href: "/subscription#logos", label: "Logos + branding" },
-      { href: "/subscription#signage", label: "Signage + print" },
+      { href: "/subscription#youth-and-kids", label: "Youth and kids" },
+      { href: "/subscription#logos", label: "Logos and branding" },
+      { href: "/subscription#signage", label: "Signage and print" },
     ],
   },
   {
@@ -47,9 +47,9 @@ export function SiteFooter() {
               Create Media Group
             </Link>
             <p className="mt-5 max-w-sm text-sm text-[color:var(--color-muted)] leading-relaxed">
-              Your church&rsquo;s designer, on a flat monthly subscription.
-              Sermon series, signage, social, kids and youth, announcements,
-              brand. One designer. No queue.
+              Unlimited graphic design for pastors and churches. Sermon series,
+              signage, social, kids and youth, announcements, brand. One flat
+              monthly subscription.
             </p>
             <div className="mt-6 space-y-1.5 text-sm text-[color:var(--color-muted)]">
               <p>
@@ -69,8 +69,7 @@ export function SiteFooter() {
                 </a>
               </p>
               <p className="pt-2">
-                {siteConfig.location.city}, {siteConfig.location.region} ·
-                Serving churches nationwide
+                {siteConfig.location.city}, {siteConfig.location.region}. Working with churches nationwide.
               </p>
             </div>
           </div>
@@ -98,10 +97,9 @@ export function SiteFooter() {
 
         <div className="mt-16 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-t border-[color:var(--color-border)] pt-6 text-xs text-[color:var(--color-muted)]">
           <p>
-            © {year} {siteConfig.legalName}. Designed in Indiana, for churches
-            everywhere.
+            © {year} {siteConfig.legalName}. Designed in Indiana. Working with churches everywhere.
           </p>
-          <p className="italic font-serif">Your church&rsquo;s designer. Not a design queue.</p>
+          <p className="italic font-serif">Unlimited graphic design for pastors and churches.</p>
         </div>
       </Container>
     </footer>

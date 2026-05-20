@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/button";
 export const metadata: Metadata = {
   title: "Case studies",
   description:
-    "Selected churches on the Create Media Group subscription — and what changed in their visual layer after they brought a designer inside.",
+    "Selected churches on the Create Media Group subscription, and what changed in their visual layer after they brought a designer inside.",
   alternates: { canonical: "/case-studies" },
 };
 
@@ -17,9 +17,9 @@ const caseStudies = [
     location: "Santa Maria, California",
     headline: "From inconsistent series art to a coherent visual rhythm.",
     body: [
-      "First Christian Church had what most mid-sized churches have: a long history, a passionate volunteer base, and a brand that drifted a little further each year as different people made different graphics with different fonts.",
-      "Sermon series art looked like it came from three different churches. The kids ministry palette had nothing to do with the main brand. The bulletin was set in a font no one could remember choosing. None of it was bad — it just wasn't talking to itself.",
-      "We started with an onboarding pass to lock down the visual system: typeface stack, color foundation, a sermon-series template language, and a kids sub-brand that was clearly its own thing while still belonging to FCC. From there it became a weekly rhythm — series art, slides, social cutdowns, event flyers. Same designer, same standards, week after week.",
+      "First Christian Church had what most mid-sized churches have. A long history, a passionate volunteer base, and a brand that drifted a little further each year as different people made different graphics with different fonts.",
+      "Sermon series art looked like it came from three different churches. The kids ministry palette had nothing to do with the main brand. The bulletin was set in a font no one could remember choosing. None of it was bad. It just wasn't talking to itself.",
+      "We started with an onboarding pass to lock down the visual system. Typeface stack, color foundation, a sermon-series template language, and a kids sub-brand that was clearly its own thing while still belonging to FCC. From there it became a weekly rhythm. Series art, slides, social cutdowns, event flyers. Same designer, same standards, week after week.",
     ],
     metrics: [
       { label: "Months on subscription", value: "12+" },
@@ -34,9 +34,9 @@ const caseStudies = [
     location: "Trussville, Alabama",
     headline: "Small-team church, large-church design ops.",
     body: [
-      "FCF Trussville is the kind of church that punches above its size — a lean staff, a creative pastor, a worship leader who designs better than most pastors will admit. They didn't need a designer to be \"a designer.\" They needed someone to take the weekly drag off the comms team and leave bandwidth for the ministry work.",
-      "What that looked like in practice: a sermon series system that anyone on staff could plug a title into and get on-brand graphics from. A kids ministry sub-brand. A summer camp campaign that ran across web, social, signage, and merch. Lobby signs. Event posters. Whatever the week needed.",
-      "Six months in, the comms director said the thing every comms director eventually says: \"I forgot what it felt like to not be doing this in Canva on Saturday night.\"",
+      "FCF Trussville is the kind of church that punches above its size. A lean staff, a creative pastor, a worship leader who designs better than most pastors will admit. They didn't need a designer to be “a designer.” They needed someone to take the weekly drag off the comms team and leave bandwidth for the ministry work.",
+      "What that looked like in practice. A sermon series system that anyone on staff could plug a title into and get on-brand graphics from. A kids ministry sub-brand. A summer camp campaign that ran across web, social, signage, and merch. Lobby signs. Event posters. Whatever the week needed.",
+      "Six months in, the comms director said the thing every comms director eventually says. “I forgot what it felt like to not be doing this in Canva on Saturday night.”",
     ],
     metrics: [
       { label: "Months on subscription", value: "10+" },
@@ -49,7 +49,7 @@ const caseStudies = [
     slug: "newspring",
     church: "NewSpring",
     location: "Multi-campus",
-    headline: "Sermon series, ministry sub-brands, event campaigns — every week.",
+    headline: "Sermon series, ministry sub-brands, event campaigns shipped every week.",
     body: [
       "NewSpring runs at a velocity most churches don't. Multiple campuses, multiple ministries, sermon series stacking on top of event campaigns stacking on top of seasonal pushes. The kind of cadence that breaks a typical freelance arrangement and overwhelms a small in-house team.",
       "The subscription model fit because the volume was steady. Series art every few weeks. Social cutdowns every week. Ministry sub-brands as they launched. Event campaigns ramping up months in advance.",
@@ -77,7 +77,7 @@ export default function CaseStudiesPage() {
               <span className="font-serif-italic">One designer.</span>
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              A snapshot of churches Emily designs for on subscription — what
+              A snapshot of churches Emily designs for on subscription. What
               changed in their visual layer once they brought a designer inside
               the room.
             </p>

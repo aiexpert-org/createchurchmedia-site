@@ -25,7 +25,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="font-serif text-xl tracking-tight text-[color:var(--color-ink)] hover:text-[color:var(--color-accent)] transition-colors"
-          aria-label="Create Media Group — home"
+          aria-label="Create Media Group, home"
         >
           Create Media Group
         </Link>

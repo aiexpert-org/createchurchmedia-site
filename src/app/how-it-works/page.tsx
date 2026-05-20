@@ -19,13 +19,14 @@ export default function HowItWorksPage() {
           <div className="max-w-3xl">
             <Eyebrow>How it works</Eyebrow>
             <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              From inquiry to <span className="font-serif-italic">finished file,</span>{" "}
+              From inquiry to a{" "}
+              <span className="font-serif-italic">finished file,</span>{" "}
               start to finish.
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
               Five steps. One designer. No ticketing system, no account manager,
-              no &ldquo;we&rsquo;ll route this to the right team.&rdquo; You send
-              me what you need. I design it. You review. We ship.
+              no &ldquo;we&rsquo;ll route this to the right team.&rdquo; You
+              send me what you need. I design it. You review. We ship.
             </p>
           </div>
         </Container>
@@ -67,7 +68,7 @@ export default function HowItWorksPage() {
             <div>
               <Eyebrow>The relationship</Eyebrow>
               <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
-                Essentially your remote
+                Your remote
                 <br />
                 <span className="font-serif-italic">staff designer.</span>
               </h2>
@@ -80,12 +81,12 @@ export default function HowItWorksPage() {
                 blue than your main brand.
               </p>
               <p>
-                I work the other way. After onboarding, I&rsquo;m essentially a
-                part of your team — like a remote graphic designer on staff,
-                except instead of a salary you pay a flat subscription. I sit in
-                your Slack if you use one. I get added to your shared drive. I
-                know your sermon series cadence and what your senior pastor
-                hates in fonts.
+                I work the other way. After onboarding I&rsquo;m part of your
+                team, the same way a remote graphic designer on staff would be.
+                Instead of a salary you pay a flat subscription. I sit in your
+                Slack if you use one. I get added to your shared drive. I know
+                your sermon series cadence and what your senior pastor hates in
+                fonts.
               </p>
               <p>
                 That&rsquo;s why this works for churches when queue services
@@ -105,8 +106,8 @@ export default function HowItWorksPage() {
               </h2>
               <p className="mt-4 text-[color:var(--color-background)]/75 leading-relaxed">
                 Tell me about your church. I&rsquo;ll reply within a day with
-                whether the subscription is right for you — and what
-                onboarding looks like if it is.
+                whether the subscription is right for you, and what onboarding
+                looks like if it is.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">

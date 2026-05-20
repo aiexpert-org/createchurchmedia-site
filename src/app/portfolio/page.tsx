@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/button";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Selected work for churches across the U.S. — sermon series, ministry brands, social systems, and signage. Updated regularly.",
+    "Selected work for churches across the U.S. Sermon series, ministry brands, social systems, signage. Updated regularly.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -14,19 +14,19 @@ const portfolioCategories = [
   { name: "Sermon series", count: 24 },
   { name: "Brand identity", count: 8 },
   { name: "Social systems", count: 16 },
-  { name: "Kids + youth", count: 12 },
-  { name: "Signage + print", count: 11 },
+  { name: "Kids and youth", count: 12 },
+  { name: "Signage and print", count: 11 },
   { name: "Event campaigns", count: 9 },
 ];
 
 const portfolioItems = [
   { title: "Built on the Rock", church: "First Christian Church", category: "Sermon series" },
-  { title: "Anchored Kids", church: "Faith Christian Fellowship", category: "Kids + youth" },
+  { title: "Anchored Kids", church: "Faith Christian Fellowship", category: "Kids and youth" },
   { title: "Made New", church: "NewSpring", category: "Sermon series" },
   { title: "Summer Camp '25", church: "Faith Christian Fellowship", category: "Event campaigns" },
   { title: "Brand refresh", church: "First Christian Church", category: "Brand identity" },
   { title: "Social system v2", church: "NewSpring", category: "Social systems" },
-  { title: "Lobby signage", church: "First Christian Church", category: "Signage + print" },
+  { title: "Lobby signage", church: "First Christian Church", category: "Signage and print" },
   { title: "Advent series", church: "Faith Christian Fellowship", category: "Sermon series" },
   { title: "Volunteer recruitment", church: "NewSpring", category: "Social systems" },
 ];
@@ -44,9 +44,9 @@ export default function PortfolioPage() {
               <span className="font-serif-italic">church by church.</span>
             </h1>
             <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              A small slice of work for churches across the U.S. — sermon series,
-              ministry brands, social systems, signage. Polished case-study pages
-              and full sets of files are landing here weekly.
+              A small slice of work for churches across the U.S. Sermon series,
+              ministry brands, social systems, signage. Polished case-study
+              pages and full sets of files are landing here weekly.
             </p>
           </div>
         </Container>
@@ -71,7 +71,7 @@ export default function PortfolioPage() {
         </Container>
       </Section>
 
-      {/* Portfolio grid — placeholder tiles, asset extraction in progress */}
+      {/* Portfolio grid */}
       <Section className="pt-0 pb-16">
         <Container>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -110,8 +110,8 @@ export default function PortfolioPage() {
                 Tell me what you&rsquo;d like to see.
               </h2>
               <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
-                Happy to send specific samples — sermon series, kids branding,
-                full social systems — based on what your church needs.
+                Happy to send specific samples. Sermon series, kids branding,
+                full social systems, whatever fits what your church needs.
               </p>
             </div>
             <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
@@ -124,7 +124,7 @@ export default function PortfolioPage() {
   );
 }
 
-/* A few warm placeholder tile treatments while real images get extracted. */
+/* Warm placeholder tile treatments while real images get extracted. */
 function PortfolioTile({ idx }: { idx: number }) {
   const palettes = [
     { bg: "#b85c38", fg: "#faf7f2", label: "CMG" },
