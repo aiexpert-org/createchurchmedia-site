@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { Section, Eyebrow } from "@/components/section";
@@ -241,6 +242,47 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </Container>
+      </Section>
+
+      {/* MEET YOUR DESIGNER */}
+      <Section>
+        <Container>
+          <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-16 items-center">
+            <div>
+              <div className="relative aspect-[4/5] max-w-md rounded-2xl overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
+                <Image
+                  src="/about/emily-headshot.webp"
+                  alt="Emily Farmer, founder and lead designer of Create Media Group."
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <Eyebrow>Meet your designer</Eyebrow>
+              <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
+                Hi, I&rsquo;m Emily.
+              </h2>
+              <p className="mt-5 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
+                I&rsquo;m a graphic designer with 15 years of experience and
+                I&rsquo;ve been designing for churches for the better part of a
+                decade. I started Create Media Group because I kept meeting
+                churches that needed real design help but couldn&rsquo;t afford
+                a full-time hire.
+              </p>
+              <p className="mt-4 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
+                When you subscribe, you get me. The same designer every week,
+                learning your church the way an in-house hire would.
+              </p>
+              <div className="mt-8">
+                <ButtonLink href="/about" variant="outline" size="md" withArrow>
+                  More about Emily
+                </ButtonLink>
+              </div>
+            </div>
+          </div>
         </Container>
       </Section>
 
