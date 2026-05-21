@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/container";
 import { Section, Eyebrow } from "@/components/section";
 import { ButtonLink } from "@/components/button";
@@ -16,19 +17,33 @@ export default function AboutPage() {
     <>
       <Section className="pt-16 pb-12">
         <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>About</Eyebrow>
-            <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              I&rsquo;m Emily.
-              <br />
-              <span className="font-serif-italic">I design for churches.</span>
-            </h1>
-            <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              Create Media Group is a quiet idea. A church should get the design
-              quality of a ten-person agency without the agency price, the
-              agency posturing, or the agency project manager who never picks
-              up the phone.
-            </p>
+          <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <Eyebrow>About</Eyebrow>
+              <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
+                I&rsquo;m Emily.
+                <br />
+                <span className="font-serif-italic">I design for churches.</span>
+              </h1>
+              <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
+                Create Media Group is a quiet idea. A church should get the design
+                quality of a ten-person agency without the agency price, the
+                agency posturing, or the agency project manager who never picks
+                up the phone.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="relative aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
+                <Image
+                  src="/about/emily-headshot.webp"
+                  alt="Emily Farmer, founder and lead designer of Create Media Group."
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
