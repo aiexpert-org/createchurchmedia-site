@@ -21,7 +21,7 @@ const homeFaqs = [
   },
   {
     q: "How much does it cost?",
-    a: `$997 a month, flat, with no per-project pricing. If you prepay for a year it's $10,967, which is twelve months for the price of eleven.`,
+    a: `$997 a month, flat, with no per-project pricing. If you prepay for a year it's $9,997, which works out to about $833 a month.`,
   },
   {
     q: "What can I request?",
@@ -387,7 +387,7 @@ export default function HomePage() {
                 <span className="font-serif-italic">Same designer. Same access.</span>
               </h2>
               <p className="mt-5 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
-                Prepay the year and get the twelfth month free.
+                Prepay the year and save almost $2,000.
               </p>
               <div className="mt-8">
                 <ButtonLink href="/subscription" variant="ink" size="lg">
@@ -419,8 +419,7 @@ export default function HomePage() {
                     </p>
                     {i === 1 && (
                       <p className="mt-1 text-sm text-[color:var(--color-accent)]">
-                        ~${siteConfig.pricing.annual.perMonth}/mo. Save $
-                        {siteConfig.pricing.annual.savings}.
+                        ~${siteConfig.pricing.annual.perMonth}/mo. Save ~$2,000.
                       </p>
                     )}
                     <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">

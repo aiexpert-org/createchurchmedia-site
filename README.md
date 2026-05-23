@@ -6,7 +6,7 @@ Next.js 16 marketing site for Create Media Group (Emily Farmer). Unlimited graph
 
 **Subhead:** Your church's design team, on a monthly subscription. Same-day rush available.
 
-**Pricing:** $997 a month, or $10,967 a year (twelve months for the price of eleven).
+**Pricing:** $997 a month, or $9,997 a year (save almost $2,000).
 
 ## Stack
 

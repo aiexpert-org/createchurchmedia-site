@@ -66,13 +66,13 @@ export const siteConfig = {
     },
     annual: {
       label: "Annual prepay",
-      amount: 10967,
+      amount: 9997,
       currency: "USD",
       cadence: "/year",
-      perMonth: 914,
+      perMonth: 833,
       blurb:
-        "Twelve months for the price of eleven. Same designer, same access, $997 off.",
-      savings: 997,
+        "Pay for the year and save almost $2,000. Same designer, same access, same turnaround.",
+      savings: 1967,
     },
   },
 

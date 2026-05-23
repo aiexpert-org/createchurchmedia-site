@@ -138,7 +138,7 @@ export default function SubscriptionPage() {
 
           <p className="mt-8 text-center text-sm text-[color:var(--color-muted)]">
             Both tiers include the same designer, the same access, the same
-            turnaround. Annual saves you $997.
+            turnaround. Annual saves you almost $2,000.
           </p>
         </Container>
       </Section>
