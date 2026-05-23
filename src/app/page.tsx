@@ -21,7 +21,7 @@ const homeFaqs = [
   },
   {
     q: "How much does it cost?",
-    a: `$800 a month, flat, with no per-project pricing. If you prepay for a year it's $8,800, which is twelve months for the price of eleven.`,
+    a: `$997 a month, flat, with no per-project pricing. If you prepay for a year it's $10,967, which is twelve months for the price of eleven.`,
   },
   {
     q: "What can I request?",
@@ -175,7 +175,7 @@ export default function HomePage() {
               <span className="font-serif-italic">In-house, without the in-house hire.</span>
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-ink-soft)] leading-relaxed max-w-2xl">
-              Emily Farmer designs for your church on a flat $800 a month
+              Emily Farmer designs for your church on a flat $997 a month
               subscription. She onboards once, learns your voice, your visual
               system, your team&rsquo;s pace. Then she just designs. The way an
               on-staff designer would, if you had an on-staff designer.
@@ -202,7 +202,7 @@ export default function HomePage() {
               {
                 title: "Flat monthly fee",
                 body:
-                  "$800 a month. Predictable, budgetable, doesn&rsquo;t spike when you launch a new series or rebrand a ministry.",
+                  "$997 a month. Predictable, budgetable, doesn&rsquo;t spike when you launch a new series or rebrand a ministry.",
               },
               {
                 title: "One dedicated designer",

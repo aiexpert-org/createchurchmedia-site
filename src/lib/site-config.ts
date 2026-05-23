@@ -13,10 +13,10 @@ export const siteConfig = {
     "Your church's design team, on a monthly subscription. Same-day rush available.",
 
   description:
-    "Unlimited graphic design for pastors and churches. Sermon series, social, signage, kids and youth, announcements, brand. Flat $800 a month. Same-day rush available.",
+    "Unlimited graphic design for pastors and churches. Sermon series, social, signage, kids and youth, announcements, brand. Flat $997 a month. Same-day rush available.",
 
   shortDescription:
-    "Unlimited graphic design for pastors and churches. $800 a month, flat.",
+    "Unlimited graphic design for pastors and churches. $997 a month, flat.",
 
   url: (
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://createmediagroup.org"
@@ -58,7 +58,7 @@ export const siteConfig = {
   pricing: {
     monthly: {
       label: "Monthly",
-      amount: 800,
+      amount: 997,
       currency: "USD",
       cadence: "/month",
       blurb:
@@ -66,13 +66,13 @@ export const siteConfig = {
     },
     annual: {
       label: "Annual prepay",
-      amount: 8800,
+      amount: 10967,
       currency: "USD",
       cadence: "/year",
-      perMonth: 733,
+      perMonth: 914,
       blurb:
-        "Twelve months for the price of eleven. Same designer, same access, $800 off.",
-      savings: 800,
+        "Twelve months for the price of eleven. Same designer, same access, $997 off.",
+      savings: 997,
     },
   },
 
