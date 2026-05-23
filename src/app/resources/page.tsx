@@ -53,7 +53,7 @@ export default function ResourcesIndexPage() {
               <li key={post.slug}>
                 <Link
                   href={`/resources/${post.slug}`}
-                  className="group block h-full rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] overflow-hidden transition-colors hover:border-[color:var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)]"
+                  className="group block h-full rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] overflow-hidden transition-colors hover:border-[color:var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)]"
                 >
                   {post.image && (
                     <div className="relative aspect-[16/9] bg-[color:var(--color-surface)]">
@@ -83,7 +83,7 @@ export default function ResourcesIndexPage() {
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full bg-[color:var(--color-surface)] px-2.5 py-0.5 text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-muted)]"
+                            className="rounded-md bg-[color:var(--color-surface)] px-2.5 py-0.5 text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-muted)]"
                           >
                             {tag}
                           </span>
@@ -104,7 +104,7 @@ export default function ResourcesIndexPage() {
 
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
-          <div className="rounded-2xl bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+          <div className="rounded-lg bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
             <div>
               <h2 className="font-serif text-[length:var(--text-h2)] leading-[1.1] tracking-tight">
                 Want this stuff in your inbox?
@@ -120,7 +120,6 @@ export default function ResourcesIndexPage() {
                 href={`mailto:${siteConfig.contact.email}?subject=Add me to the resources list`}
                 variant="primary"
                 size="lg"
-                withArrow
               >
                 Subscribe
               </ButtonLink>

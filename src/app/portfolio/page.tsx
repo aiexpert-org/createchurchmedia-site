@@ -37,7 +37,7 @@ export default function PortfolioPage() {
         </Container>
       </Section>
 
-      {/* Category jump links */}
+      {/* Category jump links - rounded-full pills swapped to rounded-lg */}
       <Section className="pt-0 pb-8">
         <Container>
           <nav aria-label="Portfolio categories" className="flex flex-wrap gap-2.5">
@@ -47,7 +47,7 @@ export default function PortfolioPage() {
                 <a
                   key={cat.slug}
                   href={`#${cat.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-4 py-2 text-sm text-[color:var(--color-ink)] hover:border-[color:var(--color-accent)]/60 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-4 py-2 text-sm text-[color:var(--color-ink)] hover:border-[color:var(--color-accent)]/60 transition-colors"
                 >
                   {cat.name}
                   <span className="text-[color:var(--color-muted)] text-xs">
@@ -60,7 +60,7 @@ export default function PortfolioPage() {
         </Container>
       </Section>
 
-      {/* Sections by category */}
+      {/* Sections by category - card chrome around tiles softened to rounded-lg */}
       {portfolioCategories.map((cat) => {
         const items = getPortfolioByCategory(cat.slug);
         if (items.length === 0) return null;
@@ -81,7 +81,7 @@ export default function PortfolioPage() {
               <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {items.map((item, idx) => (
                   <li key={`${item.file}-${idx}`}>
-                    <article className="group rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] overflow-hidden transition-colors hover:border-[color:var(--color-accent)]/60">
+                    <article className="group rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] overflow-hidden transition-colors hover:border-[color:var(--color-accent)]/60">
                       <div className="relative aspect-[4/3] bg-[color:var(--color-surface)]">
                         <Image
                           src={item.file}
@@ -110,7 +110,7 @@ export default function PortfolioPage() {
 
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
-          <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-10 lg:p-14 flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
+          <div className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-10 lg:p-14 flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
             <div className="max-w-xl">
               <Eyebrow>Looking for specifics?</Eyebrow>
               <h2 className="mt-3 font-serif text-[length:var(--text-h2)] leading-[1.1] tracking-tight">
@@ -121,7 +121,7 @@ export default function PortfolioPage() {
                 full social systems, whatever fits what your church needs.
               </p>
             </div>
-            <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
+            <ButtonLink href="/contact" variant="primary" size="lg">
               Request samples
             </ButtonLink>
           </div>

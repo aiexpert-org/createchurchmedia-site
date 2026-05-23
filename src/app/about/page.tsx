@@ -33,7 +33,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="relative aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
+              <div className="relative aspect-[4/5] max-w-md mx-auto rounded-lg overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
                 <Image
                   src="/about/emily-headshot.webp"
                   alt="Emily Farmer, founder and lead designer of Create Media Group."
@@ -82,7 +82,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <aside className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-8 lg:sticky lg:top-24">
+            <aside className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-8 lg:sticky lg:top-24">
               <h2 className="text-xs uppercase tracking-[0.22em] text-[color:var(--color-muted)]">
                 The basics
               </h2>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 </div>
               </dl>
               <div className="mt-8">
-                <ButtonLink href="/contact" variant="primary" size="md" withArrow>
+                <ButtonLink href="/contact" variant="primary" size="md">
                   Say hello
                 </ButtonLink>
               </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
 
       <Section>
         <Container>
-          <div className="rounded-2xl bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14">
+          <div className="rounded-lg bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14">
             <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
               <div>
                 <h2 className="font-serif text-[length:var(--text-h2)] leading-[1.1] tracking-tight">
@@ -171,7 +171,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
-                <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
+                <ButtonLink href="/contact" variant="primary" size="lg">
                   Get in touch
                 </ButtonLink>
               </div>

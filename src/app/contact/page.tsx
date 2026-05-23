@@ -42,7 +42,7 @@ export default function ContactPage() {
                 action={`mailto:${siteConfig.contact.email}`}
                 method="post"
                 encType="text/plain"
-                className="space-y-5 rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 lg:p-10"
+                className="space-y-5 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 lg:p-10"
               >
                 <div className="grid sm:grid-cols-2 gap-5">
                   <Field
@@ -104,7 +104,6 @@ export default function ContactPage() {
                     href={`mailto:${siteConfig.contact.email}?subject=New church inquiry`}
                     variant="primary"
                     size="lg"
-                    withArrow
                   >
                     Send the note
                   </ButtonLink>
@@ -143,7 +142,7 @@ export default function ContactPage() {
                 detail="Working with churches nationwide"
               />
 
-              <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-7">
+              <div className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-7">
                 <h3 className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]">
                   Response time
                 </h3>
@@ -210,7 +209,7 @@ function ContactCard({
   const inner = (
     <>
       <div className="flex items-center gap-2.5 text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
-        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[color:var(--color-accent-soft)] text-[color:var(--color-accent)]">
+        <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[color:var(--color-accent-soft)] text-[color:var(--color-accent)]">
           {icon}
         </span>
         {label}
@@ -227,14 +226,14 @@ function ContactCard({
     return (
       <a
         href={href}
-        className="block rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 transition-colors hover:border-[color:var(--color-accent)]"
+        className="block rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 transition-colors hover:border-[color:var(--color-accent)]"
       >
         {inner}
       </a>
     );
   }
   return (
-    <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7">
+    <div className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7">
       {inner}
     </div>
   );

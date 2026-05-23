@@ -43,7 +43,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <ButtonLink href="/contact" variant="primary" size="md" withArrow>
+          <ButtonLink href="/contact" variant="primary" size="md">
             Start
           </ButtonLink>
         </div>
@@ -53,7 +53,7 @@ export function SiteHeader() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-ink)] hover:text-[color:var(--color-accent)] hover:border-[color:var(--color-accent)] transition-colors"
+          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[color:var(--color-border)] text-[color:var(--color-ink)] hover:text-[color:var(--color-accent)] hover:border-[color:var(--color-accent)] transition-colors"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -85,7 +85,6 @@ export function SiteHeader() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                withArrow
                 className="w-full"
               >
                 Start

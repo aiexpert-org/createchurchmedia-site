@@ -7,7 +7,6 @@ import { ButtonLink } from "@/components/button";
 import { LinkCard } from "@/components/card";
 import { ServiceJsonLd, FaqJsonLd } from "@/components/json-ld";
 import { siteConfig } from "@/lib/site-config";
-import { ArrowRight, Check, Sparkle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: `${siteConfig.tagline}`,
@@ -40,7 +39,7 @@ export default function HomePage() {
       <ServiceJsonLd />
       <FaqJsonLd items={homeFaqs} />
 
-      {/* HERO */}
+      {/* HERO - kept for commit 1, restructured in commit 2 */}
       <Section className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20">
         <Container>
           <div className="max-w-4xl">
@@ -60,7 +59,7 @@ export default function HomePage() {
               </span>
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <ButtonLink href="/subscription" variant="primary" size="lg" withArrow>
+              <ButtonLink href="/subscription" variant="primary" size="lg">
                 See the subscription
               </ButtonLink>
               <ButtonLink href="/how-it-works" variant="outline" size="lg">
@@ -71,7 +70,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* STAT RIBBON */}
+      {/* STAT RIBBON - kept for commit 1, stripped in commit 3 */}
       <section className="border-y border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
         <Container className="py-8 sm:py-10">
           <dl className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-8">
@@ -127,7 +126,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* THE OFFER */}
+      {/* THE OFFER - card chrome stripped, rule-divided list */}
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
           <div className="max-w-3xl">
@@ -145,7 +144,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <dl className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10">
             {[
               {
                 title: "Unlimited requests",
@@ -180,32 +179,22 @@ export default function HomePage() {
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6"
+                className="border-t border-[color:var(--color-border)] py-6"
               >
-                <div className="flex items-start gap-3">
-                  <span
-                    aria-hidden
-                    className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[color:var(--color-accent-soft)] text-[color:var(--color-accent)]"
-                  >
-                    <Check className="h-3 w-3" strokeWidth={3} />
-                  </span>
-                  <div>
-                    <h3 className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]">
-                      {feature.title}
-                    </h3>
-                    <p
-                      className="mt-1.5 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]"
-                      dangerouslySetInnerHTML={{ __html: feature.body }}
-                    />
-                  </div>
-                </div>
+                <dt className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]">
+                  {feature.title}
+                </dt>
+                <dd
+                  className="mt-2 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]"
+                  dangerouslySetInnerHTML={{ __html: feature.body }}
+                />
               </div>
             ))}
-          </div>
+          </dl>
         </Container>
       </Section>
 
-      {/* SERVICES PREVIEW */}
+      {/* SERVICES PREVIEW - card chrome stripped, items rule-divided */}
       <Section>
         <Container>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
@@ -219,38 +208,37 @@ export default function HomePage() {
             </div>
             <Link
               href="/subscription"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--color-accent)] hover:text-[color:var(--color-accent-hover)]"
+              className="text-sm font-medium text-[color:var(--color-ink)] underline decoration-[color:var(--color-accent)] decoration-2 underline-offset-4 hover:decoration-[color:var(--color-ink)]"
             >
-              See full pricing <ArrowRight className="h-4 w-4" />
+              See full pricing
             </Link>
           </div>
 
-          <ul className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <ul className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10">
             {siteConfig.services.map((service) => (
-              <li key={service.slug}>
-                <article
-                  id={service.slug}
-                  className="h-full rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 transition-colors hover:border-[color:var(--color-accent)]/60"
-                >
-                  <h3 className="font-serif text-2xl tracking-tight text-[color:var(--color-ink)]">
-                    {service.name}
-                  </h3>
-                  <p className="mt-2.5 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">
-                    {service.blurb}
-                  </p>
-                </article>
+              <li
+                key={service.slug}
+                id={service.slug}
+                className="border-t border-[color:var(--color-border)] py-6"
+              >
+                <h3 className="font-serif text-2xl tracking-tight text-[color:var(--color-ink)]">
+                  {service.name}
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">
+                  {service.blurb}
+                </p>
               </li>
             ))}
           </ul>
         </Container>
       </Section>
 
-      {/* MEET YOUR DESIGNER */}
+      {/* MEET YOUR DESIGNER - kept for commit 1, restructured in commit 2 */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-16 items-center">
             <div>
-              <div className="relative aspect-[4/5] max-w-md rounded-2xl overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
+              <div className="relative aspect-[4/5] max-w-md rounded-lg overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
                 <Image
                   src="/about/emily-headshot.webp"
                   alt="Emily Farmer, founder and lead designer of Create Media Group."
@@ -277,7 +265,7 @@ export default function HomePage() {
                 learning your church the way an in-house hire would.
               </p>
               <div className="mt-8">
-                <ButtonLink href="/about" variant="outline" size="md" withArrow>
+                <ButtonLink href="/about" variant="outline" size="md">
                   More about Emily
                 </ButtonLink>
               </div>
@@ -298,9 +286,9 @@ export default function HomePage() {
             </div>
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--color-accent)] hover:text-[color:var(--color-accent-hover)]"
+              className="text-sm font-medium text-[color:var(--color-ink)] underline decoration-[color:var(--color-accent)] decoration-2 underline-offset-4 hover:decoration-[color:var(--color-ink)]"
             >
-              All case studies <ArrowRight className="h-4 w-4" />
+              All case studies
             </Link>
           </div>
 
@@ -349,7 +337,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* PRICING TEASER */}
+      {/* PRICING TEASER - Sparkle badge dropped, rounded-xl to rounded-lg */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-2 gap-10 items-start">
@@ -364,7 +352,7 @@ export default function HomePage() {
                 Prepay the year and get the twelfth month free.
               </p>
               <div className="mt-8">
-                <ButtonLink href="/subscription" variant="ink" size="lg" withArrow>
+                <ButtonLink href="/subscription" variant="ink" size="lg">
                   See full pricing
                 </ButtonLink>
               </div>
@@ -376,17 +364,12 @@ export default function HomePage() {
                   <div
                     key={tier.label}
                     className={
-                      "rounded-xl border p-7 " +
+                      "rounded-lg border p-7 " +
                       (i === 1
-                        ? "border-[color:var(--color-accent)] bg-[color:var(--color-card)] relative"
+                        ? "border-[color:var(--color-accent)] bg-[color:var(--color-card)]"
                         : "border-[color:var(--color-border)] bg-[color:var(--color-card)]")
                     }
                   >
-                    {i === 1 && (
-                      <div className="absolute -top-3 left-7 inline-flex items-center gap-1 rounded-full bg-[color:var(--color-accent)] px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-accent-foreground)] font-semibold">
-                        <Sparkle className="h-3 w-3" /> Best value
-                      </div>
-                    )}
                     <h3 className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
                       {tier.label}
                     </h3>
@@ -413,27 +396,25 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* FINAL CTA */}
-      <Section className="bg-[color:var(--color-ink)] text-[color:var(--color-background)]">
+      {/* FINAL CTA - dark block deleted, replaced with cream-substrate quiet close */}
+      <Section className="bg-[color:var(--color-surface)]">
         <Container>
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
             <div>
-              <h2 className="font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
-                Ready for your church to look like
-                <br />
-                <span className="font-serif-italic">one church?</span>
+              <h2 className="font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight text-[color:var(--color-ink)]">
+                Tell me about your church.
               </h2>
-              <p className="mt-5 text-lg text-[color:var(--color-background)]/75 leading-relaxed max-w-xl">
-                Tell me about your church and what you need. I&rsquo;ll reply
-                within a day with whether we&rsquo;re a fit and what onboarding
-                looks like.
+              <p className="mt-5 text-lg text-[color:var(--color-ink-soft)] leading-relaxed max-w-xl">
+                Send me a note about your church and what you need. I&rsquo;ll
+                reply within a day with whether we&rsquo;re a fit and what
+                onboarding looks like.
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
+              <ButtonLink href="/contact" variant="primary" size="lg">
                 Start the conversation
               </ButtonLink>
-              <ButtonLink href="/subscription" variant="ghost" size="lg" className="text-[color:var(--color-background)] hover:bg-[color:var(--color-background)]/10">
+              <ButtonLink href="/subscription" variant="outline" size="lg">
                 See the subscription
               </ButtonLink>
             </div>

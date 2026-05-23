@@ -19,7 +19,7 @@ export default function NotFound() {
             shipping new pages weekly while the site rolls out.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <ButtonLink href="/" variant="primary" size="md" withArrow>
+            <ButtonLink href="/" variant="primary" size="md">
               Back home
             </ButtonLink>
             <ButtonLink href="/subscription" variant="outline" size="md">

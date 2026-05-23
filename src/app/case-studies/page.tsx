@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
               <article
                 key={cs.slug}
                 id={cs.slug}
-                className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-8 lg:p-12 scroll-mt-24"
+                className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-8 lg:p-12 scroll-mt-24"
               >
                 <div className="grid lg:grid-cols-[1fr_2fr] gap-10">
                   <header>
@@ -142,7 +142,7 @@ export default function CaseStudiesPage() {
 
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
-          <div className="rounded-2xl bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+          <div className="rounded-lg bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
             <div>
               <h2 className="font-serif text-[length:var(--text-h2)] leading-[1.1] tracking-tight">
                 Want yours on this page next year?
@@ -154,7 +154,7 @@ export default function CaseStudiesPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
-              <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
+              <ButtonLink href="/contact" variant="primary" size="lg">
                 Talk to Emily
               </ButtonLink>
             </div>

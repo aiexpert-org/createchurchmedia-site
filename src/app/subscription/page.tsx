@@ -4,7 +4,6 @@ import { Section, Eyebrow } from "@/components/section";
 import { ButtonLink } from "@/components/button";
 import { ServiceJsonLd, FaqJsonLd } from "@/components/json-ld";
 import { siteConfig } from "@/lib/site-config";
-import { Check, Sparkle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Subscription and pricing",
@@ -71,12 +70,12 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* PRICING TIERS */}
+      {/* PRICING TIERS - Sparkle badge dropped, rounded-lg, withArrow removed */}
       <Section className="pt-0">
         <Container>
           <div className="grid lg:grid-cols-2 gap-5">
             {/* Monthly */}
-            <article className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-8 lg:p-10">
+            <article className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-8 lg:p-10">
               <header className="flex items-baseline justify-between">
                 <h2 className="font-serif text-3xl tracking-tight text-[color:var(--color-ink)]">
                   Monthly
@@ -100,17 +99,13 @@ export default function SubscriptionPage() {
                 variant="ink"
                 size="lg"
                 className="mt-8 w-full"
-                withArrow
               >
                 Start monthly
               </ButtonLink>
             </article>
 
             {/* Annual prepay */}
-            <article className="relative rounded-2xl border-2 border-[color:var(--color-accent)] bg-[color:var(--color-card)] p-8 lg:p-10">
-              <div className="absolute -top-3 left-8 inline-flex items-center gap-1.5 rounded-full bg-[color:var(--color-accent)] px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-accent-foreground)] font-semibold">
-                <Sparkle className="h-3 w-3" /> Best value
-              </div>
+            <article className="rounded-lg border-2 border-[color:var(--color-accent)] bg-[color:var(--color-card)] p-8 lg:p-10">
               <header className="flex items-baseline justify-between">
                 <h2 className="font-serif text-3xl tracking-tight text-[color:var(--color-ink)]">
                   Annual prepay
@@ -138,7 +133,6 @@ export default function SubscriptionPage() {
                 variant="primary"
                 size="lg"
                 className="mt-8 w-full"
-                withArrow
               >
                 Start annual
               </ButtonLink>
@@ -152,7 +146,7 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* SERVICES DETAIL */}
+      {/* SERVICES DETAIL - card chrome stripped, rule-divided */}
       <Section className="bg-[color:var(--color-surface)]">
         <Container>
           <div className="max-w-3xl">
@@ -164,17 +158,17 @@ export default function SubscriptionPage() {
             </h2>
           </div>
 
-          <ul className="mt-12 grid sm:grid-cols-2 gap-5">
+          <ul className="mt-12 grid sm:grid-cols-2 gap-x-10">
             {siteConfig.services.map((service) => (
               <li
                 key={service.slug}
                 id={service.slug}
-                className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 scroll-mt-24"
+                className="border-t border-[color:var(--color-border)] py-6 scroll-mt-24"
               >
                 <h3 className="font-serif text-2xl tracking-tight text-[color:var(--color-ink)]">
                   {service.name}
                 </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">
+                <p className="mt-2 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">
                   {service.blurb}
                 </p>
               </li>
@@ -183,7 +177,7 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* FAQ */}
+      {/* FAQ - card chrome kept for commit 1, restructured in commit 3 */}
       <Section>
         <Container>
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
@@ -206,7 +200,7 @@ export default function SubscriptionPage() {
               {subscriptionFaqs.map((item) => (
                 <li
                   key={item.q}
-                  className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6"
+                  className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6"
                 >
                   <h3 className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]">
                     {item.q}
@@ -221,19 +215,20 @@ export default function SubscriptionPage() {
         </Container>
       </Section>
 
-      {/* FINAL CTA */}
-      <Section className="bg-[color:var(--color-ink)] text-[color:var(--color-background)]">
+      {/* FINAL CTA - dark block deleted, replaced with cream-substrate quiet close */}
+      <Section className="bg-[color:var(--color-surface)]">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
-              Ready to subscribe?
+          <div className="max-w-3xl">
+            <Eyebrow>Next step</Eyebrow>
+            <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight text-[color:var(--color-ink)]">
+              Start the conversation.
             </h2>
-            <p className="mt-5 text-[color:var(--color-background)]/75 leading-relaxed">
+            <p className="mt-5 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
               Send me a note about your church and I&rsquo;ll reply within a
               day. Onboarding usually takes a week.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
+            <div className="mt-8">
+              <ButtonLink href="/contact" variant="primary" size="lg">
                 Start the conversation
               </ButtonLink>
             </div>
@@ -257,14 +252,8 @@ function Includes() {
   return (
     <ul className="mt-7 space-y-2.5">
       {items.map((item) => (
-        <li key={item} className="flex items-start gap-2.5 text-sm text-[color:var(--color-ink)]">
-          <span
-            aria-hidden
-            className="mt-0.5 inline-flex h-4 w-4 items-center justify-center rounded-full bg-[color:var(--color-accent-soft)] text-[color:var(--color-accent)] shrink-0"
-          >
-            <Check className="h-2.5 w-2.5" strokeWidth={3} />
-          </span>
-          <span>{item}</span>
+        <li key={item} className="text-sm text-[color:var(--color-ink)] leading-relaxed">
+          {item}
         </li>
       ))}
     </ul>

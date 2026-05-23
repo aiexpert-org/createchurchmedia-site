@@ -99,7 +99,7 @@ export default function HowItWorksPage() {
 
       <Section>
         <Container>
-          <div className="rounded-2xl bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14 flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
+          <div className="rounded-lg bg-[color:var(--color-ink)] text-[color:var(--color-background)] p-10 lg:p-14 flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
             <div className="max-w-xl">
               <h2 className="font-serif text-[length:var(--text-h2)] leading-[1.1] tracking-tight">
                 See if we&rsquo;re a fit.
@@ -111,7 +111,7 @@ export default function HowItWorksPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <ButtonLink href="/contact" variant="primary" size="lg" withArrow>
+              <ButtonLink href="/contact" variant="primary" size="lg">
                 Start
               </ButtonLink>
               <ButtonLink

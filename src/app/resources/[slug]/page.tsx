@@ -115,7 +115,7 @@ export default async function ResourcePage({
 
           {post.image && (
             <figure className="mt-10 max-w-4xl mx-auto">
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
+              <div className="relative aspect-[16/9] rounded-lg overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-surface)]">
                 <Image
                   src={post.image}
                   alt={`Featured design work for ${post.title}.`}
@@ -138,14 +138,14 @@ export default async function ResourcePage({
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
 
-            <div className="mt-16 rounded-2xl border border-[color:var(--color-accent)]/40 bg-[color:var(--color-card)] p-8">
+            <div className="mt-16 rounded-lg border border-[color:var(--color-accent)]/40 bg-[color:var(--color-card)] p-8">
               <Eyebrow>About Create Media Group</Eyebrow>
               <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
                 {siteConfig.shortDescription} Written by {siteConfig.owner.name}
                 , founder and lead designer.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
-                <ButtonLink href="/subscription" variant="primary" size="md" withArrow>
+                <ButtonLink href="/subscription" variant="primary" size="md">
                   See the subscription
                 </ButtonLink>
                 <ButtonLink href="/contact" variant="outline" size="md">
@@ -161,7 +161,7 @@ export default async function ResourcePage({
               {prev ? (
                 <Link
                   href={`/resources/${prev.slug}`}
-                  className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors"
+                  className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
                     Previous
@@ -176,7 +176,7 @@ export default async function ResourcePage({
               {next ? (
                 <Link
                   href={`/resources/${next.slug}`}
-                  className="rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors text-right"
+                  className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-5 hover:border-[color:var(--color-accent)] transition-colors text-right"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
                     Next
