@@ -172,7 +172,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={state.kind === "submitting"}
-            className="inline-flex items-center justify-center rounded-lg bg-[color:var(--color-accent)] px-7 h-14 text-base font-medium text-[color:var(--color-accent-foreground)] hover:bg-[color:var(--color-accent-hover)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            className="inline-flex items-center justify-center rounded-lg bg-[color:var(--color-cta)] px-7 h-14 text-base font-medium text-[color:var(--color-cta-foreground)] hover:bg-[color:var(--color-cta-hover)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {state.kind === "submitting" ? "Sending..." : "Send the note"}
           </button>

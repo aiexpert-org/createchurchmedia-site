@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Fraunces, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { siteConfig } from "@/lib/site-config";
 import { SiteHeader } from "@/components/site-header";
@@ -8,17 +8,10 @@ import { SiteFooter } from "@/components/site-footer";
 import { OrganizationJsonLd, LocalBusinessJsonLd } from "@/components/json-ld";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: siteConfig.legalName,
     title: `${siteConfig.name}. ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
@@ -67,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable}`}
+      className={jakarta.variable}
     >
       <body className="antialiased flex min-h-screen flex-col">
         <OrganizationJsonLd />

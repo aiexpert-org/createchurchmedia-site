@@ -21,7 +21,7 @@ export function SiteFooter() {
               href="/"
               className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]"
             >
-              Create Media Group
+              Create
             </Link>
             <p className="mt-4 text-sm text-[color:var(--color-muted)] leading-relaxed">
               {siteConfig.shortDescription}

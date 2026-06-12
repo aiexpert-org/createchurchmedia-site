@@ -6,7 +6,10 @@
  */
 
 export const siteConfig = {
-  name: "Create Media Group",
+  // Brand display name used across the site (header, titles, body voice).
+  // The legal entity name "Create Media Group" lives in legalName below and
+  // is used for the footer copyright, the publisher meta, and JSON-LD.
+  name: "Create",
   legalName: "Create Media Group",
   tagline: "Unlimited graphic design for pastors and churches.",
   subhead:

@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/button";
 export const metadata: Metadata = {
   title: "Case studies",
   description:
-    "Selected churches on the Create Media Group subscription, and what changed in their visual layer after they brought a designer inside.",
+    "Selected churches on the Create subscription, and what changed in their visual layer after they brought a designer inside.",
   alternates: { canonical: "/case-studies" },
   // Temporary noindex while we confirm written permission from each named
   // church. Remove this block once Emily and Brett have confirmed permissions

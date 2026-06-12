@@ -9,7 +9,11 @@ import { siteConfig } from "@/lib/site-config";
 import { ContactForm } from "./contact/contact-form";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.tagline}`,
+  // Leads with the brand display name "Create", keeps the legal entity
+  // "Create Media Group" as a trailing clarifier so existing SEO holds.
+  title: {
+    absolute: `Create. ${siteConfig.tagline} | ${siteConfig.legalName}`,
+  },
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
@@ -66,7 +70,7 @@ export default function HomePage() {
               <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6">
                 <Link
                   href="#start"
-                  className="inline-flex items-center gap-3 rounded-lg bg-[color:var(--color-accent)] pl-2 pr-7 h-14 text-base font-medium text-[color:var(--color-accent-foreground)] hover:bg-[color:var(--color-accent-hover)] transition-colors"
+                  className="inline-flex items-center gap-3 rounded-lg bg-[color:var(--color-cta)] pl-2 pr-7 h-14 text-base font-medium text-[color:var(--color-cta-foreground)] hover:bg-[color:var(--color-cta-hover)] transition-colors"
                 >
                   <Image
                     src="/about/emily-headshot.webp"
@@ -230,7 +234,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/5] max-w-md rounded-lg overflow-hidden border border-[color:var(--color-border)] bg-[color:var(--color-card)]">
                 <Image
                   src="/about/emily-headshot.webp"
-                  alt="Emily Farmer, founder and lead designer of Create Media Group."
+                  alt="Emily Farmer, founder and lead designer of Create."
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
                   className="object-cover"

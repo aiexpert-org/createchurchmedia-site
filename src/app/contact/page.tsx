@@ -7,7 +7,7 @@ import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with Emily Farmer at Create Media Group. Email ${siteConfig.contact.email} or call ${siteConfig.contact.phone}. Replies within one business day.`,
+  description: `Get in touch with Emily Farmer at Create. Email ${siteConfig.contact.email} or call ${siteConfig.contact.phone}. Replies within one business day.`,
   alternates: { canonical: "/contact" },
 };
 
