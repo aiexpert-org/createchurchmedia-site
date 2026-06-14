@@ -1,109 +1,110 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { Container } from "@/components/container";
-import { Section, Eyebrow } from "@/components/section";
-import { ButtonLink } from "@/components/button";
-import {
-  portfolioCategories,
-  portfolioItems,
-  getPortfolioByCategory,
-} from "@/lib/portfolio";
+import type { Metadata } from 'next'
+import Image from 'next/image'
+
+import { Container } from '@/components/Container'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { PageIntro } from '@/components/PageIntro'
+import { SectionIntro } from '@/components/SectionIntro'
+import { ContactBlock } from '@/components/ContactBlock'
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: 'Portfolio',
   description:
-    "Selected work for churches. Sermon series art, social systems, announcements, signage, kids and youth, logos and brand systems.",
-  alternates: { canonical: "/portfolio" },
-};
+    'See the work. Sermon series, branding, social media, announcements and signage designed by Emily Farmer for churches across the country.',
+}
+
+type Piece = {
+  src: string
+  alt: string
+  category: 'Sermon series' | 'Announcement' | 'Logos'
+}
+
+const PIECES: Piece[] = [
+  { src: '/portfolio/sermon-malachi.webp', alt: 'Sermon series art for a Malachi series', category: 'Sermon series' },
+  { src: '/portfolio/sermon-love-your-neighbor.webp', alt: 'Sermon series art for Love Your Neighbor', category: 'Sermon series' },
+  { src: '/portfolio/sermon-joy-in-every-season.webp', alt: 'Sermon series art for Joy in Every Season', category: 'Sermon series' },
+  { src: '/portfolio/sermon-matters-of-the-heart.webp', alt: 'Sermon series art for Matters of the Heart', category: 'Sermon series' },
+  { src: '/portfolio/sermon-drive-in-church.webp', alt: 'Drive-in church sermon graphic', category: 'Sermon series' },
+  { src: '/portfolio/sermon-me-i-want-to-be.webp', alt: 'Sermon series art for Me I Want To Be', category: 'Sermon series' },
+  { src: '/portfolio/sermon-foster-care-christmas.webp', alt: 'Sermon series art for Foster Care Christmas', category: 'Sermon series' },
+  { src: '/portfolio/sermon-faq.webp', alt: 'Sermon series FAQ graphic', category: 'Sermon series' },
+  { src: '/portfolio/announcements-baptism.webp', alt: 'Baptism Sunday announcement graphic', category: 'Announcement' },
+  { src: '/portfolio/announcements-easter-services.webp', alt: 'Easter services announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-21-day-focus.webp', alt: '21 Day Focus announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-spring-slides.webp', alt: 'Spring announcement slide', category: 'Announcement' },
+  { src: '/portfolio/announcements-welcome-dinner.webp', alt: 'Welcome dinner announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-men-made-strong.webp', alt: 'Men Made Strong ministry announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-connection-sunday.webp', alt: 'Connection Sunday announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-food-pantry.webp', alt: 'Food Pantry announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-clothing-drive.webp', alt: 'Clothing drive announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-august-bbq.webp', alt: 'August BBQ announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-follow-the-leader.webp', alt: 'Follow the Leader kids ministry announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-virtual-group.webp', alt: 'Virtual small group announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-garage.webp', alt: 'Garage event announcement', category: 'Announcement' },
+  { src: '/portfolio/announcements-slide-shot.webp', alt: 'Worship slide announcement', category: 'Announcement' },
+  { src: '/portfolio/logos-logo-1.webp', alt: 'Church logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-2.webp', alt: 'Church sub-brand logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-3.webp', alt: 'Church logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-4.webp', alt: 'Church ministry logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-5.webp', alt: 'Church logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-6.webp', alt: 'Church logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-7.webp', alt: 'Church logo design', category: 'Logos' },
+  { src: '/portfolio/logos-logo-8.webp', alt: 'Church logo design', category: 'Logos' },
+]
 
 export default function PortfolioPage() {
   return (
     <>
-      <Section className="pt-16 pb-10">
-        <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>Portfolio</Eyebrow>
-            <h1 className="mt-5 font-serif text-[length:var(--text-display)] leading-[1.0] tracking-tight">
-              Selected work,
-              <br />
-              <span className="font-serif-italic">church by church.</span>
-            </h1>
-            <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              A slice of {portfolioItems.length} pieces of work for churches.
-              Sermon series, ministry brands, social systems, announcements,
-              signage, and logos. New work lands here as it ships.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <PageIntro eyebrow="Portfolio" title="See the work.">
+        <p>
+          Sermon series, branding, social media, announcements and signage.
+        </p>
+      </PageIntro>
 
-      {/* Sections by category - card chrome around tiles softened to rounded-lg */}
-      {portfolioCategories.map((cat) => {
-        const items = getPortfolioByCategory(cat.slug);
-        if (items.length === 0) return null;
-        return (
-          <Section
-            key={cat.slug}
-            className="pt-2 pb-12 scroll-mt-24"
+      <Container className="mt-16 sm:mt-24">
+        <FadeInStagger faster>
+          <ul
+            role="list"
+            className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3"
           >
-            <Container>
-              <div id={cat.slug} className="scroll-mt-24 flex items-baseline justify-between gap-4 border-b border-[color:var(--color-border)] pb-4">
-                <h2 className="font-serif text-3xl sm:text-4xl tracking-tight text-[color:var(--color-ink)]">
-                  {cat.name}
-                </h2>
-                <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
-                  {items.length} pieces
-                </p>
-              </div>
-              <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {items.map((item, idx) => (
-                  <li key={`${item.file}-${idx}`}>
-                    <article className="group rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] overflow-hidden transition-colors hover:border-[color:var(--color-accent)]/60">
-                      <div className="relative aspect-[4/3] bg-[color:var(--color-surface)]">
-                        <Image
-                          src={item.file}
-                          alt={`${item.title}. Designed by Emily Farmer for a church.`}
-                          fill
-                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="p-5">
-                        <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
-                          {cat.name}
-                        </p>
-                        <h3 className="mt-1.5 font-serif text-lg tracking-tight text-[color:var(--color-ink)]">
-                          {item.title}
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                ))}
-              </ul>
-            </Container>
-          </Section>
-        );
-      })}
+            {PIECES.map((piece, i) => (
+              <FadeIn as="li" key={piece.src}>
+                <figure className="group relative overflow-hidden rounded-2xl bg-neutral-100 ring-1 ring-neutral-900/5">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={piece.src}
+                      alt={piece.alt}
+                      fill
+                      sizes="(min-width: 1024px) 30vw, 50vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                      priority={i < 3}
+                    />
+                  </div>
+                  <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-neutral-950/70 to-transparent px-4 py-3 text-xs font-medium text-white opacity-0 transition group-hover:opacity-100">
+                    <span>{piece.category}</span>
+                  </figcaption>
+                </figure>
+              </FadeIn>
+            ))}
+          </ul>
+        </FadeInStagger>
+      </Container>
 
-      <Section className="bg-[color:var(--color-surface)]">
-        <Container>
-          <div className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-10 lg:p-14 flex flex-col lg:flex-row gap-10 lg:items-center lg:justify-between">
-            <div className="max-w-xl">
-              <Eyebrow>Looking for specifics?</Eyebrow>
-              <h2 className="mt-3 font-serif text-[length:var(--text-h2)] leading-[1.1] tracking-tight">
-                Tell me what you&rsquo;d like to see.
-              </h2>
-              <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
-                Happy to send specific samples. Sermon series, kids branding,
-                full social systems, whatever fits what your church needs.
-              </p>
-            </div>
-            <ButtonLink href="/contact" variant="primary" size="lg">
-              Request samples
-            </ButtonLink>
-          </div>
-        </Container>
-      </Section>
+      <SectionIntro
+        eyebrow="More on request"
+        title="Tell me what you’d like to see."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          I’m happy to send specific samples. Let me know what you are looking for.
+        </p>
+      </SectionIntro>
+
+      <ContactBlock heading="Tell me about your church.">
+        <p>
+          Send me a message about your church and I will reply very quickly. Onboarding is fast and effortless so the design work can start right away.
+        </p>
+      </ContactBlock>
     </>
-  );
+  )
 }

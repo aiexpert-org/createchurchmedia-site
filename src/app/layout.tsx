@@ -1,75 +1,62 @@
-import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
-import { siteConfig } from "@/lib/site-config";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import { OrganizationJsonLd, LocalBusinessJsonLd } from "@/components/json-ld";
-import "./globals.css";
+import type { Metadata } from 'next'
+import localFont from 'next/font/local'
 
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT"],
-});
+import '@/styles/tailwind.css'
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+import { SiteHeader } from '@/components/SiteHeader'
+import { SiteFooter } from '@/components/SiteFooter'
+import { OrganizationJsonLd } from '@/components/JsonLd'
+import { siteConfig } from '@/lib/site-config'
+
+const monaSans = localFont({
+  src: '../fonts/Mona-Sans.var.woff2',
+  display: 'block',
+  variable: '--font-mona-sans',
+  weight: '200 900',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name}. ${siteConfig.tagline}`,
-    template: `%s · ${siteConfig.name}`,
+    template: `%s — ${siteConfig.brand}`,
+    default: `${siteConfig.brand} — Unlimited graphic design for churches`,
   },
   description: siteConfig.description,
-  alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name}. ${siteConfig.tagline}`,
+    type: 'website',
+    title: `${siteConfig.brand} — Unlimited graphic design for churches`,
     description: siteConfig.description,
+    siteName: siteConfig.brand,
+    locale: 'en_US',
+    url: siteConfig.url,
   },
   twitter: {
-    card: "summary_large_image",
-    title: `${siteConfig.name}. ${siteConfig.tagline}`,
+    card: 'summary_large_image',
+    title: `${siteConfig.brand} — Unlimited graphic design for churches`,
     description: siteConfig.description,
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-    },
+  alternates: {
+    canonical: '/',
   },
-  authors: [{ name: siteConfig.owner.name }],
-  creator: siteConfig.owner.name,
-  publisher: siteConfig.legalName,
-};
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable}`}
-    >
-      <body className="antialiased flex min-h-screen flex-col">
+    <html lang="en" className={`${monaSans.variable} h-full bg-white text-base antialiased`}>
+      <body className="flex min-h-full flex-col font-sans text-neutral-950 selection:bg-[var(--color-cta)] selection:text-neutral-950">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-neutral-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+        >
+          Skip to content
+        </a>
         <OrganizationJsonLd />
-        <LocalBusinessJsonLd />
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-auto pt-28 sm:pt-32">
+          {children}
+        </main>
         <SiteFooter />
       </body>
     </html>
-  );
+  )
 }
