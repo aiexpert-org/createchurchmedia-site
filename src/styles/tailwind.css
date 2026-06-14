@@ -68,6 +68,52 @@ h4 {
   }
 }
 
+/* Trust-band marquee (src/components/ChurchLogos.tsx).
+   The logo array is rendered twice inside each track, so translating the track
+   by -50% lands exactly on the start of the second copy for a seamless loop. */
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+.marquee-ltr {
+  animation-name: marquee-ltr;
+}
+.marquee-rtl {
+  animation-name: marquee-rtl;
+}
+/* Pause both rows when the user hovers anywhere in the band so logos are
+   clickable, and pause the focused row for keyboard users. */
+.marquee-band:hover .marquee-track,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
 /* Article body styling for /resources/[slug] pages */
 .prose-blog {
   color: #404040;

@@ -29,5 +29,6 @@ export const navItems = [
   { href: '/how-it-works', label: 'How it works' },
   { href: '/subscription', label: 'Subscription' },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: '/case-studies', label: 'Case Studies' },
   { href: '/resources', label: 'Resources' },
 ] as const

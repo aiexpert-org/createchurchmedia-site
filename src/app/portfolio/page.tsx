@@ -1,22 +1,15 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { ContactBlock } from '@/components/ContactBlock'
+import { PortfolioGallery, type Piece } from '@/components/PortfolioGallery'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
   description:
     'See the work. Sermon series, branding, social media, announcements and signage designed by Emily Farmer for churches across the country.',
-}
-
-type Piece = {
-  src: string
-  alt: string
-  category: 'Sermon series' | 'Announcement' | 'Logos'
 }
 
 const PIECES: Piece[] = [
@@ -62,32 +55,7 @@ export default function PortfolioPage() {
       </PageIntro>
 
       <Container className="mt-16 sm:mt-24">
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3"
-          >
-            {PIECES.map((piece, i) => (
-              <FadeIn as="li" key={piece.src}>
-                <figure className="group relative overflow-hidden rounded-2xl bg-neutral-100 ring-1 ring-neutral-900/5">
-                  <div className="relative aspect-square">
-                    <Image
-                      src={piece.src}
-                      alt={piece.alt}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, 50vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.02]"
-                      priority={i < 3}
-                    />
-                  </div>
-                  <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-neutral-950/70 to-transparent px-4 py-3 text-xs font-medium text-white opacity-0 transition group-hover:opacity-100">
-                    <span>{piece.category}</span>
-                  </figcaption>
-                </figure>
-              </FadeIn>
-            ))}
-          </ul>
-        </FadeInStagger>
+        <PortfolioGallery pieces={PIECES} />
       </Container>
 
       <SectionIntro

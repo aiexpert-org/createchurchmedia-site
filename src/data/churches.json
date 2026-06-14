@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "calvary-fort-worth",
+    "name": "Calvary Fort Worth",
+    "url": "https://calvaryftw.com",
+    "location": "Fort Worth, TX",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Social graphics", "Announcements"],
+    "excerpt": "Weekly sermon series art and social graphics that keep a growing Fort Worth congregation looking like one church across every screen."
+  },
+  {
+    "slug": "centerpoint-utah",
+    "name": "Centerpoint Church",
+    "url": "https://centerpointutah.org",
+    "location": "Utah",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Sermon series art", "Social graphics"],
+    "excerpt": "A clean cross mark and a consistent visual system that carries Centerpoint's brand from the lobby to the feed."
+  },
+  {
+    "slug": "central-coast-young-adults",
+    "name": "Central Coast Young Adults",
+    "url": null,
+    "location": "California",
+    "status": "past",
+    "engagement": "Past project",
+    "workTypes": ["Event branding", "Social graphics"],
+    "excerpt": "Bold event identity and social campaigns built to reach young adults on the Central Coast where they already spend their attention."
+  },
+  {
+    "slug": "community-christian-church",
+    "name": "Community Christian Church",
+    "url": "https://communitycc.net",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Announcements", "Signage"],
+    "excerpt": "The C3 mark anchors a full announcement and signage system so every weekend touchpoint feels intentional and on-brand."
+  },
+  {
+    "slug": "cornerstone-buzz",
+    "name": "Cornerstone Church",
+    "url": "https://cornerstonebuzz.org",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Social graphics", "Announcements"],
+    "excerpt": "Series art and weekly social that give Cornerstone a steady, recognizable rhythm people can follow from week to week."
+  },
+  {
+    "slug": "cornerstone-manteca",
+    "name": "Cornerstone Manteca",
+    "url": "https://cornerstonemanteca.com",
+    "location": "Manteca, CA",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Sermon series art", "Print"],
+    "excerpt": "A refined ring mark and matching sermon and print collateral that hold up across a busy weekend production."
+  },
+  {
+    "slug": "eastown-church",
+    "name": "Eastown Church",
+    "url": "https://eastown.church",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Social graphics", "Branding"],
+    "excerpt": "A confident wordmark and ongoing series design that keep Eastown feeling current without losing its identity."
+  },
+  {
+    "slug": "faith-bible-ok",
+    "name": "Faith Bible Church",
+    "url": "https://faithbibleok.com",
+    "location": "Oklahoma",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Announcements", "Social graphics", "Signage"],
+    "excerpt": "Clear announcement and signage design that helps an Oklahoma congregation know what's happening and where to go."
+  },
+  {
+    "slug": "faith-community-fellowship",
+    "name": "Faith Community Fellowship",
+    "url": "https://fcffamily.com",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Sermon series art", "Social graphics"],
+    "excerpt": "A family-focused brand system and weekly series art that make a multi-ministry church feel like one connected family."
+  },
+  {
+    "slug": "fcc-santa-maria",
+    "name": "First Christian Church Santa Maria",
+    "url": "https://fccsantamaria.org",
+    "location": "Santa Maria, CA",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Branding", "Social graphics", "Print"],
+    "excerpt": "A full design partnership for FCC Santa Maria, from sermon series art and social to print and signage across the building."
+  },
+  {
+    "slug": "for-the-one-church",
+    "name": "For The One Church",
+    "url": "https://fortheone.church",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Kids ministry", "Social graphics"],
+    "excerpt": "Series art plus a distinct kids-ministry sub-brand that give For The One a cohesive look for every age in the room."
+  },
+  {
+    "slug": "holland-chapel",
+    "name": "Holland Chapel",
+    "url": null,
+    "location": "United States",
+    "status": "past",
+    "engagement": "Past project",
+    "workTypes": ["Branding", "Print"],
+    "excerpt": "A clean wordmark and print collateral built to fit the character of a long-standing chapel community."
+  },
+  {
+    "slug": "ignite-church",
+    "name": "Ignite Church",
+    "url": "https://ignitechurch.org",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Sermon series art", "Social graphics"],
+    "excerpt": "A flame-mark identity and energetic series art that match the pace of a church built around momentum."
+  },
+  {
+    "slug": "lifepoint-church",
+    "name": "Lifepoint Church",
+    "url": "https://lifepointnow.com",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Social graphics", "Announcements"],
+    "excerpt": "Ongoing series and social design that keep Lifepoint's weekend communication clear, current, and consistent."
+  },
+  {
+    "slug": "northpointe-community-church",
+    "name": "Northpointe Community Church",
+    "url": "https://northpointecc.org",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Sermon series art", "Signage"],
+    "excerpt": "A polished brand and wayfinding system that help a growing community church feel established and easy to navigate."
+  },
+  {
+    "slug": "sanibel-community-church",
+    "name": "Sanibel Community Church",
+    "url": "https://sanibelchurch.com",
+    "location": "Sanibel, FL",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Print", "Social graphics"],
+    "excerpt": "Brand and print design with an island sensibility, built for a close-knit Sanibel congregation and its visitors."
+  },
+  {
+    "slug": "shelby-church",
+    "name": "Shelbyville Community Church",
+    "url": "https://shelbychurch.org",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Announcements", "Social graphics"],
+    "excerpt": "Series art and announcement design that keep a community church looking sharp without adding work to the staff."
+  },
+  {
+    "slug": "swg-leadership",
+    "name": "SWG Leadership",
+    "url": "https://swgleadership.com",
+    "location": "United States",
+    "status": "past",
+    "engagement": "Past project",
+    "workTypes": ["Branding", "Social graphics"],
+    "excerpt": "Leadership-brand identity and social design for a ministry focused on developing the next set of church leaders."
+  },
+  {
+    "slug": "the-crossing-church",
+    "name": "The Crossing Church",
+    "url": "https://thecrossingchurch.info",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Sermon series art", "Social graphics", "Announcements"],
+    "excerpt": "A steady stream of series art and social graphics that give The Crossing a consistent presence every weekend."
+  },
+  {
+    "slug": "the-grove-church",
+    "name": "The Grove Church",
+    "url": "https://grove.church",
+    "location": "United States",
+    "status": "active",
+    "engagement": "Ongoing",
+    "workTypes": ["Branding", "Sermon series art", "Social graphics", "Signage"],
+    "excerpt": "A high-resolution brand and full series system that let The Grove scale its design without losing a unified look."
+  }
+]
