@@ -1,274 +1,256 @@
-import type { Metadata } from "next";
-import { Container } from "@/components/container";
-import { Section, Eyebrow } from "@/components/section";
-import { ButtonLink } from "@/components/button";
-import { ServiceJsonLd, FaqJsonLd } from "@/components/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import type { Metadata } from 'next'
+
+import { Container } from '@/components/Container'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { PageIntro } from '@/components/PageIntro'
+import { SectionIntro } from '@/components/SectionIntro'
+import { Border } from '@/components/Border'
+import { Button } from '@/components/Button'
+import { ContactBlock } from '@/components/ContactBlock'
+import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
+import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
-  title: "Subscription and pricing",
-  description: `Unlimited graphic design for churches. Flat $${siteConfig.pricing.monthly.amount} a month, or $${siteConfig.pricing.annual.amount.toLocaleString()} a year (twelve for the price of eleven). Sermon series, social, signage, kids and youth, announcements, brand.`,
-  alternates: { canonical: "/subscription" },
-};
+  title: 'Subscription',
+  description:
+    'One flat fee. Unlimited graphic design for churches. $997 a month or $9,997 annual prepay. Same designer, same access, same turn around times.',
+}
 
-const subscriptionFaqs = [
+const PLAN_BULLETS = [
+  'One designer.',
+  'Unlimited requests.',
+  'Unlimited revisions.',
+  'Same-day rush available.',
+  'Source files included.',
+]
+
+const CATEGORIES = [
   {
-    q: "What does “unlimited” actually mean?",
-    a: "Unlimited requests, unlimited revisions, no point system, no per-project pricing. There's a single shared queue with one designer (Emily). She works the queue one item at a time. Most small requests go same week, often same day. Same-day rush is available when you flag the urgency. Larger pieces like full sermon series or brand systems get the runway they need.",
+    title: 'Sermon series',
+    body:
+      'Sermon series packages, all sizes included, custom built around your message and your church brand.',
   },
   {
-    q: "Is there a contract?",
-    a: "Month-to-month for the monthly tier. Pause or cancel anytime. Your files are yours. The annual prepay tier is 12 months upfront for the price of 11.",
+    title: 'Announcements',
+    body:
+      'Weekly screen graphics for everything happening at your church. Events, baptisms, conferences, you name it. All sizes offered for every platform.',
   },
   {
-    q: "What if I have a slow month?",
-    a: "Pause the subscription. We don't bill you for months you're not using. Pick it back up when you ramp up again for a series, event, or busy season.",
+    title: 'Logos and branding',
+    body:
+      'Church logos, color palettes, sub-brands for Youth, Kids, Women, Men, Missions, and more. Full brand identity built to last.',
   },
   {
-    q: "What about file ownership?",
-    a: "You own everything I make for you. Final files, source files, Figma, brand assets. They live in a shared folder you control. If we ever part ways, you keep the library.",
+    title: 'Social media',
+    body:
+      'Social media graphics and story templates. On-brand across every platform.',
   },
   {
-    q: "Will I work with the same designer every time?",
-    a: "Yes. That's the whole point. Emily is the designer on every request. No account managers, no rotating cast of contractors, no “let me hand this off to our specialist.”",
+    title: 'Youth and Kids',
+    body:
+      'Bright, on-brand graphics for your kids and youth ministries. Camp shirts, summer series, parent handouts, hallway signage.',
   },
   {
-    q: "Do you do websites?",
-    a: "Brand and design system work yes; full custom site builds no. I'll happily make sure your site visuals are on-brand, and I work with a few church-friendly web developers I can refer you to if you need a full rebuild.",
+    title: 'Signage, mailers and print',
+    body:
+      'Lobby signs, exterior banners, large-format prints, business cards. Print-ready files formatted for your printer.',
+  },
+]
+
+const FAQS: { question: string; answer: string }[] = [
+  {
+    question: 'What does "unlimited" actually mean?',
+    answer:
+      'Unlimited requests, unlimited revisions, no per-project pricing. There’s a single shared queue with one designer. We work together until you are completely happy with the finished project. Same-day rush is available when you flag the urgency.',
   },
   {
-    q: "How do I send requests?",
-    a: "However works for your team. Most churches use a shared Notion or Google Doc. Some just text or Slack me. I'll match your pace. What matters is one place to see the queue, not a specific app.",
+    question: 'Is there a contract?',
+    answer:
+      'There is a month-to-month option. The annual prepay tier is 12 months upfront and saves you almost $2,000.',
   },
   {
-    q: "What happens if you take on too many churches?",
-    a: "I don't. I cap the number of churches on subscription so that every church gets real attention. When the roster is full, new churches go on a short waitlist.",
+    question: 'What if I have a slow month?',
+    answer:
+      'Usually churches have slower months and busier months, around holidays or big events. I have found that it generally ends up balancing out by the end of the year.',
   },
-];
+  {
+    question: 'What about file ownership?',
+    answer:
+      'You own everything I design for you. Final files, source files, brand assets. If we ever part ways, you keep the library.',
+  },
+  {
+    question: 'Will I work with the same designer every time?',
+    answer:
+      'Yes, I am the designer on every request. No account managers, no rotating cast of contractors, no “let me hand this off to our specialist.”',
+  },
+  {
+    question: 'Do you do websites?',
+    answer:
+      'Brand and design system work, yes. Full custom site builds, no. I’ll happily make sure your site visuals are on-brand, and I work with a few church-friendly web developers I can refer you to if you need a full rebuild.',
+  },
+  {
+    question: 'How do I send requests?',
+    answer:
+      'However works for your team. Some churches already have platforms in place like Basecamp, and if so, I am happy to jump on your team threads. Most churches just email me, putting the title of the project in the Email Subject, making it easy to go back and find projects conversations. I will match your rhythm and flow.',
+  },
+  {
+    question: 'Can anyone on our staff request a project from Emily, or does she prefer one point-person to communicate through?',
+    answer:
+      'I have worked both ways depending on the preference of the church. I am happy to communicate with all your department heads on their individual design needs, or filter through one point-person if that is easier for your staff.',
+  },
+]
+
+function PriceCard({
+  header,
+  price,
+  period,
+  tagline,
+  featured = false,
+}: {
+  header: string
+  price: string
+  period: string
+  tagline: string
+  featured?: boolean
+}) {
+  return (
+    <FadeIn
+      className={
+        featured
+          ? 'rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900'
+          : 'rounded-3xl bg-white p-10 text-neutral-950 shadow-sm ring-1 ring-neutral-200'
+      }
+    >
+      <p
+        className={
+          featured
+            ? 'font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]'
+            : 'font-display text-sm font-semibold uppercase tracking-wider text-neutral-500'
+        }
+      >
+        {header}
+      </p>
+      <p className="mt-6 flex items-baseline gap-2">
+        <span className="font-display text-5xl font-semibold tracking-tight">
+          {price}
+        </span>
+        <span className={featured ? 'text-base text-neutral-300' : 'text-base text-neutral-500'}>
+          / {period}
+        </span>
+      </p>
+      <p className={featured ? 'mt-4 text-base text-neutral-300' : 'mt-4 text-base text-neutral-600'}>
+        {tagline}
+      </p>
+      <ul role="list" className="mt-8 space-y-3 text-base">
+        {PLAN_BULLETS.map((bullet) => (
+          <li key={bullet} className="flex items-start gap-3">
+            <span
+              aria-hidden="true"
+              className="mt-1 inline-block size-2 rounded-full bg-[var(--color-cta)]"
+            />
+            <span>{bullet}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-10">
+        <Button
+          href={siteConfig.bookingUrl}
+          variant={featured ? 'primary' : 'secondary'}
+          className="w-full"
+        >
+          Book a call with Emily
+        </Button>
+      </div>
+    </FadeIn>
+  )
+}
 
 export default function SubscriptionPage() {
   return (
     <>
       <ServiceJsonLd />
-      <FaqJsonLd items={subscriptionFaqs} />
+      <FaqJsonLd faqs={FAQS} />
 
-      <Section className="pt-16 pb-12">
-        <Container>
-          <div className="max-w-3xl">
-            <h1 className="font-serif font-normal text-[44px] md:text-[64px] leading-[1.06] tracking-[-0.02em] text-[color:var(--color-ink)] text-balance max-w-[18ch]">
-              One flat fee. Everything your church needs designed.
-            </h1>
-            <p className="mt-7 text-lg sm:text-xl text-[color:var(--color-ink-soft)] leading-relaxed">
-              No per-project pricing. No ticket points. No upsells on revisions.
-              Just a flat monthly subscription and a designer who actually knows
-              your church.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <PageIntro eyebrow="Subscription" title="One flat fee.">
+        <p className="text-2xl text-neutral-700">Everything your church needs designed.</p>
+        <p className="mt-4">
+          No long wait times. No per-project pricing. No upsells on revisions. Just a flat monthly subscription and a designer who actually knows your church.
+        </p>
+      </PageIntro>
 
-      {/* PRICING TIERS - Sparkle badge dropped, rounded-lg, withArrow removed */}
-      <Section className="pt-0">
-        <Container>
-          <div className="grid lg:grid-cols-2 gap-5">
-            {/* Monthly */}
-            <article className="rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-8 lg:p-10">
-              <header className="flex items-baseline justify-between">
-                <h2 className="font-serif text-3xl tracking-tight text-[color:var(--color-ink)]">
-                  Monthly
-                </h2>
-                <span className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-muted)]">
-                  Most flexible
-                </span>
-              </header>
-              <p className="mt-6 font-serif text-6xl tracking-tight text-[color:var(--color-ink)]">
-                ${siteConfig.pricing.monthly.amount}
-                <span className="text-base text-[color:var(--color-muted)] font-sans font-normal">
-                  /month
-                </span>
-              </p>
-              <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
-                {siteConfig.pricing.monthly.blurb}
-              </p>
-              <Includes />
-              <ButtonLink
-                href="/contact?tier=monthly"
-                variant="ink"
-                size="lg"
-                className="mt-8 w-full"
-              >
-                Start monthly
-              </ButtonLink>
-            </article>
+      {/* Pricing cards */}
+      <Container className="mt-16 sm:mt-20">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <PriceCard
+            header="Monthly"
+            price="$997"
+            period="month"
+            tagline="Pay month to month. Every file is yours to keep."
+          />
+          <PriceCard
+            header="Annual prepay"
+            price="$9,997"
+            period="year"
+            tagline="Pay for the year and save almost $2,000. Same designer, same access, same turn around times."
+            featured
+          />
+        </div>
+      </Container>
 
-            {/* Annual prepay */}
-            <article className="rounded-lg border-2 border-[color:var(--color-accent)] bg-[color:var(--color-card)] p-8 lg:p-10">
-              <header className="flex items-baseline justify-between">
-                <h2 className="font-serif text-3xl tracking-tight text-[color:var(--color-ink)]">
-                  Annual prepay
-                </h2>
-                <span className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
-                  Save ${siteConfig.pricing.annual.savings}
-                </span>
-              </header>
-              <p className="mt-6 font-serif text-6xl tracking-tight text-[color:var(--color-ink)]">
-                ${siteConfig.pricing.annual.amount.toLocaleString()}
-                <span className="text-base text-[color:var(--color-muted)] font-sans font-normal">
-                  /year
-                </span>
-              </p>
-              <p className="mt-1 text-sm text-[color:var(--color-accent)]">
-                ~${siteConfig.pricing.annual.perMonth} a month. Save almost
-                $2,000 on the year.
-              </p>
-              <p className="mt-3 text-[color:var(--color-ink-soft)] leading-relaxed">
-                {siteConfig.pricing.annual.blurb}
-              </p>
-              <Includes />
-              <ButtonLink
-                href="/contact?tier=annual"
-                variant="primary"
-                size="lg"
-                className="mt-8 w-full"
-              >
-                Start annual
-              </ButtonLink>
-            </article>
-          </div>
-
-          <p className="mt-8 text-center text-sm text-[color:var(--color-muted)]">
-            Both tiers include the same designer, the same access, the same
-            turnaround. Annual saves you almost $2,000.
-          </p>
-        </Container>
-      </Section>
-
-      {/* Voice corpus Translation 4 — why one-designer works. Pulled from the cold template */}
-      {/* and How-It-Works banner; positioned as a quiet editorial moment before the service list. */}
-      <Section>
-        <Container>
-          <div className="max-w-3xl">
-            <p className="font-serif text-2xl md:text-3xl leading-[1.3] text-[color:var(--color-ink)]">
-              I only work for a few churches at the same time. That&rsquo;s how
-              I can get things back to you same day, and that&rsquo;s why
-              you&rsquo;ll never wait behind a queue. When you send me a
-              project, I&rsquo;m the one designing it. The files are yours to
-              keep, and they will never be shared with any other church.
-            </p>
-          </div>
-        </Container>
-      </Section>
-
-      {/* SERVICES DETAIL - card chrome stripped, rule-divided */}
-      <Section className="bg-[color:var(--color-surface)]">
-        <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>Included</Eyebrow>
-            <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
-              Six service categories,
-              <br />
-              <span className="font-serif-italic">all under one subscription.</span>
-            </h2>
-          </div>
-
-          <ul className="mt-12 grid sm:grid-cols-2 gap-x-10">
-            {siteConfig.services.map((service) => (
-              <li
-                key={service.slug}
-                id={service.slug}
-                className="border-t border-[color:var(--color-border)] py-6 scroll-mt-24"
-              >
-                <h3 className="font-serif text-2xl tracking-tight text-[color:var(--color-ink)]">
-                  {service.name}
-                </h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-[color:var(--color-ink-soft)]">
-                  {service.blurb}
-                </p>
-              </li>
+      {/* Categories */}
+      <SectionIntro
+        eyebrow="Categories"
+        title="Many categories, all under one subscription."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      />
+      <Container className="mt-16">
+        <FadeInStagger faster>
+          <ul role="list" className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+            {CATEGORIES.map((cat) => (
+              <FadeIn as="li" key={cat.title}>
+                <Border className="pt-6">
+                  <h3 className="mt-6 font-display text-xl font-semibold tracking-tight text-neutral-950">
+                    {cat.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-neutral-600">{cat.body}</p>
+                </Border>
+              </FadeIn>
             ))}
           </ul>
-        </Container>
-      </Section>
+        </FadeInStagger>
+      </Container>
 
-      {/* FAQ - chrome dropped commit 3. TODO: rewrite answers in Emily voice per corpus. */}
-      <Section>
-        <Container>
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
-            <div className="lg:sticky lg:top-24">
-              <Eyebrow>FAQ</Eyebrow>
-              <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight">
-                Things pastors ask.
-              </h2>
-              <p className="mt-5 text-[color:var(--color-ink-soft)] leading-relaxed">
-                Missing something?{" "}
-                <a
-                  className="text-[color:var(--color-accent)] underline underline-offset-4"
-                  href={`mailto:${siteConfig.contact.email}`}
-                >
-                  Just email me.
-                </a>
-              </p>
-            </div>
-            <ul className="divide-y divide-[color:var(--color-border)]">
-              {subscriptionFaqs.map((item) => (
-                <li
-                  key={item.q}
-                  className="py-6"
-                >
-                  <h3 className="font-serif text-xl tracking-tight text-[color:var(--color-ink)]">
-                    {item.q}
-                  </h3>
-                  <p className="mt-2 text-[color:var(--color-ink-soft)] leading-relaxed">
-                    {item.a}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </Section>
+      {/* FAQ */}
+      <SectionIntro
+        eyebrow="FAQ"
+        title="Common questions, answered honestly."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      />
+      <Container className="mt-16">
+        <FadeIn>
+          <dl className="divide-y divide-neutral-200">
+            {FAQS.map((faq) => (
+              <div
+                key={faq.question}
+                className="grid grid-cols-1 gap-6 py-8 lg:grid-cols-12"
+              >
+                <dt className="lg:col-span-5 font-display text-lg font-semibold tracking-tight text-neutral-950">
+                  {faq.question}
+                </dt>
+                <dd className="lg:col-span-7 text-base leading-7 text-neutral-700">
+                  {faq.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </FadeIn>
+      </Container>
 
-      {/* FINAL CTA - dark block deleted, replaced with cream-substrate quiet close */}
-      <Section className="bg-[color:var(--color-surface)]">
-        <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>Next step</Eyebrow>
-            <h2 className="mt-4 font-serif text-[length:var(--text-h1)] leading-[1.05] tracking-tight text-[color:var(--color-ink)]">
-              Start the conversation.
-            </h2>
-            <p className="mt-5 text-lg text-[color:var(--color-ink-soft)] leading-relaxed">
-              Send me a note about your church and I&rsquo;ll reply within a
-              day. Onboarding usually takes a week.
-            </p>
-            <div className="mt-8">
-              <ButtonLink href="/contact" variant="primary" size="lg">
-                Start the conversation
-              </ButtonLink>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <ContactBlock heading="Start the conversation.">
+        <p>
+          Send me a message about your church and I will reply very quickly. Onboarding is fast and effortless so the design work can start right away.
+        </p>
+      </ContactBlock>
     </>
-  );
-}
-
-function Includes() {
-  const items = [
-    "One dedicated designer (Emily)",
-    "Unlimited requests",
-    "Unlimited revisions",
-    "I can even get things back to you same day.",
-    "All six service categories included",
-    "Source files and brand library",
-    "Pause anytime",
-  ];
-  return (
-    <ul className="mt-7 space-y-2.5">
-      {items.map((item) => (
-        <li key={item} className="text-sm text-[color:var(--color-ink)] leading-relaxed">
-          {item}
-        </li>
-      ))}
-    </ul>
-  );
+  )
 }
