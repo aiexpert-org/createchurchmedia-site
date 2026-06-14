@@ -8,7 +8,6 @@ export function OrganizationJsonLd() {
     alternateName: siteConfig.shortBrand,
     url: siteConfig.url,
     email: siteConfig.email,
-    telephone: siteConfig.phoneTel,
     description: siteConfig.description,
     address: {
       '@type': 'PostalAddress',
