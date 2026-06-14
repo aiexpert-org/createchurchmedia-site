@@ -41,7 +41,7 @@ export default async function CaseStudiesPage() {
             className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             {studies.map((study) => (
-              <FadeIn as="li" key={study.slug}>
+              <FadeIn as="li" key={study.slug} scaleIn>
                 <Link
                   href={`/case-studies/${study.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-neutral-900/5 transition hover:ring-neutral-900/15 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"

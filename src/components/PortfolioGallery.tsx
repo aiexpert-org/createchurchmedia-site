@@ -224,7 +224,7 @@ function CategorySection({
         className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
       >
         {visible.map((piece, i) => (
-          <FadeIn as="li" key={piece.src}>
+          <FadeIn as="li" key={piece.src} scaleIn>
             <Tile
               piece={piece}
               aspectClass={category.aspectClass}

@@ -90,7 +90,10 @@ h4 {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation-duration: 60s;
+  /* Slow, elegant drift: ~135s per full cycle so each logo gets visual real
+     estate before scrolling off. Linear so the motion reads as a continuous,
+     mechanical conveyor rather than easing in and out. */
+  animation-duration: 135s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   will-change: transform;
@@ -110,6 +113,56 @@ h4 {
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;
+    transform: none;
+  }
+}
+
+/* Lenis inertial smooth scroll (src/components/SmoothScroll.tsx).
+   Recommended base styles so Lenis owns the scroll and native sticky still
+   works for the hero parallax reveal. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Gradient-aware hero mosaic tiles (src/components/HeroMosaic.tsx,
+   HeroMosaicBackground). Tiles rest desaturated/dimmed; on hover each tile
+   lifts to a saturation + brightness scaled by its column so the leftmost
+   tiles (under the headline and CTAs) stay muted and text-legible, while the
+   rightmost tiles pop to full color. The 480ms ease-out runs on the base
+   element, so leaving a tile fades it back down with the same luxurious curve
+   (bidirectional, no snap). --hover-saturation / --hover-brightness are set
+   per tile inline from data-col. */
+.mosaic-tile-img {
+  opacity: 0.55;
+  filter: grayscale(0.85) brightness(0.95);
+  transition:
+    transform 480ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 480ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 480ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover > .mosaic-tile-img {
+  opacity: 1;
+  transform: scale(1.04);
+  filter: saturate(var(--hover-saturation, 1)) brightness(var(--hover-brightness, 1.05));
+}
+@media (prefers-reduced-motion: reduce) {
+  .mosaic-tile-img {
+    transition: none;
+  }
+  .group:hover > .mosaic-tile-img {
     transform: none;
   }
 }

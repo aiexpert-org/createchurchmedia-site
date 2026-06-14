@@ -305,6 +305,16 @@ const BG_TILES: string[] = [
   'social-smp-26', 'announcements-garage', 'sermon-series-shot-4', 'social-asset-1', 'signage-holiday-food', 'youth-shot-5', 'social-smp-40', 'announcements-slide-shot', 'sermon-series-asset', 'social-smp-10',
 ].map((s) => `/portfolio/${s}.webp`)
 
+// Per-column hover saturation + brightness for the background mosaic. Columns
+// are 0-indexed across the 10-col desktop grid; left = muted/receding,
+// right = vivid/forward.
+function hoverIntensity(col: number): { saturation: number; brightness: number } {
+  if (col <= 3) return { saturation: 0.35, brightness: 0.95 }
+  if (col <= 5) return { saturation: 0.55, brightness: 1.0 }
+  if (col <= 7) return { saturation: 0.75, brightness: 1.05 }
+  return { saturation: 1.0, brightness: 1.1 }
+}
+
 export function HeroMosaicBackground() {
   return (
     <div
@@ -312,22 +322,36 @@ export function HeroMosaicBackground() {
       aria-hidden="true"
     >
       <div className="grid h-full w-full auto-rows-fr grid-cols-6 gap-1.5 sm:grid-cols-8 lg:grid-cols-10">
-        {BG_TILES.map((src, i) => (
-          <div
-            key={`${src}-${i}`}
-            tabIndex={-1}
-            className="group pointer-events-auto relative cursor-pointer overflow-hidden rounded-sm transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
-          >
-            <Image
-              src={src}
-              alt=""
-              fill
-              sizes="(min-width: 1024px) 10vw, (min-width: 640px) 12vw, 16vw"
-              className="object-cover opacity-55 brightness-95 grayscale-[0.85] transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] group-hover:opacity-100 group-hover:brightness-105 group-hover:grayscale-0"
-              priority={i < 10}
-            />
-          </div>
-        ))}
+        {BG_TILES.map((src, i) => {
+          // Column index in the 10-col desktop layout. The leftmost columns sit
+          // under the headline/CTAs, so their hover saturation + brightness are
+          // dialed down (text stays readable); the rightmost pop to full color.
+          const col = i % 10
+          const { saturation, brightness } = hoverIntensity(col)
+          return (
+            <div
+              key={`${src}-${i}`}
+              data-col={col}
+              tabIndex={-1}
+              className="group pointer-events-auto relative cursor-pointer overflow-hidden rounded-sm transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
+              style={
+                {
+                  '--hover-saturation': saturation,
+                  '--hover-brightness': brightness,
+                } as React.CSSProperties
+              }
+            >
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 10vw, (min-width: 640px) 12vw, 16vw"
+                className="mosaic-tile-img object-cover"
+                priority={i < 10}
+              />
+            </div>
+          )
+        })}
       </div>
 
       {/* Right-to-left white gradient. Fully opaque white across the left ~35%

@@ -52,8 +52,10 @@ export default function HowItWorksPage() {
     <>
       {/* Hero with the same full-bleed portfolio mosaic + right-to-left white
           gradient used on the home page. Headline sits left where the gradient
-          keeps the tiles clean; per-tile color pop on hover. */}
-      <div className="relative isolate overflow-hidden">
+          keeps the tiles clean; per-tile color pop on hover. The hero pins
+          (md:sticky) so the dark step section scrolls up over it. */}
+      <div className="relative">
+      <div className="relative isolate overflow-hidden md:sticky md:top-0 md:z-0">
         <div className="hidden md:block">
           <HeroMosaicBackground />
         </div>
@@ -91,7 +93,13 @@ export default function HowItWorksPage() {
         </div>
       </div>
 
-      <StepList steps={STEPS} />
+      {/* Dark step section rises over the pinned hero for the parallax reveal.
+          It shares the parallax stage wrapper above so the sticky hero has
+          scroll range to pin against. */}
+      <div className="relative z-10 bg-white">
+        <StepList steps={STEPS} />
+      </div>
+      </div>
 
       <SectionIntro
         eyebrow="What you get"

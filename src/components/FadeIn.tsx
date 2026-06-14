@@ -9,10 +9,15 @@ const viewport = { once: true, margin: '0px 0px -120px' }
 
 type Tag = 'div' | 'li' | 'section' | 'article' | 'header' | 'footer' | 'aside' | 'nav'
 
-type FadeInProps<T extends Tag = 'div'> = HTMLMotionProps<T> & { as?: T }
+type FadeInProps<T extends Tag = 'div'> = HTMLMotionProps<T> & {
+  as?: T
+  /** Image/card variant: scale-in from 0.96 -> 1 instead of a translateY lift. */
+  scaleIn?: boolean
+}
 
 export function FadeIn<T extends Tag = 'div'>({
   as,
+  scaleIn = false,
   ...props
 }: FadeInProps<T>) {
   const shouldReduceMotion = useReducedMotion()
@@ -21,12 +26,19 @@ export function FadeIn<T extends Tag = 'div'>({
   const motionMap = motion as unknown as Record<string, typeof motion.div>
   const Component = as ? motionMap[as] : motion.div
 
-  return (
-    <Component
-      variants={{
+  const variants = scaleIn
+    ? {
+        hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : 0.96 },
+        visible: { opacity: 1, scale: 1 },
+      }
+    : {
         hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
         visible: { opacity: 1, y: 0 },
-      }}
+      }
+
+  return (
+    <Component
+      variants={variants}
       transition={{ duration: 0.5 }}
       {...(isInStaggerGroup
         ? {}

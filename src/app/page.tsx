@@ -41,8 +41,12 @@ export default function HomePage() {
     <>
       <ServiceJsonLd />
 
-      {/* Hero with a full-bleed Studio-style portfolio mosaic background */}
-      <div className="relative isolate overflow-hidden">
+      {/* Hero with a full-bleed Studio-style portfolio mosaic background.
+          The outer wrapper supplies the scroll range; the inner hero pins
+          (md:sticky) at the top so the black trust block below scrolls up and
+          over it, instead of the hero scrolling out of view. */}
+      <div className="relative">
+      <div className="relative isolate overflow-hidden md:sticky md:top-0 md:z-0">
         {/* Desktop: edge-to-edge mosaic behind the copy, masked by a
             right-to-left white gradient so the left side stays clean. */}
         <div className="hidden md:block">
@@ -82,8 +86,13 @@ export default function HomePage() {
         </Container>
       </div>
 
-      {/* Churches trust block */}
-      <ChurchLogos />
+      {/* Churches trust block — sits above the pinned hero (z-10) so it scrolls
+          up and over it for the parallax reveal. It shares the parallax stage
+          wrapper above so the sticky hero has scroll range to pin against. */}
+      <div className="relative z-10 bg-white">
+        <ChurchLogos />
+      </div>
+      </div>
 
       {/* Offer block */}
       <SectionIntro
