@@ -316,7 +316,7 @@ export function HeroMosaicBackground() {
           <div
             key={`${src}-${i}`}
             tabIndex={-1}
-            className="group relative overflow-hidden rounded-sm transition duration-300 ease-out hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
+            className="group pointer-events-auto relative cursor-pointer overflow-hidden rounded-sm transition duration-300 ease-out hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
           >
             <Image
               src={src}

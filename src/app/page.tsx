@@ -48,7 +48,11 @@ export default function HomePage() {
           <HeroMosaicBackground />
         </div>
 
-        <Container className="mt-8 pb-12 sm:mt-12 sm:pb-20 lg:mt-16 lg:pb-28">
+        {/* `pointer-events-none` lets the cursor reach the mosaic tiles behind
+            this copy column so every tile (not just the row above the headline)
+            lights up on hover. The interactive CTAs below re-enable pointer
+            events on themselves. */}
+        <Container className="pointer-events-none mt-8 pb-12 sm:mt-12 sm:pb-20 lg:mt-16 lg:pb-28">
           <FadeIn className="relative z-10 max-w-2xl lg:max-w-3xl">
             <span className="mb-5 block font-display text-sm font-semibold tracking-wider text-neutral-600 uppercase">
               Church design subscription
@@ -59,7 +63,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-2xl text-xl text-neutral-600">
               Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="pointer-events-auto mt-10 flex flex-wrap items-center gap-6">
               <Button href={siteConfig.waitlistUrl}>Join the wait list</Button>
               <Button href="/portfolio" variant="ghost">
                 See the work

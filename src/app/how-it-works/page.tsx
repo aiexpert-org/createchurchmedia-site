@@ -57,7 +57,10 @@ export default function HowItWorksPage() {
         <div className="hidden md:block">
           <HeroMosaicBackground />
         </div>
-        <div className="relative z-10">
+        {/* `pointer-events-none` so the cursor reaches the mosaic tiles behind
+            the headline and every tile lights up on hover (the hero has no
+            interactive elements of its own). */}
+        <div className="pointer-events-none relative z-10">
           <PageIntro eyebrow="How it works" title="From inquiry to a finished file, start to finish.">
             <p className="italic text-neutral-700">Simple and efficient.</p>
             <p className="mt-4">
