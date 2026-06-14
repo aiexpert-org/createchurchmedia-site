@@ -1,26 +1,52 @@
 import { siteConfig } from '@/lib/site-config'
 
 export function OrganizationJsonLd() {
+  const sameAs: string[] = []
+  if (siteConfig.googleBusinessUrl) sameAs.push(siteConfig.googleBusinessUrl)
+
   const data = {
     '@context': 'https://schema.org',
-    '@type': ['Organization', 'LocalBusiness'],
+    '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+    '@id': `${siteConfig.url}#organization`,
     name: siteConfig.brand,
     alternateName: siteConfig.shortBrand,
     url: siteConfig.url,
     email: siteConfig.email,
     description: siteConfig.description,
+    image: `${siteConfig.url}/og-image.jpg`,
+    priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
       addressLocality: siteConfig.city,
       addressRegion: siteConfig.state,
       addressCountry: 'US',
     },
-    areaServed: 'United States',
+    areaServed: [
+      { '@type': 'City', name: 'Indianapolis' },
+      { '@type': 'State', name: 'Indiana' },
+      { '@type': 'Country', name: 'United States' },
+    ],
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 39.7684,
+        longitude: -86.1581,
+      },
+      geoRadius: 80467,
+    },
     founder: {
       '@type': 'Person',
       name: siteConfig.designer,
+      jobTitle: 'Graphic Designer',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: siteConfig.city,
+        addressRegion: siteConfig.state,
+        addressCountry: 'US',
+      },
     },
-    sameAs: [],
+    sameAs,
   }
 
   return (
@@ -42,7 +68,10 @@ export function ServiceJsonLd() {
       url: siteConfig.url,
     },
     serviceType: 'Graphic design subscription',
-    areaServed: 'United States',
+    areaServed: [
+      { '@type': 'City', name: 'Indianapolis' },
+      { '@type': 'Country', name: 'United States' },
+    ],
     offers: [
       {
         '@type': 'Offer',
@@ -92,6 +121,51 @@ export function FaqJsonLd({ faqs }: { faqs: { question: string; answer: string }
       },
     })),
   }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
+
+type ArticleJsonLdProps = {
+  title: string
+  description: string
+  slug: string
+  date: string
+  image?: string
+}
+
+export function ArticleJsonLd({ title, description, slug, date, image }: ArticleJsonLdProps) {
+  const data: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: date,
+    dateModified: date,
+    author: {
+      '@type': 'Person',
+      name: siteConfig.designer,
+      url: siteConfig.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.brand,
+      url: siteConfig.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}/og-image.jpg`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteConfig.url}/resources/${slug}`,
+    },
+  }
+  if (image) data.image = `${siteConfig.url}${image}`
 
   return (
     <script

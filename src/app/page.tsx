@@ -40,27 +40,40 @@ export default function HomePage() {
     <>
       <ServiceJsonLd />
 
-      {/* Hero */}
-      <Container className="mt-8 sm:mt-12 lg:mt-16">
-        <FadeIn className="max-w-4xl">
-          <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1]">
-            Unlimited graphic design for churches.
-          </h1>
-          <p className="mt-6 max-w-2xl text-xl text-neutral-600">
-            Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Button href={siteConfig.bookingUrl}>Book a call with Emily</Button>
-            <Button href="/portfolio" variant="ghost">
-              See the work
-            </Button>
+      {/* Hero with layered mosaic background */}
+      <div className="relative isolate">
+        {/* Desktop background mosaic, layered behind hero text */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden opacity-[0.35] md:block"
+        >
+          <div className="mx-auto h-full max-w-7xl px-6 lg:px-8">
+            <HeroMosaic />
           </div>
-        </FadeIn>
+        </div>
 
-        <FadeIn className="mt-16 sm:mt-20">
-          <HeroMosaic />
-        </FadeIn>
-      </Container>
+        <Container className="mt-8 sm:mt-12 lg:mt-16">
+          <FadeIn className="relative z-10 max-w-4xl">
+            <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1]">
+              Unlimited graphic design for churches.
+            </h1>
+            <p className="mt-6 max-w-2xl text-xl text-neutral-600">
+              Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Button href={siteConfig.bookingUrl}>Book a call with Emily</Button>
+              <Button href="/portfolio" variant="ghost">
+                See the work
+              </Button>
+            </div>
+          </FadeIn>
+
+          {/* Mobile-only mosaic, rendered below the hero text */}
+          <FadeIn className="mt-16 md:hidden">
+            <HeroMosaic />
+          </FadeIn>
+        </Container>
+      </div>
 
       {/* Churches trust block */}
       <ChurchLogos />

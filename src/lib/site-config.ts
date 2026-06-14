@@ -14,6 +14,8 @@ export const siteConfig = {
     annual: 9997,
   },
   bookingUrl: 'mailto:emily@createchurchmedia.com?subject=Booking%20a%20call%20with%20Emily',
+  // Google Business Profile URL. Empty until Brett fills it in.
+  googleBusinessUrl: '',
 } as const
 
 export const navItems = [
