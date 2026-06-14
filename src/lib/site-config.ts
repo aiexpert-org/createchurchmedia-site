@@ -4,8 +4,6 @@ export const siteConfig = {
   domain: 'createchurchmedia.com',
   url: 'https://createchurchmedia.com',
   email: 'emily@createchurchmedia.com',
-  phone: '317-502-7443',
-  phoneTel: '+13175027443',
   city: 'Indianapolis',
   state: 'IN',
   designer: 'Emily Farmer',
