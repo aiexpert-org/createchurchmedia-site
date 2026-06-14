@@ -53,14 +53,6 @@ export function SiteFooter() {
                   {siteConfig.email}
                 </a>
               </li>
-              <li>
-                <a
-                  href={`tel:${siteConfig.phoneTel}`}
-                  className="transition hover:text-neutral-950 hover:underline underline-offset-4 decoration-[var(--color-cta)]"
-                >
-                  {siteConfig.phone}
-                </a>
-              </li>
               <li className="text-neutral-500">
                 {siteConfig.city}, {siteConfig.state}
               </li>
