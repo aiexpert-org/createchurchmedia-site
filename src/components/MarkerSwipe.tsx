@@ -19,7 +19,16 @@ import { cn } from '@/lib/cn'
  * (notably Safari), which made the swipe read as a hollow outline frame instead
  * of a solid fill. Pairing `z-0` here with `z-10` on the text keeps the fill
  * solid and behind the text in every browser.
+ *
+ * The fill is a literal `#EEDD47` set via the inline CSS `fill` property (with a
+ * matching presentation attribute as a fallback) rather than `fill="var(...)"`.
+ * Safari and iOS do not evaluate `var()` inside an SVG presentation attribute,
+ * so the yellow failed to paint there: on white the swipe read as an outline
+ * frame, and on a dark card the unfilled marker left the dark CTA text
+ * illegible. A literal CSS `fill` value paints solid yellow in every engine.
  */
+const MARKER_YELLOW = '#EEDD47'
+
 export function MarkerSwipe({ className }: { className?: string }) {
   return (
     <span
@@ -40,7 +49,8 @@ export function MarkerSwipe({ className }: { className?: string }) {
       >
         <path
           d="M 1,11 L 6,3.5 L 94,3.5 L 99,11 L 94,18.5 L 6,18.5 Z"
-          fill="var(--color-cta)"
+          fill={MARKER_YELLOW}
+          style={{ fill: MARKER_YELLOW }}
           opacity="0.9"
         />
       </svg>
