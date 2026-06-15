@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -50,6 +50,7 @@ function Lightbox({
   onNavigate: (next: number) => void
 }) {
   const piece = pieces[index]
+  const dialogRef = useRef<HTMLDivElement>(null)
 
   const go = useCallback(
     (delta: number) => {
@@ -58,23 +59,56 @@ function Lightbox({
     [index, pieces.length, onNavigate],
   )
 
+  // Mount-only: lock body scroll, move focus into the dialog, and return focus
+  // to the element that opened it (the originating gallery tile) on close.
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-      else if (e.key === 'ArrowRight') go(1)
-      else if (e.key === 'ArrowLeft') go(-1)
-    }
-    window.addEventListener('keydown', onKey)
+    const trigger = document.activeElement as HTMLElement | null
     const prevOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    dialogRef.current?.querySelector<HTMLElement>('button')?.focus()
     return () => {
-      window.removeEventListener('keydown', onKey)
       document.body.style.overflow = prevOverflow
+      trigger?.focus?.()
     }
+  }, [])
+
+  // Keyboard: Escape to close, arrows to navigate, and a focus trap so Tab
+  // never leaves the open lightbox.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') return onClose()
+      if (e.key === 'ArrowRight') return go(1)
+      if (e.key === 'ArrowLeft') return go(-1)
+      if (e.key !== 'Tab') return
+      const dialog = dialogRef.current
+      if (!dialog) return
+      const els = Array.from(
+        dialog.querySelectorAll<HTMLElement>(
+          'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])',
+        ),
+      )
+      if (!els.length) return
+      const first = els[0]
+      const last = els[els.length - 1]
+      const active = document.activeElement as HTMLElement | null
+      if (e.shiftKey && active === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault()
+        first.focus()
+      } else if (active && !dialog.contains(active)) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
   }, [go, onClose])
 
   return createPortal(
     <motion.div
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label={piece.alt}

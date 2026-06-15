@@ -57,6 +57,35 @@ h4 {
   text-wrap: balance;
 }
 
+/* Focus indicators (WCAG 2.4.7) without the persistent ring after a mouse
+   click. A pointer click sets :focus but NOT :focus-visible, so we strip the
+   user-agent outline in that case; keyboard focus keeps :focus-visible and a
+   high-contrast brand outline. This kills the "blue/yellow frame stuck around
+   the active nav item after clicking" artifact while preserving keyboard a11y.
+   Form fields opt back in to their own :focus ring below. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--color-cta-ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* On dark surfaces the near-black brand-ink outline disappears; use a white
+   ring instead so keyboard focus stays visible there. */
+.bg-neutral-950 :focus-visible,
+[data-surface='dark'] :focus-visible {
+  outline-color: #ffffff;
+}
+/* Inputs and textareas drive their own visible focus state (border + soft
+   ring), which is expected on click as well, so they keep the UA-free outline
+   and are not double-ringed by the rule above. */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -111,9 +140,12 @@ h4 {
   animation-play-state: paused;
 }
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
-    transform: none;
+  .marquee-track,
+  .marquee-ltr,
+  .marquee-rtl,
+  [class*='marquee'] {
+    animation: none !important;
+    transform: none !important;
   }
 }
 

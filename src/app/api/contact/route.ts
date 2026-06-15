@@ -7,6 +7,10 @@ export const dynamic = 'force-dynamic'
 
 type Payload = {
   name?: string
+  // The footer + contact-block forms send first/last separately; the full
+  // /contact form still sends a single `name`. We reconcile both below.
+  firstName?: string
+  lastName?: string
   email?: string
   church?: string
   location?: string
@@ -47,7 +51,10 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ ok: true })
   }
 
-  const name = clean(body.name, 120)
+  const firstName = clean(body.firstName, 80)
+  const lastName = clean(body.lastName, 80)
+  // Prefer an explicit single name; otherwise compose it from first + last.
+  const name = clean(body.name, 120) || [firstName, lastName].filter(Boolean).join(' ')
   const email = clean(body.email, 200)
   const church = clean(body.church, 200)
   const location = clean(body.location, 200)
@@ -62,9 +69,17 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
 
   // Best-effort CRM sync. Never blocks the email or fails the request.
-  await createGhlContact({ name, email, church, location, message, source, tag }).catch(
-    () => {},
-  )
+  await createGhlContact({
+    name,
+    firstName,
+    lastName,
+    email,
+    church,
+    location,
+    message,
+    source,
+    tag,
+  }).catch(() => {})
 
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
@@ -112,6 +127,8 @@ export async function POST(req: Request): Promise<NextResponse> {
 
 async function createGhlContact(p: {
   name: string
+  firstName: string
+  lastName: string
   email: string
   church: string
   location: string
@@ -123,7 +140,11 @@ async function createGhlContact(p: {
   const locationId = process.env.GHL_LOCATION_ID
   if (!apiKey || !locationId) return
 
-  const [firstName, ...rest] = p.name.split(/\s+/)
+  // Use the explicit first/last when the form provided them; otherwise split
+  // the single name field on whitespace.
+  const [splitFirst, ...splitRest] = p.name.split(/\s+/)
+  const firstName = p.firstName || splitFirst
+  const lastName = p.lastName || splitRest.join(' ')
   const tags = ['wait-list-2026', ...(p.tag ? [p.tag] : [])]
   await fetch('https://services.leadconnectorhq.com/contacts/', {
     method: 'POST',
@@ -135,7 +156,7 @@ async function createGhlContact(p: {
     body: JSON.stringify({
       locationId,
       firstName: firstName || p.name || undefined,
-      lastName: rest.join(' ') || undefined,
+      lastName: lastName || undefined,
       email: p.email,
       companyName: p.church || undefined,
       city: p.location || undefined,

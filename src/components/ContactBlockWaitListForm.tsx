@@ -8,17 +8,17 @@ const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 type Status = 'idle' | 'submitting' | 'done' | 'error'
 
 /**
- * Wait-list capture for the footer. Collects first name, last name, and email
- * (matching the ContactBlock form) and posts to the shared /api/contact
- * endpoint, tagged so footer signups are identifiable in the CRM. A valid email
- * is the only hard requirement. On success the fields swap for a confirmation
- * line; validation + request errors surface in a polite live region.
+ * Inline wait-list capture for the black ContactBlock. Mirrors the footer form
+ * (first name, last name, email) but is styled for a dark surface: light text
+ * on a translucent field, with a solid rectangular yellow submit button (the
+ * locked form-CTA treatment). Posts to the same /api/contact endpoint, tagged
+ * so contact-block signups are identifiable in GHL.
  *
- * The submit is a solid rectangular yellow button (the locked form-CTA
- * treatment) so it reads as an obvious control next to the inputs rather than a
- * marker-swiped link.
+ * Accessibility: every field has a real (visually hidden) <label>; validation
+ * and request errors surface in a polite live region so screen readers announce
+ * them.
  */
-export function FooterWaitListForm() {
+export function ContactBlockWaitListForm() {
   const uid = useId()
   const [status, setStatus] = useState<Status>('idle')
   const [firstName, setFirstName] = useState('')
@@ -54,8 +54,8 @@ export function FooterWaitListForm() {
           firstName: firstName.trim(),
           lastName: lastName.trim(),
           email: value,
-          source: 'footer',
-          tag: 'wait-list-footer-2026',
+          source: 'contact-block',
+          tag: 'wait-list-contact-block-2026',
         }),
       })
       if (!res.ok) throw new Error('request failed')
@@ -67,18 +67,22 @@ export function FooterWaitListForm() {
 
   if (status === 'done') {
     return (
-      <p role="status" className="mt-3 max-w-xs text-sm leading-6 text-neutral-700">
-        You&rsquo;re on the list. Emily will reach out by email.
+      <p
+        role="status"
+        className="mt-8 max-w-md rounded-2xl bg-white/5 px-5 py-4 text-base leading-7 text-neutral-200"
+      >
+        You&rsquo;re on the list. Emily will reach out personally by email when a
+        spot opens.
       </p>
     )
   }
 
   const fieldClass =
-    'min-w-0 w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-950 transition placeholder:text-neutral-400 focus:border-neutral-950 focus:ring-4 focus:ring-neutral-950/5 focus:outline-none disabled:opacity-60'
+    'w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-base text-white transition placeholder:text-neutral-500 focus:border-white focus:ring-2 focus:ring-white/25 focus:outline-none disabled:opacity-60'
 
   return (
-    <form onSubmit={onSubmit} noValidate className="mt-3 max-w-xs">
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate className="mt-8 max-w-md">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor={`${uid}-first`} className="sr-only">
             First name
@@ -113,7 +117,7 @@ export function FooterWaitListForm() {
         </div>
       </div>
 
-      <div className="mt-3">
+      <div className="mt-4">
         <label htmlFor={`${uid}-email`} className="sr-only">
           Email address
         </label>
@@ -123,7 +127,7 @@ export function FooterWaitListForm() {
           name="email"
           autoComplete="email"
           inputMode="email"
-          placeholder="your@email.com"
+          placeholder="Email address"
           aria-invalid={error ? true : undefined}
           value={email}
           onChange={(e) => {
@@ -143,16 +147,24 @@ export function FooterWaitListForm() {
         </label>
       </div>
 
-      <div className="mt-4">
-        <Button type="submit" variant="solid" disabled={status === 'submitting'}>
+      <div className="mt-6">
+        <Button
+          type="submit"
+          variant="solid"
+          tone="dark"
+          withArrow
+          disabled={status === 'submitting'}
+        >
           {status === 'submitting' ? 'Joining' : 'Join the wait list'}
         </Button>
       </div>
 
       <div role="status" aria-live="polite">
-        {error ? <p className="mt-2 text-sm text-neutral-700">{error}</p> : null}
+        {error ? (
+          <p className="mt-3 text-sm text-neutral-300">{error}</p>
+        ) : null}
         {status === 'error' ? (
-          <p className="mt-2 text-sm text-neutral-700">
+          <p className="mt-3 text-sm text-neutral-300">
             Something went wrong. Please try again or email Emily directly.
           </p>
         ) : null}

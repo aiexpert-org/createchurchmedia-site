@@ -39,6 +39,9 @@ export function MarkerSwipe({ className }: { className?: string }) {
       )}
     >
       <svg
+        aria-hidden="true"
+        role="presentation"
+        focusable="false"
         viewBox="0 0 100 22"
         preserveAspectRatio="none"
         className="absolute top-1/2 left-1/2 h-[75%] w-[110%]"

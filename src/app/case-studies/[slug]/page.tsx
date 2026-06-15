@@ -11,7 +11,7 @@ import {
   getAllCaseStudySlugs,
   getCaseStudyBySlug,
 } from '@/lib/case-studies'
-import { getChurchBySlug } from '@/lib/churches'
+import { getChurchBySlug, churchLogo } from '@/lib/churches'
 import { ArticleByline } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
 
@@ -111,9 +111,11 @@ export default async function CaseStudyPage({
       <Container className="mt-12">
         <FadeIn className="mx-auto max-w-4xl">
           <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden rounded-3xl bg-neutral-950 ring-1 ring-neutral-900/5">
+            {/* White logo variant on the black hero panel so it stays visible
+                (the black variant would vanish into the background). */}
             <div className="relative h-1/2 w-2/3">
               <Image
-                src={study.image}
+                src={churchLogo(study.slug, 'white')}
                 alt={`${study.church} logo`}
                 fill
                 sizes="(min-width: 1024px) 1024px, 100vw"

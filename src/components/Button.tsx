@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/cn'
 import { MarkerSwipe } from '@/components/MarkerSwipe'
 
-type Variant = 'primary' | 'secondary' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'ghost' | 'solid'
 type Tone = 'light' | 'dark'
 
 type ButtonProps = {
@@ -11,7 +11,7 @@ type ButtonProps = {
    * Background the CTA sits on. `light` (default) keeps the text near-black so
    * it reads on white. `dark` flips the text to white so it stays legible over
    * the yellow marker on a `bg-neutral-950` panel (the marker itself stays
-   * yellow either way).
+   * yellow either way). For `solid` it only drives the focus-ring offset color.
    */
   tone?: Tone
   withArrow?: boolean
@@ -21,16 +21,20 @@ type ButtonProps = {
 )
 
 /**
- * CTAs read as marker-swiped text rather than filled rectangles.
+ * Two CTA families:
  *
- * - primary: larger, semibold text with the highlighter swipe behind the whole
- *   phrase (always visible). Optional trailing arrow.
- * - secondary / ghost: body-weight text with a dashed underline at rest that
- *   gives way to the swipe on hover.
+ * - Link/nav CTAs (`primary` / `secondary` / `ghost`) read as marker-swiped
+ *   text rather than filled rectangles. `primary` shows the highlighter swipe
+ *   behind the whole phrase; `secondary` / `ghost` swap a dashed underline for
+ *   the swipe on hover.
+ * - `solid` is a conventional rectangular yellow button with rounded corners
+ *   and a clear button affordance. This is the locked treatment for FORM submit
+ *   buttons (footer, contact block, /contact), where the marker-swiped text
+ *   read as ambiguous next to an input. The marker swipe stays reserved for
+ *   hero/nav/link CTAs.
  *
- * `isolate` keeps the swipe's negative z-index scoped to the button so it sits
- * above the button's own (transparent) background but never escapes behind a
- * dark section like the contact block.
+ * `isolate` keeps the swipe scoped to the button so it sits above the button's
+ * own (transparent) background but never escapes behind a dark section.
  */
 export function Button({
   variant = 'primary',
@@ -42,6 +46,41 @@ export function Button({
 }: ButtonProps) {
   const isPrimary = variant === 'primary'
   const isDark = tone === 'dark'
+
+  // Solid: rectangular yellow button. No marker, no underline — a plain,
+  // obvious "press me" control for forms.
+  if (variant === 'solid') {
+    const solid = cn(
+      'inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-cta)] px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm transition hover:bg-[var(--color-cta-hover)] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2',
+      isDark ? 'focus-visible:ring-offset-neutral-950' : 'focus-visible:ring-offset-white',
+      className,
+    )
+    const solidContent = (
+      <>
+        <span>{children}</span>
+        {withArrow ? (
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-200 group-hover:translate-x-0.5"
+          >
+            &rarr;
+          </span>
+        ) : null}
+      </>
+    )
+    if (typeof props.href === 'undefined') {
+      return (
+        <button className={solid} {...props}>
+          {solidContent}
+        </button>
+      )
+    }
+    return (
+      <Link className={solid} {...props}>
+        {solidContent}
+      </Link>
+    )
+  }
 
   const merged = cn(
     'group relative isolate inline-flex items-center justify-center gap-1.5 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4',

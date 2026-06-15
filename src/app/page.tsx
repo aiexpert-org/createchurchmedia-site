@@ -96,6 +96,7 @@ export default function HomePage() {
       </div>
 
       {/* Offer block — portrait of Emily balances the right side */}
+      <section aria-label="The offer">
       <SectionIntro
         eyebrow="The offer"
         title="One designer. One flat fee. Fast turn around times."
@@ -133,8 +134,10 @@ export default function HomePage() {
           </ul>
         </FadeInStagger>
       </Container>
+      </section>
 
       {/* See the work — a strong sermon series piece with subtle scroll parallax */}
+      <section aria-label="See the work">
       <SectionIntro
         eyebrow="See the work"
         title="Custom graphic design for churches."
@@ -161,6 +164,7 @@ export default function HomePage() {
           </Link>
         </FadeIn>
       </Container>
+      </section>
 
       <ContactBlock heading="Join the wait list.">
         <p>

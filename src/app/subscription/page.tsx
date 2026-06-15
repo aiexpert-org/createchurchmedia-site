@@ -181,6 +181,7 @@ export default function SubscriptionPage() {
       </PageIntro>
 
       {/* Pricing cards */}
+      <section aria-label="Subscription pricing">
       <Container className="mt-16 sm:mt-20">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <PriceCard
@@ -205,8 +206,10 @@ export default function SubscriptionPage() {
           </p>
         </FadeIn>
       </Container>
+      </section>
 
       {/* Categories */}
+      <section aria-label="What's included">
       <SectionIntro
         eyebrow="Categories"
         title="Many categories, all under one subscription."
@@ -228,11 +231,13 @@ export default function SubscriptionPage() {
           </ul>
         </FadeInStagger>
       </Container>
+      </section>
 
       {/* FAQ */}
+      <section aria-label="Frequently asked questions">
       <SectionIntro
         eyebrow="FAQ"
-        title="Common questions, answered honestly."
+        title="The questions I hear most."
         className="mt-24 sm:mt-32 lg:mt-40"
       />
       <Container className="mt-16">
@@ -254,6 +259,7 @@ export default function SubscriptionPage() {
           </dl>
         </FadeIn>
       </Container>
+      </section>
 
       <ContactBlock heading="Join the wait list.">
         <p>

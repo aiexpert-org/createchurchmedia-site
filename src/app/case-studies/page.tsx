@@ -7,6 +7,7 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { ContactBlock } from '@/components/ContactBlock'
 import { getAllCaseStudies } from '@/lib/case-studies'
+import { churchLogo } from '@/lib/churches'
 import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
@@ -46,13 +47,25 @@ export default async function CaseStudiesPage() {
                   href={`/case-studies/${study.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-neutral-900/5 transition hover:ring-neutral-900/15 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950"
                 >
+                  {/* Dark card: logos render in WHITE and cross-fade to brand
+                      yellow on hover (same treatment as the home trust marquee),
+                      so they stay highly visible against the black panel rather
+                      than disappearing as a black-on-black variant. */}
                   <div className="relative aspect-[16/10] bg-neutral-950">
                     <Image
-                      src={study.image}
+                      src={churchLogo(study.slug, 'white')}
                       alt={`${study.church} logo`}
                       fill
                       sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                      className="object-contain p-10 transition duration-500 group-hover:scale-[1.03]"
+                      className="object-contain p-10 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-0"
+                    />
+                    <Image
+                      src={churchLogo(study.slug, 'yellow')}
+                      alt=""
+                      aria-hidden="true"
+                      fill
+                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                      className="object-contain p-10 opacity-0 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">

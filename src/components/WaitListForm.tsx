@@ -116,21 +116,28 @@ export function WaitListForm() {
         </label>
       </div>
 
-      {status === 'error' ? (
-        <p className="mt-6 text-base text-neutral-700">
-          Something went wrong on our end. Email Emily directly at{' '}
-          <a
-            href={siteConfig.waitlistMailto}
-            className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)]"
-          >
-            {siteConfig.email}
-          </a>{' '}
-          and she will add you to the list.
-        </p>
-      ) : null}
+      <div role="status" aria-live="polite">
+        {status === 'error' ? (
+          <p className="mt-6 text-base text-neutral-700">
+            Something went wrong on our end. Email Emily directly at{' '}
+            <a
+              href={siteConfig.waitlistMailto}
+              className="font-semibold text-neutral-950 underline underline-offset-4 decoration-[var(--color-cta)]"
+            >
+              {siteConfig.email}
+            </a>{' '}
+            and she will add you to the list.
+          </p>
+        ) : null}
+      </div>
 
       <div className="mt-10">
-        <Button type="submit" disabled={status === 'submitting'}>
+        <Button
+          type="submit"
+          variant="solid"
+          withArrow
+          disabled={status === 'submitting'}
+        >
           {status === 'submitting' ? 'Joining…' : 'Join the wait list'}
         </Button>
       </div>
