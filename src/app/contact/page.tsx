@@ -5,7 +5,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { PageIntro } from '@/components/PageIntro'
-import { WaitListForm } from '@/components/WaitListForm'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { EmilyPortrait } from '@/components/EmilyAvatar'
 import { siteConfig } from '@/lib/site-config'
 
@@ -29,7 +29,19 @@ export default function ContactPage() {
       <Container className="mt-16 sm:mt-20 lg:mt-24">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <FadeIn>
-            <WaitListForm />
+            <div className="rounded-3xl bg-neutral-50 p-8 ring-1 ring-inset ring-neutral-900/5">
+              <h2 className="font-display text-2xl font-semibold tracking-tight text-neutral-950">
+                Save your spot
+              </h2>
+              <p className="mt-4 text-base leading-7 text-neutral-600">
+                Tell Emily who you are and where to reach you. It takes about
+                thirty seconds, and she follows up personally by email when a
+                spot opens.
+              </p>
+              <div className="mt-8">
+                <JoinWaitListButton source="contact-page" />
+              </div>
+            </div>
           </FadeIn>
 
           <FadeIn>

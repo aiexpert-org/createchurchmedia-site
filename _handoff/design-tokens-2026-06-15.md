@@ -8,20 +8,32 @@ Locked decisions that recur across the site. Update this when a rule changes.
 - `--color-cta-hover: #E3CF2A`
 - `--color-cta-ink: #0A0A0A` (near-black, the text/ink that sits on yellow)
 
-## CTA treatments — marker swipe vs. solid button
+## CTA treatments — marker swipe vs. rectangular button
 
 Two distinct CTA families. Do not mix them.
 
 - **Marker swipe** (`Button` variants `primary` / `secondary` / `ghost`):
-  highlighter-style yellow swipe behind text. Used for **hero, nav, and
-  link-style CTAs**. Text is always dark (#0A0A0A) on the yellow marker; the
-  marker is always #EEDD47 regardless of the surface behind it — the marker IS
-  the contrast container.
-- **Solid button** (`Button` variant `solid`): conventional rectangular yellow
-  button, `rounded-md`, dark text, clear press affordance. Used for **FORM
-  submit buttons** (footer wait list, contact-block wait list, /contact form).
-  A marker-swiped "link" next to inputs read as ambiguous, so forms get an
-  obvious button instead.
+  highlighter-style yellow swipe behind text. Used for **hero text links and the
+  active nav state only** (e.g. "See the work", "See the full portfolio"). Text
+  is always dark (#0A0A0A) on the yellow marker; the marker is always #EEDD47
+  regardless of the surface — the marker IS the contrast container.
+- **Rectangular yellow button**: conventional `rounded-md`, yellow #EEDD47 bg,
+  dark text, clear press affordance. Every **"Join the wait list" CTA** uses
+  this, via `<JoinWaitListButton source="…">`, which opens the shared wait-list
+  modal (see below). `Button` also still has a `solid` variant with the same
+  look for any plain form submit.
+
+### Wait-list modal (2026-06-15 pivot — supersedes inline forms)
+
+All "Join the wait list" CTAs are now `<JoinWaitListButton>` rectangular buttons
+that open one shared `<JoinWaitListModal>` (4 fields: first name, last name,
+email, optional church domain). The earlier inline forms (footer email-capture,
+contact-block inline form, dedicated /contact form) were removed. Global state
+lives in `WaitListProvider` (React context, wrapping the app in the root layout);
+every button passes a `source` string so signups are attributed to the exact CTA.
+Submissions POST to `/api/wait-list`, which fans out to a Google Sheet (Apps
+Script webhook), GHL, and an email to Emily. See
+`_handoff/google-sheets-waitlist-setup-2026-06-15.md`.
 
 ## Marker fill implementation
 

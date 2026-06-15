@@ -5,11 +5,10 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { ContactBlock } from '@/components/ContactBlock'
 import { FaqJsonLd, ServiceJsonLd } from '@/components/JsonLd'
-import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: 'Subscription',
@@ -106,12 +105,14 @@ function PriceCard({
   price,
   period,
   tagline,
+  source,
   featured = false,
 }: {
   header: string
   price: string
   period: string
   tagline: string
+  source: string
   featured?: boolean
 }) {
   return (
@@ -154,14 +155,13 @@ function PriceCard({
         ))}
       </ul>
       <div className="mt-10">
-        <Button
-          href={siteConfig.waitlistUrl}
+        <JoinWaitListButton
+          source={source}
           variant={featured ? 'primary' : 'secondary'}
           tone={featured ? 'dark' : 'light'}
+          withArrow={false}
           className="w-full"
-        >
-          Join the wait list
-        </Button>
+        />
       </div>
     </FadeIn>
   )
@@ -189,12 +189,14 @@ export default function SubscriptionPage() {
             price="$997"
             period="month"
             tagline="Pay month to month. Every file is yours to keep."
+            source="subscription-monthly"
           />
           <PriceCard
             header="Annual prepay"
             price="$9,997"
             period="year"
             tagline="Pay for the year and save almost $2,000. Same designer, same access, same turn around times."
+            source="subscription-annual"
             featured
           />
         </div>

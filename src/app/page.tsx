@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Button } from '@/components/Button'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { SectionIntro } from '@/components/SectionIntro'
 import { Border } from '@/components/Border'
 import { HeroMosaic, HeroMosaicBackground } from '@/components/HeroMosaic'
@@ -73,7 +74,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="pointer-events-auto mt-10 flex flex-wrap items-center gap-6">
-              <Button href={siteConfig.waitlistUrl}>Join the wait list</Button>
+              <JoinWaitListButton source="home-hero" />
               <Button href="/portfolio" variant="ghost">
                 See the work
               </Button>

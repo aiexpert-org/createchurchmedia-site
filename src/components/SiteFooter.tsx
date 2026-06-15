@@ -3,7 +3,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
-import { FooterWaitListForm } from '@/components/FooterWaitListForm'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { navItems, siteConfig } from '@/lib/site-config'
 
 export function SiteFooter() {
@@ -47,12 +47,15 @@ export function SiteFooter() {
               Contact Emily
             </h2>
 
-            <p className="mt-6 text-sm font-semibold text-neutral-950">
-              Join the wait list
+            <p className="mt-6 max-w-xs text-sm leading-6 text-neutral-600">
+              Emily takes on a small number of new churches each quarter. Drop
+              your info and she will reach out by email when a spot opens.
             </p>
-            <FooterWaitListForm />
+            <div className="mt-5">
+              <JoinWaitListButton source="footer" />
+            </div>
 
-            <ul className="mt-6 space-y-3 text-sm text-neutral-700">
+            <ul className="mt-8 space-y-3 text-sm text-neutral-700">
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}

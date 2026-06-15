@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/cn'
 import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
 import { MarkerSwipe } from '@/components/MarkerSwipe'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { navItems, siteConfig } from '@/lib/site-config'
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -88,9 +88,11 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button href={siteConfig.waitlistUrl} className="hidden sm:inline-flex">
-              Join the wait list
-            </Button>
+            <JoinWaitListButton
+              source="header"
+              withArrow={false}
+              className="hidden sm:inline-flex"
+            />
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
@@ -143,9 +145,11 @@ export function SiteHeader() {
               )
             })}
             <li className="mt-3">
-              <Button href={siteConfig.waitlistUrl} className="w-full">
-                Join the wait list
-              </Button>
+              <JoinWaitListButton
+                source="header"
+                withArrow={false}
+                className="w-full"
+              />
             </li>
           </ul>
         </Container>

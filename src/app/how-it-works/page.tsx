@@ -5,6 +5,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StepList, type Step } from '@/components/StepList'
 import { ContactBlock } from '@/components/ContactBlock'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { HeroMosaicBackground } from '@/components/HeroMosaic'
 
 export const metadata: Metadata = {
@@ -80,6 +81,9 @@ export default function HowItWorksPage() {
                   You send me what you need. I design it. You review. I revise and send you the completed files.
                 </p>
               </div>
+              <div className="pointer-events-auto mt-10">
+                <JoinWaitListButton source="how-it-works-hero" />
+              </div>
             </FadeIn>
           </Container>
         </div>
@@ -114,7 +118,7 @@ export default function HowItWorksPage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Join the wait list.">
+      <ContactBlock heading="Join the wait list." source="how-it-works">
         <p>
           Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
         </p>

@@ -112,7 +112,7 @@ export default async function ResourcesPage() {
         </FadeIn>
       </Container>
 
-      <ContactBlock heading="Join the wait list.">
+      <ContactBlock heading="Join the wait list." source="resources-index">
         <p>
           Emily takes on a small number of new churches each quarter. Drop your church name and email on the wait list and she will reach out personally by email when a spot opens.
         </p>

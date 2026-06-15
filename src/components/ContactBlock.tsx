@@ -2,15 +2,17 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Border } from '@/components/Border'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
-import { ContactBlockWaitListForm } from '@/components/ContactBlockWaitListForm'
+import { JoinWaitListButton } from '@/components/wait-list/JoinWaitListButton'
 import { siteConfig } from '@/lib/site-config'
 
 type Props = {
   heading: string
   children: React.ReactNode
+  /** Tags the CTA so this page's bottom signups are attributed to it. */
+  source?: string
 }
 
-export function ContactBlock({ heading, children }: Props) {
+export function ContactBlock({ heading, children, source = 'contact-block' }: Props) {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
@@ -21,7 +23,9 @@ export function ContactBlock({ heading, children }: Props) {
                 {heading}
               </h2>
               <div className="mt-6 text-xl text-neutral-300">{children}</div>
-              <ContactBlockWaitListForm />
+              <div className="mt-10">
+                <JoinWaitListButton source={source} tone="dark" />
+              </div>
             </div>
 
             {/* Circular portrait of Emily humanizes the conversion moment. Shown
