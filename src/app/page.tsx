@@ -61,21 +61,25 @@ export default function HomePage() {
             events on themselves. */}
         <Container className="pointer-events-none mt-8 pb-12 sm:mt-12 sm:pb-20 lg:mt-16 lg:pb-28">
           <FadeIn className="relative z-10 max-w-2xl lg:max-w-3xl">
-            <span className="mb-5 block font-display text-sm font-semibold tracking-wider text-neutral-600 uppercase">
+            <span className="mb-5 block font-display text-sm font-semibold tracking-wider text-neutral-600 uppercase [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">
               Church design subscription
             </span>
-            <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1]">
+            <h1 className="font-display text-[2.75rem] leading-[1.05] font-medium tracking-tight text-balance text-neutral-950 sm:text-6xl lg:text-[4rem] lg:leading-[1.1] [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">
               Unlimited graphic design for churches.
             </h1>
             <div className="mt-6 flex max-w-2xl items-start gap-4">
               <EmilyAvatar size={72} priority className="mt-1" />
-              <p className="text-xl text-neutral-600">
+              <p className="text-xl text-neutral-600 [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">
                 Hi, I&rsquo;m Emily. I offer unlimited graphic design for churches on a monthly subscription. I would love to help you build toward your vision.
               </p>
             </div>
             <div className="pointer-events-auto mt-10 flex flex-wrap items-center gap-6">
               <JoinWaitListButton source="home-hero" />
-              <Button href="/portfolio" variant="ghost">
+              <Button
+                href="/portfolio"
+                variant="ghost"
+                className="[text-shadow:0_0_6px_rgba(255,255,255,0.8)]"
+              >
                 See the work
               </Button>
             </div>

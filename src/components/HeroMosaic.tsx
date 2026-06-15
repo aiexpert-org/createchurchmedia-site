@@ -323,22 +323,35 @@ export function HeroMosaicBackground() {
     >
       <div className="grid h-full w-full auto-rows-fr grid-cols-6 gap-1.5 sm:grid-cols-8 lg:grid-cols-10">
         {BG_TILES.map((src, i) => {
-          // Column index in the 10-col desktop layout. The leftmost columns sit
-          // under the headline/CTAs, so their hover saturation + brightness are
-          // dialed down (text stays readable); the rightmost pop to full color.
+          // Column index in the 10-col desktop layout. The leftmost four columns
+          // sit under the headline and CTAs.
           const col = i % 10
+          // Hover is DISABLED entirely on the text columns (0-3): no opacity
+          // lift, no scale, no filter change. Desaturating a dark sermon-art
+          // tile still leaves it dark, so lighting one to full opacity behind
+          // the near-black headline made the text vanish. Leaving these tiles at
+          // their muted rest state keeps the copy legible regardless of the
+          // cursor. Columns 4-9 still light up.
+          const inTextColumns = col <= 3
           const { saturation, brightness } = hoverIntensity(col)
           return (
             <div
               key={`${src}-${i}`}
               data-col={col}
               tabIndex={-1}
-              className="group pointer-events-auto relative cursor-pointer overflow-hidden rounded-sm transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
+              className={cn(
+                'relative overflow-hidden rounded-sm',
+                inTextColumns
+                  ? 'pointer-events-none'
+                  : 'group pointer-events-auto cursor-pointer transition duration-[480ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:z-10 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]',
+              )}
               style={
-                {
-                  '--hover-saturation': saturation,
-                  '--hover-brightness': brightness,
-                } as React.CSSProperties
+                inTextColumns
+                  ? undefined
+                  : ({
+                      '--hover-saturation': saturation,
+                      '--hover-brightness': brightness,
+                    } as React.CSSProperties)
               }
             >
               <Image
@@ -363,7 +376,7 @@ export function HeroMosaicBackground() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.45) 75%, rgba(255,255,255,0) 100%)',
+            'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 75%, rgba(255,255,255,0) 100%)',
         }}
       />
       {/* Soft white fade into the page below. */}

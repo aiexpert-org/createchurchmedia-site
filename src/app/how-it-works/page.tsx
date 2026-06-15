@@ -68,14 +68,14 @@ export default function HowItWorksPage() {
           <Container className="mt-24 sm:mt-32 lg:mt-40">
             <FadeIn>
               <h1>
-                <span className="block font-display text-base font-semibold tracking-wider uppercase text-neutral-950">
+                <span className="block font-display text-base font-semibold tracking-wider uppercase text-neutral-950 [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">
                   How it works
                 </span>
-                <span className="mt-6 block max-w-3xl font-display text-[2.75rem] leading-[1.05] sm:text-6xl lg:text-[4rem] lg:leading-[1.1] font-medium tracking-tight text-balance text-neutral-950">
+                <span className="mt-6 block max-w-3xl font-display text-[2.75rem] leading-[1.05] sm:text-6xl lg:text-[4rem] lg:leading-[1.1] font-medium tracking-tight text-balance text-neutral-950 [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">
                   From inquiry to a finished file, start to finish.
                 </span>
               </h1>
-              <div className="mt-6 max-w-2xl text-xl text-neutral-600">
+              <div className="mt-6 max-w-2xl text-xl text-neutral-600 [text-shadow:0_0_6px_rgba(255,255,255,0.8)]">
                 <p className="italic text-neutral-700">Simple and efficient.</p>
                 <p className="mt-4">
                   You send me what you need. I design it. You review. I revise and send you the completed files.
