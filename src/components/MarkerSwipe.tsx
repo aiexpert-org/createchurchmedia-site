@@ -10,16 +10,22 @@ import { cn } from '@/lib/cn'
  * highlighter pass straight through the letterforms.
  *
  * Rendered as an absolutely positioned layer behind its content. Callers place
- * the text in a `relative` span on top and drive the reveal via `className`:
- * pass `scale-x-0 ... group-hover:scale-x-100` for the center-expand animation,
- * or `scale-x-100 opacity-100` for an always-on swipe.
+ * the text in a `relative z-10` span on top and drive the reveal via
+ * `className`: pass `scale-x-0 ... group-hover:scale-x-100` for the
+ * center-expand animation, or `scale-x-100 opacity-100` for an always-on swipe.
+ *
+ * The marker sits at `z-0` (not a negative z-index): a negative z-index inside
+ * an `isolate` parent can fail to composite the SVG fill in some engines
+ * (notably Safari), which made the swipe read as a hollow outline frame instead
+ * of a solid fill. Pairing `z-0` here with `z-10` on the text keeps the fill
+ * solid and behind the text in every browser.
  */
 export function MarkerSwipe({ className }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
       className={cn(
-        'pointer-events-none absolute inset-0 -z-10 origin-center',
+        'pointer-events-none absolute inset-0 z-0 origin-center',
         className,
       )}
     >

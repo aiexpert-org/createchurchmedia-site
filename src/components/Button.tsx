@@ -67,7 +67,7 @@ export function Button({
       />
       <span
         className={cn(
-          'relative',
+          'relative z-10',
           !isPrimary &&
             'underline decoration-dashed underline-offset-4 transition-colors group-hover:decoration-transparent',
           !isPrimary && (isDark ? 'decoration-neutral-500' : 'decoration-neutral-400'),
@@ -78,7 +78,7 @@ export function Button({
       {withArrow ? (
         <span
           aria-hidden="true"
-          className="relative transition-transform duration-200 group-hover:translate-x-0.5"
+          className="relative z-10 transition-transform duration-200 group-hover:translate-x-0.5"
         >
           &rarr;
         </span>

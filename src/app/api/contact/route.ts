@@ -11,6 +11,10 @@ type Payload = {
   church?: string
   location?: string
   message?: string
+  // Where the signup came from (e.g. the footer quick-capture) and an optional
+  // campaign tag, used to label the GHL contact.
+  source?: string
+  tag?: string
   // Honeypot. Real users never fill this.
   company?: string
 }
@@ -48,13 +52,19 @@ export async function POST(req: Request): Promise<NextResponse> {
   const church = clean(body.church, 200)
   const location = clean(body.location, 200)
   const message = clean(body.message, 4000)
+  const source = clean(body.source, 80)
+  const tag = clean(body.tag, 80)
 
-  if (!name || !EMAIL_RE.test(email)) {
+  // A valid email is the only hard requirement. The full /contact form also
+  // collects a name; the footer quick-capture sends email only.
+  if (!EMAIL_RE.test(email)) {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 422 })
   }
 
   // Best-effort CRM sync. Never blocks the email or fails the request.
-  await createGhlContact({ name, email, church, location, message }).catch(() => {})
+  await createGhlContact({ name, email, church, location, message, source, tag }).catch(
+    () => {},
+  )
 
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
@@ -64,14 +74,18 @@ export async function POST(req: Request): Promise<NextResponse> {
   const to = process.env.WAITLIST_TO || siteConfig.email
   const from =
     process.env.WAITLIST_FROM || `Create Church Media <noreply@${siteConfig.domain}>`
-  const subject = `[CCM wait list] New signup: ${name}${church ? ` from ${church}` : ''}`
+  const who = name || email
+  const subject = `[CCM wait list] New signup: ${who}${church ? ` from ${church}` : ''}${
+    source ? ` (${source})` : ''
+  }`
   const text = [
     'New wait list signup',
     '',
-    `Name: ${name}`,
+    `Name: ${name || '(not provided)'}`,
     `Email: ${email}`,
     `Church: ${church || '(not provided)'}`,
     `Location: ${location || '(not provided)'}`,
+    `Source: ${source || '(not provided)'}`,
     '',
     'What they are looking for:',
     message || '(none provided)',
@@ -102,12 +116,15 @@ async function createGhlContact(p: {
   church: string
   location: string
   message: string
+  source: string
+  tag: string
 }): Promise<void> {
   const apiKey = process.env.GHL_API_KEY
   const locationId = process.env.GHL_LOCATION_ID
   if (!apiKey || !locationId) return
 
   const [firstName, ...rest] = p.name.split(/\s+/)
+  const tags = ['wait-list-2026', ...(p.tag ? [p.tag] : [])]
   await fetch('https://services.leadconnectorhq.com/contacts/', {
     method: 'POST',
     headers: {
@@ -117,13 +134,13 @@ async function createGhlContact(p: {
     },
     body: JSON.stringify({
       locationId,
-      firstName: firstName || p.name,
+      firstName: firstName || p.name || undefined,
       lastName: rest.join(' ') || undefined,
       email: p.email,
       companyName: p.church || undefined,
       city: p.location || undefined,
-      source: 'Website wait list',
-      tags: ['wait-list-2026'],
+      source: p.source === 'footer' ? 'Website footer wait list' : 'Website wait list',
+      tags,
     }),
   })
 }

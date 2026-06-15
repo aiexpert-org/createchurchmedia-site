@@ -3,6 +3,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { EmilyAvatar } from '@/components/EmilyAvatar'
+import { FooterWaitListForm } from '@/components/FooterWaitListForm'
 import { navItems, siteConfig } from '@/lib/site-config'
 
 export function SiteFooter() {
@@ -45,15 +46,13 @@ export function SiteFooter() {
             <h2 className="font-display text-sm font-semibold tracking-wider uppercase text-neutral-950">
               Contact Emily
             </h2>
+
+            <p className="mt-6 text-sm font-semibold text-neutral-950">
+              Join the wait list
+            </p>
+            <FooterWaitListForm />
+
             <ul className="mt-6 space-y-3 text-sm text-neutral-700">
-              <li>
-                <Link
-                  href={siteConfig.waitlistUrl}
-                  className="font-semibold text-neutral-950 transition hover:underline underline-offset-4 decoration-[var(--color-cta)]"
-                >
-                  Join the wait list
-                </Link>
-              </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}

@@ -81,7 +81,7 @@ export function SiteHeader() {
                         : 'scale-x-0 opacity-0 transition-[transform,opacity] duration-[280ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-x-100 group-hover:opacity-70',
                     )}
                   />
-                  <span className="relative">{item.label}</span>
+                  <span className="relative z-10">{item.label}</span>
                 </Link>
               )
             })}
@@ -137,7 +137,7 @@ export function SiteHeader() {
                           : 'opacity-0 transition-opacity duration-200 group-hover:opacity-60',
                       )}
                     />
-                    <span className="relative">{item.label}</span>
+                    <span className="relative z-10">{item.label}</span>
                   </Link>
                 </li>
               )
