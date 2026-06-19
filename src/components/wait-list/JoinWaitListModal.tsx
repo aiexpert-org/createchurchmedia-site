@@ -127,12 +127,17 @@ export function JoinWaitListModal({
     const fn = firstName.trim()
     const ln = lastName.trim()
     const value = email.trim()
+    const dom = churchDomain.trim()
     if (!fn || !ln) {
       setError('Enter your first and last name.')
       return
     }
     if (!EMAIL_RE.test(value)) {
       setError('Enter a valid email address.')
+      return
+    }
+    if (!dom) {
+      setError('Enter your church website domain.')
       return
     }
     setError(null)
@@ -146,7 +151,7 @@ export function JoinWaitListModal({
           firstName: fn,
           lastName: ln,
           email: value,
-          churchDomain: churchDomain.trim(),
+          churchDomain: dom,
           referralCode: referralCode.trim(),
           source,
         }),
@@ -296,16 +301,20 @@ export function JoinWaitListModal({
 
                   <div className="mt-4">
                     <label htmlFor={`${titleId}-domain`} className="sr-only">
-                      Church website domain (optional)
+                      Church website domain
                     </label>
                     <input
                       id={`${titleId}-domain`}
                       type="text"
                       name="churchDomain"
                       autoComplete="url"
-                      placeholder="Church website domain (optional)"
+                      placeholder="Church website domain"
+                      required
                       value={churchDomain}
-                      onChange={(e) => setChurchDomain(e.target.value)}
+                      onChange={(e) => {
+                        setChurchDomain(e.target.value)
+                        if (error) setError(null)
+                      }}
                       disabled={status === 'submitting'}
                       className={fieldClass}
                     />

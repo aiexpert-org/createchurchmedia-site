@@ -61,6 +61,10 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ ok: false, error: 'invalid' }, { status: 422 })
   }
 
+  if (!churchDomain) {
+    return NextResponse.json({ ok: false, error: 'invalid' }, { status: 422 })
+  }
+
   const record = {
     firstName,
     lastName,
