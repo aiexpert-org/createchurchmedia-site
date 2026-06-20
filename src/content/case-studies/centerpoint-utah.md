@@ -3,15 +3,14 @@ title: Centerpoint Church
 church: Centerpoint Church
 slug: centerpoint-utah
 location: 'Eagle Mountain, UT'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/centerpoint-utah-black.png
 excerpt: >-
   A multi-ministry design subscription with CenterPoint Church in Utah, working
   with Communications Director Ethan Closson and Executive Pastor Chris Allen
-  across sermon series, youth events, signage, and class branding. The
-  subscription ran from spring 2025 through October 2025, when CenterPoint moved
-  the role in-house.
+  across sermon series, youth events, signage, and class branding, all driven by
+  a tight Google Form intake process.
 tags:
   - sermon-series
   - youth
@@ -19,7 +18,7 @@ tags:
   - branding
   - intake-process
 ---
-CenterPoint Church sits in Eagle Mountain, Utah, with the tagline "Making Jesus the center point." The graphic design subscription ran from spring 2025 through October 2025. My main contacts were Ethan Closson, the Communications Director, and Chris Allen on the executive side for invoicing. Other staff (Josh Harbin in Spiritual Formation, Nick Anderson with the youth team, Lindsey Poulton on the design side) came in for specific projects.
+CenterPoint Church sits in Eagle Mountain, Utah, with the tagline "Making Jesus the center point." The graphic design subscription covers a wide range of multi-ministry work, all flowing through a tight Google Form intake. My main contacts are Ethan Closson, the Communications Director, and Chris Allen on the executive side for invoicing. Other staff (Josh Harbin in Spiritual Formation, Nick Anderson with the youth team, Lindsey Poulton on the design side) come in for specific projects.
 
 ## How we started
 
@@ -42,4 +41,4 @@ The Wreck The Roof sermon series in May 2025 is a good example of how a request 
 
 ## Where things stand
 
-Chris Allen reached out on October 29, 2025 to let me know CenterPoint was closing out the subscription. They had been looking for an in-house hire who could combine several roles into one position, and that hire had landed. Ethan had given me a heads up a couple months earlier so I had runway to plan, which I appreciated. I told Chris the same in my reply, and we wrapped on a good note. The November 19 follow-up from Ethan asking for AI project files for the If/Then class graphics was the final handoff. CenterPoint left with full source files for anything they need to keep edited internally.
+The CenterPoint work spans the full range of a growing church: adult sermon series, youth ministry assets for CP YTH, class branding for the Dream Team and If/Then leadership tracks, and a steady run of signage. The Google Form intake is what keeps it all moving, clear briefs in and clear designs out across every ministry. The partnership stays ready for the next series, event, or signage push, and CenterPoint has full source files on hand for anything they want to edit internally between projects.

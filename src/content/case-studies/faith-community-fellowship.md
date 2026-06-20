@@ -34,7 +34,7 @@ The vinyl decals project. Jana sent measurements for a 35-inch maximum height ac
 
 The Family Day and Founded 250 dual title. Jana asked for a second proof of the same Family Day promo graphics with "Founded 250" swapped in for "Family Day" because the team was still deciding which title fit better for the day. I sent both versions same-day. Small ask, real impact: it lets the team make a final naming decision with the actual designs in front of them rather than picking blind.
 
-## A specific moment: the missions poster that was no longer needed
+## A specific moment: the missions poster timing
 
 In March 2026, right before I left for a vacation, Jana sent through a Missions Poster request and said she wanted to go ahead and send it in case I could fit it in. I did not get to it. When I came back, I emailed her on April 13 to check whether she still needed it. Her reply, April 14, 2026: "Hey, Emily. This is the project I needed right before your trip. I no longer need it. Thanks for checking!"
 

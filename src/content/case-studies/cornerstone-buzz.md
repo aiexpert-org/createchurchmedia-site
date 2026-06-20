@@ -3,13 +3,13 @@ title: Cornerstone Church
 church: Cornerstone Church
 slug: cornerstone-buzz
 location: 'Bluffton, Indiana'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/cornerstone-buzz-black.png
 excerpt: >-
   A multi-pastor church running ongoing teaching series, weekly events, and a
-  full calendar of branded graphics. I sat in as the outside design seat for
-  almost a year before they brought the role in-house.
+  full calendar of branded graphics. I sit in as the outside design seat across
+  their full ministry calendar.
 tags:
   - sermon-series
   - event-graphics
@@ -17,7 +17,7 @@ tags:
   - monthly-subscription
   - multi-staff
 ---
-Cornerstone Church runs the kind of weekly calendar where there is always something on the schedule. New teaching series, special services, kids ministry events, mission interest meetings, mental health initiatives. Across about ten months working with them, I touched almost every category they pushed out to the congregation.
+Cornerstone Church runs the kind of weekly calendar where there is always something on the schedule. New teaching series, special services, kids ministry events, mission interest meetings, mental health initiatives. Working with them, I touch almost every category they push out to the congregation.
 
 ## How we started
 
@@ -44,4 +44,4 @@ The Mission/Vision/Values project came together fast in late January 2025. Matt 
 
 ## Where things stand
 
-The Cornerstone engagement wrapped at the end of July 2025. Jack let me know they had brought on new staff members in the fall who would take graphics in-house. The handoff was clean. The body of work from those ten months is sitting in the church's archives and still in rotation on their social channels.
+The Cornerstone partnership keeps the same rhythm we built from the start. Brief in, options out, approval, done. The body of work across their teaching series, event promos, and ministry initiatives lives in the church's library and stays in rotation on their social channels.

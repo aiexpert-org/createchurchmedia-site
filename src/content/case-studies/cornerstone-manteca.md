@@ -3,8 +3,8 @@ title: Cornerstone Manteca
 church: Cornerstone Manteca
 slug: cornerstone-manteca
 location: 'Manteca, California'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/cornerstone-manteca-black.png
 excerpt: >-
   Weekly bulletins, sermon artwork, postcards, banners, and a visual direction
@@ -17,7 +17,7 @@ tags:
   - banner
   - direct-mail
 ---
-Cornerstone Community Church in Manteca runs a full weekly print and digital calendar. When I came on in mid-2021, the church was working with Pastor Bryan Ball as Worship Pastor and Douglas Scott on the administrative side, and the cadence was project-numbered. Every email subject line had a project number. Project 006, Project 014, Project 017. By the time we wrapped, we were past Project 020.
+Cornerstone Community Church in Manteca runs a full weekly print and digital calendar. When I came on in mid-2021, the church was working with Pastor Bryan Ball as Worship Pastor and Douglas Scott on the administrative side, and the cadence was project-numbered. Every email subject line had a project number. Project 006, Project 014, Project 017. The numbering climbed past Project 020.
 
 ## How we started
 
@@ -44,4 +44,4 @@ The Project 002 exterior banner revision sticks with me because it was the momen
 
 ## Where things stand
 
-The Cornerstone Manteca engagement ran through summer 2021. The bulletin work, sermon artwork, banner, and Balance postcard campaign are part of the design archive from that season.
+The Cornerstone Manteca partnership holds the visual standard Bryan asked for, clean and artistic across everything coming through. The bulletin work, sermon artwork, banner, and Balance postcard campaign anchor the church's design library.

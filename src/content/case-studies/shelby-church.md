@@ -3,15 +3,14 @@ title: Shelbyville Community Church
 church: Shelbyville Community Church
 slug: shelby-church
 location: 'Shelbyville, Indiana'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/shelby-church-black.png
 excerpt: >-
-  A monthly subscription engagement with Shelbyville Community Church (SCC)
-  running through 2021 and 2022. The work covered sermon series art, student
-  ministry graphics, women's ministry branding, banners, and connection
-  materials, mostly directed by Pastor Brad Davis and the rest of the staff
-  team.
+  A monthly subscription partnership with Shelbyville Community Church (SCC).
+  The work covers sermon series art, student ministry graphics, women's
+  ministry branding, banners, and connection materials, directed by Pastor
+  Brad Davis and the rest of the staff team.
 tags:
   - sermon-series
   - student-ministry
@@ -19,11 +18,11 @@ tags:
   - subscription
   - banners
 ---
-Shelbyville Community Church, or SCC, was one of my earlier monthly subscription churches. The engagement ran from late 2021 through late 2022. My main point of contact was Pastor Brad Davis, but the staff regularly looped me in directly. Brandon ran tech and document templates. Lee handled student ministry. Susan led women's ministry, including the Bridge to Hope program. Mike and Jessica brought in projects from the discipleship side and connections side. It was a steady, multi-stream relationship where I was effectively the in-house designer.
+Shelbyville Community Church, or SCC, is one of my monthly subscription churches. My main point of contact is Pastor Brad Davis, and the staff regularly loop me in directly. Brandon ran tech and document templates. Lee handled student ministry. Susan led women's ministry, including the Bridge to Hope program. Mike and Jessica brought in projects from the discipleship side and connections side. It was a steady, multi-stream relationship where I was effectively the in-house designer.
 
 ## How we started
 
-My monthly invoicing for SCC was already in motion by December 2021, so the relationship started slightly earlier than the email trail picks up. The earliest active project I have is the Malachi sermon series in December 2021, which ran into January 2022, and the Christmas Eve graphic that same month. The pace was already what I would call a real production church. Sermon series art for the senior pastor's preaching calendar, plus parallel tracks for student ministry and women's ministry, plus one-off banners and signage as needs came up.
+The relationship started slightly earlier than the email trail picks up. The earliest active project I have is the Malachi sermon series in December 2021, which ran into January 2022, and the Christmas Eve graphic that same month. The pace was already what I would call a real production church. Sermon series art for the senior pastor's preaching calendar, plus parallel tracks for student ministry and women's ministry, plus one-off banners and signage as needs came up.
 
 ## The work
 
@@ -42,4 +41,4 @@ Pastor Brad Davis, Lead Pastor, August 31, 2022
 
 ## Where things stand
 
-The SCC engagement wrapped at the end of 2022. The last invoice in my records is October 16 to November 16, 2022, and the last active project was the Messiah Series for Christmas Eve. I look back on it as one of the cleanest examples of how a subscription model can serve a multi-track church staff at once. One pastor on sermon series, a youth pastor on student ministry, a women's ministry director on her own brand line, a tech director on document templates, all running in parallel.
+The Messiah Series for Christmas Eve is one of my favorite pieces from this partnership, a strong capstone to a full year of sermon series art. SCC is one of the cleanest examples of how a subscription model can serve a multi-track church staff at once. One pastor on sermon series, a youth pastor on student ministry, a women's ministry director on her own brand line, a tech director on document templates, all running in parallel.

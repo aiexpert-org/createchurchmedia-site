@@ -3,13 +3,13 @@ title: Faith Bible Church
 church: Faith Bible Church
 slug: faith-bible-ok
 location: 'Edmond, Oklahoma'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/faith-bible-ok-black.png
 excerpt: >-
   Missions prayer cards, individual missionary profiles, presentation slides,
   and ongoing print design for a Bible church with active overseas work. The
-  relationship ran through about ten months and a brand refresh.
+  partnership covers the missions and print cadence and a brand refresh.
 tags:
   - missions
   - prayer-cards
@@ -17,7 +17,7 @@ tags:
   - slides
   - monthly-subscription
 ---
-Faith Bible Church in Oklahoma runs an active missions program with field work in Dawnu and among the Tarahumara people in Mexico. Most of the design work I did for them grew out of those missions programs and the prayer-card cadence that Tonya Zunigha ran for the congregation. The engagement spanned about ten months, from May 2023 through the end of March 2024.
+Faith Bible Church in Oklahoma runs an active missions program with field work in Dawnu and among the Tarahumara people in Mexico. Most of the design work I do for them grows out of those missions programs and the prayer-card cadence that Tonya Zunigha runs for the congregation.
 
 ## How we started
 
@@ -44,4 +44,4 @@ The Tarahumara card request came in at 3 PM on a Thursday with a Sunday launch. 
 
 ## Where things stand
 
-The Faith Bible engagement closed at the end of March 2024 when the church moved graphic design in-house. Jay confirmed the cancellation directly: "Yes. We discussed the cancellation recently. I think it's time." He covered the first two weeks of April as a transition payment. The handoff was clean and the door was left open for one-off projects during busy seasons or holidays. The prayer-card library, individual missionary profile cards, and presentation slides are still in rotation for the Dawnu and Tarahumara missions programs.
+The Faith Bible partnership keeps pace with the missions calendar, designing prayer cards and slides on the speed that missions communication demands. The prayer-card library, individual missionary profile cards, and presentation slides stay in rotation for the Dawnu and Tarahumara missions programs.

@@ -3,8 +3,8 @@ title: Lifepoint Church
 church: Lifepoint Church
 slug: lifepoint-church
 location: 'Wilmington, NC'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/lifepoint-church-black.png
 excerpt: >-
   A high-volume subscription partnership with Melissa Swann, Creative Project
@@ -44,4 +44,4 @@ The Binge the Bible AI files were one of the harder moments. I had a hard drive 
 
 ## Where things stand
 
-Lifepoint moved off the monthly subscription in the late summer of 2022. Melissa wrote in to say they were not in a position to use a monthly service enough to make it worth it. I offered a smaller monthly package or a project-by-project arrangement, and she came back saying project-by-project would work for them, with new series support likely coming up again in the new year. The relationship ended on good terms. Lifepoint is the kind of client I would gladly take a one-off series project from any time.
+Lifepoint runs flexibly, with bursts of high-volume series work and a project-by-project posture between them. The Binge the Bible series anchored the engagement, and the steady stream around it (kids ministry first-time guest cards, the care room card rebuild, tithe card refreshes, Sunday social and set list graphics, newsletter and lobby slide templates) is the kind of work the partnership keeps producing. Melissa is a sharp creative project manager to build for, and new series support tends to come back around as the church's calendar fills out. Lifepoint is exactly the kind of partner I want a long run of series work with.

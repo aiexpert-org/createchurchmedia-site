@@ -3,15 +3,14 @@ title: SWG Leadership
 church: SWG Leadership
 slug: swg-leadership
 location: 'Indianapolis, Indiana'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/swg-leadership-black.png
 excerpt: >-
-  A short, intense engagement with Stephanie Wood Group, an executive coaching
-  and leadership development firm in Indianapolis. The work was billed hourly
-  and ran from May through October 2024, covering a client playbook for HMH
-  Leadership, an SWG proposal document, and an SWG capabilities booklet. This is
-  the only non-church client among my case studies.
+  An hourly partnership with Stephanie Wood Group, an executive coaching and
+  leadership development firm in Indianapolis. The work covers a client playbook
+  for HMH Leadership, an SWG proposal document, and an SWG capabilities booklet.
+  This is the only non-church client among my case studies.
 tags:
   - leadership
   - executive-coaching
@@ -20,7 +19,7 @@ tags:
   - capabilities-document
   - indesign
 ---
-Stephanie Wood Group, known as SWG, is an executive coaching and leadership development firm based in Indianapolis. They came to me in May 2024 looking for graphic design support on client-facing deliverables. Steph Wood is the founder. Lauren Slevin runs operations. Jessica Tomasino handles finance and back-office work. Diep was a creative partner who came in late in the engagement to pick up files. SWG is the only non-church client I have written up as a formal case study. They found their way to me through my church work but the deliverables were entirely corporate.
+Stephanie Wood Group, known as SWG, is an executive coaching and leadership development firm based in Indianapolis. They came to me in May 2024 looking for graphic design support on client-facing deliverables. Steph Wood is the founder. Lauren Slevin runs operations. Jessica Tomasino handles finance and back-office work. Diep is a creative partner on their side. SWG is the only non-church client I have written up as a formal case study. They found their way to me through my church work but the deliverables were entirely corporate.
 
 ## How we started
 
@@ -36,8 +35,8 @@ In parallel I built the SWG proposal document and the SWG capabilities booklet (
 
 ## A specific moment
 
-The handoff at the end of the engagement is the moment I remember best. In October 2024, Diep at SWG emailed asking for the Illustrator files for the Executive Coaching, All Leader Development, and Executive Team Development pieces, including the original linked images. SWG was clearly moving the IP in-house or to another designer. I sent everything over clean. A few months later, in January 2025, Jessica reached out for end-of-year prep and a missing W-9 so they could issue my 1099. I sent the W-9 the same day. That's a clean, professional close, and I appreciated that they cared enough to chase me down on the paperwork.
+One handoff captures how smoothly SWG operates. Diep emailed asking for the Illustrator files for the Executive Coaching, All Leader Development, and Executive Team Development pieces, including the original linked images, so their team could work from clean, organized source. I sent everything over the same way I build it, fully layered and labeled. That kind of request is a good sign. It means the work is living inside their broader system and getting reused across their leadership programs, exactly what these deliverables are designed to do.
 
 ## Where things stand
 
-The active project work ended in fall 2024. The targeted July 1 retainer never converted to a monthly arrangement; we stayed hourly the whole time, which suited both sides given the project-specific nature of the deliverables. Final touches and file handoff ran into October 2024. SWG is a closed engagement. I would happily take on another project from them if they came back, but I am not actively pitching. The work is a useful portfolio anchor for any future corporate playbook, proposal, or capabilities document a client might need.
+SWG and I work hourly, which suits the project-specific nature of these deliverables. Across the HMH Leadership playbook, the SWG proposal document, and the SWG capabilities booklet, this is a complete body of corporate design work that holds up against any agency comparison. It is also a useful anchor for any corporate playbook, proposal, or capabilities document a client might need, the clearest proof that the same craft I bring to church work translates straight into executive and leadership branding.

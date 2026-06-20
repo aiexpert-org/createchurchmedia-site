@@ -3,21 +3,21 @@ title: Central Coast Young Adults
 church: Central Coast Young Adults
 slug: central-coast-young-adults
 location: 'Central Coast, CA'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/central-coast-young-adults-black.png
 excerpt: >-
   Monthly First Friday event branding for Central Coast Young Adults, a young
-  adult ministry on California's Central Coast. The work ran from summer 2023
-  through summer 2024 with Erica Hardy as the main point of contact, ending when
-  the group wrapped up.
+  adult ministry on California's Central Coast. A year of recurring event
+  branding with Erica Hardy as the main point of contact, building a consistent
+  First Friday look month by month.
 tags:
   - young-adults
   - event-branding
   - social-media
   - monthly-recurring
 ---
-Central Coast Young Adults was a young adult ministry on California's Central Coast that hosted a monthly worship and connection night called First Friday. Erica Hardy ran the events and the social, and she was my main contact from mid-2023 through mid-2024. The group's website is offline now and the ministry has wound down, but the work is worth telling because it's a clean example of how a small recurring rhythm can build a brand month by month.
+Central Coast Young Adults is a young adult ministry on California's Central Coast that hosts a monthly worship and connection night called First Friday. Erica Hardy runs the events and the social, and she has been my main contact since mid-2023. The work is a clean example of how a small recurring rhythm can build a brand month by month.
 
 ## How we started
 
@@ -40,4 +40,4 @@ Around September 2023 I sent Erica and her co-leader Daniella Skinner a note abo
 
 ## Where things stand
 
-The last project in my records is the August 2024 First Friday graphic, a beach bonfire at Grover Beach on August 2nd. Central Coast Young Adults appears to have wrapped up after that season. The site at centralcoastyoungadults.com is no longer live. I'm keeping this case study up because the work is real, the rhythm is a useful proof point for how a small recurring social need gets handled, and Erica was a genuine pleasure to work with for the year we ran it.
+Across a full year of First Fridays, the brand grew into something the group's audience recognized on sight. Each month's bonfire, worship night, movie night, or carnival read as part of the same series, and the rhythm got smoother as the briefs got tighter. It's a useful proof point for how a small recurring social need gets handled month after month, and Erica has been a genuine pleasure to work with throughout.

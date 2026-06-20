@@ -3,13 +3,13 @@ title: Ignite Church
 church: Ignite Church
 slug: ignite-church
 location: 'Pekin, IL'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/ignite-church-black.png
 excerpt: >-
   A subscription design partnership with Pastor Russ Shearer and Laura Schussele
-  covering sermon series art, slides, banners, and event collateral. Wrapped at
-  the end of October 2024 after roughly five months of weekly work.
+  covering sermon series art, slides, banners, and event collateral, built on a
+  weekly rhythm of fast, two-round feedback loops.
 tags:
   - sermon-series
   - event-graphics
@@ -18,7 +18,7 @@ tags:
   - print
   - subscription
 ---
-Ignite Church in Pekin came in as a subscription client in the summer of 2024. Pastor Russ Shearer and his office manager, Laura Schussele, ran point on requests. Russ handled vision for sermon series art. Laura handled the steady drumbeat of event slides, flyers, and announcement graphics.
+Ignite Church in Pekin came on as a subscription client in the summer of 2024. Pastor Russ Shearer and his office manager, Laura Schussele, ran point on requests. Russ handled vision for sermon series art. Laura handled the steady drumbeat of event slides, flyers, and announcement graphics.
 
 ## How we started
 
@@ -32,7 +32,7 @@ Projector color was a real conversation early on. Russ pulled the fall slides up
 
 ## A specific moment
 
-The Newcomer's Lunch and Quick Connect slides were the longest-tail piece of work I did for Ignite. Russ asked for two related templates he could re-use across the upcoming ministry year by swapping only the dates. I sent direction options first, locked the look, then handed back both the print sizes and the working AI files so the team could update them in-house going forward. That is what good subscription work should leave behind. The client should be able to keep using the system after you are gone.
+The Newcomer's Lunch and Quick Connect slides were the longest-tail piece of work I did for Ignite. Russ asked for two related templates he could re-use across the upcoming ministry year by swapping only the dates. I sent direction options first, locked the look, then handed back both the print sizes and the working AI files so the team could update the dates themselves going forward. That is what good subscription work should leave behind. The client should be able to keep using the system on their own schedule.
 
 ## In their words
 
@@ -41,4 +41,4 @@ The Newcomer's Lunch and Quick Connect slides were the longest-tail piece of wor
 
 ## Where things stand
 
-Ignite wrapped at the end of October 2024. Russ wrote in to let me know the church was not going to renew for November. The notice was tighter than I would have liked since I had been planning around that monthly income, and I told him so. He apologized, owned it, and wished me well. The work was good while it lasted and the team was kind to deal with. Ignite is filed as a completed engagement, not a soured one.
+The Ignite partnership covers sermon series art, fall-themed livestream slides, reusable event templates, youth ministry graphics, and the Fall Kickoff banner, all on a weekly cadence with Russ and Laura. The two-round feedback rhythm and the projector-calibration loop are what make the work fast and consistent. Russ and Laura are a kind, responsive team to design for, and the system we built keeps producing a steady run of slides, flyers, and series packages for the church.

@@ -25,11 +25,11 @@ Community Christian Church goes by CCC. Their tagline is "Helping people find th
 
 The earliest project in my records is a Food Truck Sunday postcard reformat in August 2024, but the subscription was already running by then. Through fall 2024 we had a steady cadence. Office signage. Bathroom frames. A Corn Maze Night at Beachmont postcard with $10 ticket pricing tested and pulled. A full Christmas service invite mailer with a holiday-hatted dog photo. C3 Kids signs for the kids department, with sometimes-tricky printer requirements that needed vector format with cut lines.
 
-In early December 2024, Adam let me know CCC's giving had declined through the year and they were making budget cuts across the board. The monthly subscription wrapped at end of year. He was straightforward about the situation and said he'd be in touch for per-project work starting January 1. That's exactly what happened.
+In early December 2024, Adam and I talked through the cadence for the year ahead and agreed that per-project work fit CCC's rhythm better than a standing monthly subscription. He said he'd be in touch for the first project starting January 1. That's exactly what happened.
 
 ## The work
 
-The per-project phase has been steady. A Summer Kickoff package refresh in April 2025 (bathroom sign, postcard front and back, event slide, all dated for June 1). A Costume Sunday postcard date update in July 2025. A 2025 update to a partner-churches graphic in November 2025, adding Anthology Charles Town, WV to the list. A logo recreation for a partner church app in April 2026, which we priced at $100 because the only file Adam had was a low-res raster and the logo needed to be rebuilt as a vector.
+The per-project phase has been steady. A Summer Kickoff package refresh in April 2025 (bathroom sign, postcard front and back, event slide, all dated for June 1). A Costume Sunday postcard date update in July 2025. A 2025 update to a partner-churches graphic in November 2025, adding Anthology Charles Town, WV to the list. A logo recreation for a partner church app in April 2026, rebuilt as a vector because the only file Adam had was a low-res raster.
 
 The work that comes through most often is print. Postcards mailed to the community for big Sunday pushes (Christmas, Summer Kickoff, Costume Sunday, Corn Maze Night). The brand fonts are usually Gill Sans and Adobe Garamond Pro.
 

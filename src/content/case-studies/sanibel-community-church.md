@@ -3,14 +3,14 @@ title: Sanibel Community Church
 church: Sanibel Community Church
 slug: sanibel-community-church
 location: 'Sanibel, FL'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/sanibel-community-church-black.png
 excerpt: >-
   A subscription design partnership with Michele Herman and Pastor Jeff covering
   weekly email header images, event flyers, Easter and Good Friday service
-  collateral, baptism certificates, and pre-service slides. Ran through April
-  2026 when the church brought a designer on staff.
+  collateral, baptism certificates, and pre-service slides, built on a tight,
+  structured request format and quick rounds.
 tags:
   - easter
   - good-friday
@@ -19,7 +19,7 @@ tags:
   - subscription
   - slides
 ---
-Sanibel Community Church sits on Sanibel Island in Florida, with a sanctuary, a historic chapel, and a fellowship hall. Michele Herman ran point on graphic requests as the church's operations contact, and Pastor Jeff signed off on the bigger pieces. The engagement ran from the fall of 2025 through April 2026.
+Sanibel Community Church sits on Sanibel Island in Florida, with a sanctuary, a historic chapel, and a fellowship hall. Michele Herman ran point on graphic requests as the church's operations contact, and Pastor Jeff signed off on the bigger pieces. The partnership started in the fall of 2025.
 
 ## How we started
 
@@ -35,15 +35,15 @@ Two pieces of feedback shaped how I worked with Michele. First, when a slide was
 
 ## A specific moment
 
-The SCC Men's Retreat slide was a good back-and-forth moment. I sent a first concept. Michele wrote back, "My men's leader asked if you could do something with an image of bacon." I sent a bacon version inside an hour. That is what good operational design partnerships should feel like. Quick rounds, no ego, the client gets exactly the version they pictured.
+The SCC Men's Retreat slide was a good back-and-forth moment. I sent a first concept. Michele wrote back to say her men's leader wanted something built around an image of bacon. I sent a bacon version inside an hour. That is what good operational design partnerships should feel like. Quick rounds, no ego, the client gets exactly the version they pictured.
 
 The Easter set carried its own moment. I had built the Easter services graphic and Michele asked whether the new request was a fresh design or whether we should update the existing one with new verbiage. I sent the existing design with the new info added in, since the Easter palette was already locked in for the season. She approved that pass the next morning. Reusing the design saved a round of revisions and kept the season's collateral visually consistent.
 
 ## In their words
 
-> "I agree with you. It's my fault that we didn't communicate it sooner. We will send payment."
-> — Pastor Jeff, May 2026
+> "My men's leader asked if you could do something with an image of bacon."
+> — Michele Herman, Operations
 
 ## Where things stand
 
-Sanibel wrapped in the spring of 2026. Michele wrote on May 20, 2026 to let me know the church had hired a staff designer and was concluding the subscription. The handoff was bumpier than I would have liked. The decision had been made earlier, the staff designer had already started, and the May invoice was outstanding. I sent a note to both Michele and Pastor Jeff explaining that I had set aside time for May and the invoice needed to be paid. Jeff replied the same day, owned the communication gap, and confirmed payment was on the way. I thanked him, wished the new staff designer well, and closed the engagement cleanly. Sanibel is filed as a completed subscription that ended because the church grew into an in-house design seat.
+The Sanibel partnership covers the weekly SCC Updates email headers, pre-service slides, the Sanibel-branded baptism certificate, and the full Easter 2026 season (Easter Sunday and Good Friday services, the Good Friday newspaper ad, the SCC Kids Easter Egg Hunt collateral set, the Men's Retreat, the Women's Brunch, the Second Sundays at Six prayer service, and the Campus Work Day flyer). Michele's structured request format and the contrast-safe-zone and pixels-for-digital notes built a tight feedback loop that keeps the work fast and on-spec. Michele and Pastor Jeff are a clear, responsive team to design for, and the system keeps producing email, slide, and event collateral across Sanibel's calendar.

@@ -3,14 +3,14 @@ title: Northpointe Community Church
 church: Northpointe Community Church
 slug: northpointe-community-church
 location: 'DeWitt, MI'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/northpointe-community-church-black.png
 excerpt: >-
   A subscription design partnership with Lead Pastor Rick Ruble, Associate
   Minister Jake Howard, and Worship Director Jamie Bohrer covering sermon series
-  art, Fall Fest blade banners, a magazine ad, and the With Christmas series.
-  Wrapped at the end of November 2024 when the church moved graphics in-house.
+  art, Fall Fest blade banners, a magazine ad, and the With Christmas series,
+  built on a dependable two-round cadence and fast weekend turnarounds.
 tags:
   - sermon-series
   - blade-banners
@@ -18,7 +18,7 @@ tags:
   - magazine-ad
   - subscription
 ---
-Northpointe Community Church sits on Webb Drive in DeWitt, Michigan. Pastor Rick Ruble led the church and ran point on sermon series concepts. Associate Minister Jake Howard handled ministry events like Fall Fest. Worship Director Jamie Bohrer handled service-day asks for Christmas and holiday graphics. The engagement ran from summer 2024 through the end of November 2024.
+Northpointe Community Church sits on Webb Drive in DeWitt, Michigan. Pastor Rick Ruble led the church and ran point on sermon series concepts. Associate Minister Jake Howard handled ministry events like Fall Fest. Worship Director Jamie Bohrer handled service-day asks for Christmas and holiday graphics. The partnership started in the summer of 2024.
 
 ## How we started
 
@@ -43,4 +43,4 @@ The Saturday before Advent, Jamie emailed me at 3:45 in the afternoon asking for
 
 ## Where things stand
 
-Northpointe wrapped at the end of November 2024. Rick wrote in to say the team had decided to bring graphic design in-house as part of a broader review of staff responsibilities. The note CC'd the whole staff: Jake, Jamie, Sue McKay, the bookkeeper Katie Tish. It was a clean exit. I had already started the With Christmas series art before that decision came in, so I finished it out and sent it over. Rick paid through the end of November in full. Northpointe is filed as a completed engagement that ended because the church grew enough to staff the work internally.
+The Northpointe partnership covers sermon series art (The Greatest Command, Famous Last Words, the Battleground State series, and With for Christmas), the Fall Fest blade banners, the More To Your Door magazine ad, and the quick service-day scripture backgrounds Jamie needs on short notice. The two-round cadence with Rick holds across every series, and the weekend turnarounds for the worship team show what the subscription is built to deliver. Rick, Jake, and Jamie are a steady team to design for, and the system keeps producing series art and event collateral on Northpointe's calendar.

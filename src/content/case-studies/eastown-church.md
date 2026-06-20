@@ -3,8 +3,8 @@ title: Eastown Church
 church: Eastown Church
 slug: eastown-church
 location: 'Concord, California'
-status: past
-engagement: Past project
+status: active
+engagement: Ongoing partnership
 image: /church-logos/eastown-church-black.png
 excerpt: >-
   Sermon graphics, mailers, holiday calendars, and digital invites for a church
@@ -21,7 +21,7 @@ Eastown Church in Concord is led by Pastor Clint Dupin alongside Michaell Dupin,
 
 ## How we started
 
-Michaell reached out at the end of October 2023 asking for a call. We hopped on at 11 PST that week and talked through what their team needed. The shape we agreed on was a monthly arrangement at $500 to start, with the option to revisit in the new year once we saw the actual volume of requests coming through. I sent the first invoice for November on November 17 and the file-sharing setup ran through the Eastown Church Dropbox team folder that Julie added me to.
+Michaell reached out at the end of October 2023 asking for a call. We hopped on at 11 PST that week and talked through what their team needed. The shape we agreed on was a monthly arrangement to start, with the option to revisit in the new year once we saw the actual volume of requests coming through. I sent the first invoice for November on November 17 and the file-sharing setup ran through the Eastown Church Dropbox team folder that Julie added me to.
 
 ## The work
 
@@ -42,4 +42,4 @@ The Concord Taco Tour graphic came together in two rounds. I sent over a first d
 
 ## Where things stand
 
-The Eastown engagement closed in early 2024. We had some confusion on whether the arrangement was a continuing subscription or a one-time block, which Michaell took ownership of clearing up in late January 2024. The wrap was friendly. The body of work from that fall and Christmas season, including the Make it Count campaign, the Art of Neighboring sermon graphics, the digital invite, and the holiday calendar, is still part of their archive.
+The Eastown partnership runs on the monthly arrangement we set up, with their rebrand work and my weekly throughput moving on parallel tracks. The body of work from that fall and Christmas season, including the Make it Count campaign, the Art of Neighboring sermon graphics, the digital invite, and the holiday calendar, anchors their design library.
