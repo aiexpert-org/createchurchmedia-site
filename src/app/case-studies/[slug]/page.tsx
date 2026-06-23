@@ -14,6 +14,8 @@ import {
 import { getChurchBySlug, churchLogo } from '@/lib/churches'
 import { ArticleByline } from '@/components/EmilyAvatar'
 import { SelectedWork } from '@/components/SelectedWork'
+import { BreadcrumbJsonLd, CaseStudyJsonLd } from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site-config'
 
 type RouteParams = { slug: string }
@@ -31,18 +33,12 @@ export async function generateMetadata({
   const study = await getCaseStudyBySlug(slug)
   if (!study) return {}
 
-  return {
-    title: `${study.church} — Case Study`,
+  return buildMetadata({
+    title: `${study.church} · Case Study`,
     description: study.excerpt,
-    alternates: { canonical: `/case-studies/${slug}` },
-    openGraph: {
-      type: 'article',
-      title: `${study.church} — Case Study`,
-      description: study.excerpt,
-      url: `${siteConfig.url}/case-studies/${slug}`,
-      siteName: siteConfig.brand,
-    },
-  }
+    path: `/case-studies/${slug}`,
+    type: 'article',
+  })
 }
 
 export default async function CaseStudyPage({
@@ -58,6 +54,20 @@ export default async function CaseStudyPage({
 
   return (
     <>
+      <CaseStudyJsonLd
+        church={study.church}
+        excerpt={study.excerpt}
+        slug={slug}
+        location={study.location}
+        image={study.image || undefined}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Case Studies', path: '/case-studies' },
+          { name: study.church, path: `/case-studies/${slug}` },
+        ]}
+      />
       <Container className="mt-12 sm:mt-20">
         <FadeIn className="mx-auto max-w-3xl">
           <p className="text-sm text-neutral-500">
