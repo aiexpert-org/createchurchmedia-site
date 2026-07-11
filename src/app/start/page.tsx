@@ -53,7 +53,7 @@ export default function StartPage() {
               </p>
               <p className="mt-6 flex items-baseline gap-x-2">
                 <span className="font-display text-6xl font-semibold tracking-tight text-neutral-950">
-                  $797
+                  $997
                 </span>
                 <span className="text-base text-neutral-500">/month</span>
               </p>
