@@ -6,8 +6,9 @@ import { EmilyAvatar } from '@/components/EmilyAvatar'
 import { Border } from '@/components/Border'
 import { buildMetadata } from '@/lib/seo'
 
-// GHL checkout URL -- update once go.createchurchmedia.com DNS propagates
-const CHECKOUT_URL = 'https://go.createchurchmedia.com'
+// GHL checkout URLs
+const MONTHLY_CHECKOUT_URL = 'https://go.createchurchmedia.com/order'
+const ANNUAL_CHECKOUT_URL = 'https://go.createchurchmedia.com/order-annual'
 
 // noindex: this page is shared privately by Emily, not meant for public discovery
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export default function StartPage() {
             </h1>
             <p className="mt-6 text-lg text-neutral-600">
               Both plans give you the same access, same designer, same turnaround.
-              The annual plan saves you almost $2,000.
+              The annual plan saves you $2,400 compared to paying month to month.
             </p>
           </FadeIn>
         </Container>
@@ -52,7 +53,7 @@ export default function StartPage() {
               </p>
               <p className="mt-6 flex items-baseline gap-x-2">
                 <span className="font-display text-6xl font-semibold tracking-tight text-neutral-950">
-                  $997
+                  $797
                 </span>
                 <span className="text-base text-neutral-500">/month</span>
               </p>
@@ -60,7 +61,7 @@ export default function StartPage() {
                 Cancel any time. No long-term commitment.
               </p>
               <a
-                href={CHECKOUT_URL}
+                href={MONTHLY_CHECKOUT_URL}
                 className="mt-8 block w-full rounded-full bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800"
               >
                 Subscribe monthly
@@ -70,19 +71,19 @@ export default function StartPage() {
             {/* Annual */}
             <FadeIn className="rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900">
               <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
-                Annual -- best value
+                Annual, save 20%
               </p>
               <p className="mt-6 flex items-baseline gap-x-2">
                 <span className="font-display text-6xl font-semibold tracking-tight text-white">
-                  $9,997
+                  $9,564
                 </span>
                 <span className="text-base text-neutral-400">/year</span>
               </p>
               <p className="mt-4 text-base text-neutral-300">
-                12 months upfront. Saves you almost $2,000.
+                12 months upfront. That&rsquo;s $797/month. You save $2,400.
               </p>
               <a
-                href={CHECKOUT_URL}
+                href={ANNUAL_CHECKOUT_URL}
                 className="mt-8 block w-full rounded-full bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110"
               >
                 Subscribe annually
