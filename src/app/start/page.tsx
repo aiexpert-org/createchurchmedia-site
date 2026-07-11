@@ -62,14 +62,24 @@ export default function StartPage() {
               </p>
               <a
                 href={MONTHLY_CHECKOUT_URL}
-                className="mt-8 block w-full rounded-full bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800"
+                className="mt-8 block w-full rounded-md bg-neutral-950 px-6 py-4 text-center text-sm font-semibold text-white transition hover:bg-neutral-800"
               >
                 Subscribe monthly
               </a>
             </FadeIn>
 
             {/* Annual */}
-            <FadeIn className="rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900">
+            <FadeIn className="relative rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900">
+              <div
+                aria-label="$797/mo"
+                className="absolute -top-4 -right-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-cta)] shadow-lg"
+              >
+                <span className="text-center text-xs font-bold leading-tight text-neutral-950">
+                  $797
+                  <br />
+                  /mo
+                </span>
+              </div>
               <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
                 Annual, save 20%
               </p>
@@ -84,7 +94,7 @@ export default function StartPage() {
               </p>
               <a
                 href={ANNUAL_CHECKOUT_URL}
-                className="mt-8 block w-full rounded-full bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110"
+                className="mt-8 block w-full rounded-md bg-[var(--color-cta)] px-6 py-4 text-center text-sm font-semibold text-neutral-950 transition hover:brightness-110"
               >
                 Subscribe annually
               </a>
