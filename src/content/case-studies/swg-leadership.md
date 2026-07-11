@@ -4,13 +4,13 @@ church: SWG Leadership
 slug: swg-leadership
 location: 'Indianapolis, Indiana'
 status: active
-engagement: Ongoing partnership
+engagement: Hourly
 image: /church-logos/swg-leadership-black.png
 excerpt: >-
-  An hourly partnership with Stephanie Wood Group, an executive coaching and
-  leadership development firm in Indianapolis. The work covers a client playbook
-  for HMH Leadership, an SWG proposal document, and an SWG capabilities booklet.
-  This is the only non-church client among my case studies.
+  An hourly design partnership with Stephanie Wood Group, an executive coaching
+  and leadership development firm in Indianapolis. The work covers a client
+  playbook for HMH Leadership, a proposal document, and a capabilities booklet.
+  This is the only non-church client among the case studies.
 tags:
   - leadership
   - executive-coaching
@@ -19,24 +19,18 @@ tags:
   - capabilities-document
   - indesign
 ---
-Stephanie Wood Group, known as SWG, is an executive coaching and leadership development firm based in Indianapolis. They came to me in May 2024 looking for graphic design support on client-facing deliverables. Steph Wood is the founder. Lauren Slevin runs operations. Jessica Tomasino handles finance and back-office work. Diep is a creative partner on their side. SWG is the only non-church client I have written up as a formal case study. They found their way to me through my church work but the deliverables were entirely corporate.
-
-## How we started
-
-Steph reached out on May 15, 2024 with a clear scope. Three deliverables to start, billed hourly, with the goal of moving to a monthly retainer on July 1. The three pieces were a playbook for one of their clients, HMH Leadership, plus two SWG-branded sales documents: a proposal and a capabilities booklet. The HMH playbook was the most complex of the three. It needed to communicate mission, vision, values and cultural characteristics, a strategic plan with four pillars, guiding principles, and a leadership brand piece that was still being developed on June 4. Steph's brief had a nice phrase I held onto: the purpose of the document was to "simply and visually communicate the reason for each piece of work as well as the connections of the pieces."
-
-We scheduled a Monday phone call to kick off (Friday was my day off), Lauren shared an old SWG workbook InDesign file so I had the color, icon, and typography vocabulary in front of me, and I started building.
+Stephanie Wood Group, known as SWG, is an executive coaching and leadership development firm based in Indianapolis. They came looking for graphic design support on client-facing deliverables. SWG is the only non-church client written up as a formal case study. They found their way here through church work, but the deliverables were entirely corporate.
 
 ## The work
 
-The HMH Leadership playbook was the spine of the engagement. We iterated through mission and vision pages, a strategic pillars layout, a cultural characteristics treatment that had to weave together values and behaviors, and a leadership brand section that landed after their June 4 internal workshop. Jessica fed me the content drops as they finalized. Lauren handled the design feedback and corrections. We did multiple rounds on the cover page, the leadership chart, the four-pillars layout, and stock photo selection. By late summer the playbook was in solid shape and Jessica was coming back for an update with more HMH content.
+Three deliverables anchored the engagement: a playbook for one of SWG's clients, HMH Leadership, plus two SWG-branded sales documents, a proposal and a capabilities booklet.
 
-In parallel I built the SWG proposal document and the SWG capabilities booklet (sometimes called the four-page capabilities document). Both were sales-facing, so the brand had to read polished and trustworthy. The capabilities booklet went through a proper editorial pass with Lauren feeding me client logos, four-pillar examples, screenshots, and corrections. By July and August we were also revising the HMH Leadership Brand and Playbook as new content came in.
+The HMH Leadership playbook was the most complex of the three. It needed to communicate mission, vision, values and cultural characteristics, a strategic plan with four pillars, guiding principles, and a leadership brand piece still being developed mid-project. The purpose of the document, as the brief described it, was to "simply and visually communicate the reason for each piece of work as well as the connections of the pieces." An old SWG workbook InDesign file provided the color, icon, and typography vocabulary from the start.
 
-## A specific moment
+The work iterated through mission and vision pages, a strategic pillars layout, a cultural characteristics treatment weaving together values and behaviors, and a leadership brand section that landed after an internal workshop. Content drops came in as each section was finalized.
 
-One handoff captures how smoothly SWG operates. Diep emailed asking for the Illustrator files for the Executive Coaching, All Leader Development, and Executive Team Development pieces, including the original linked images, so their team could work from clean, organized source. I sent everything over the same way I build it, fully layered and labeled. That kind of request is a good sign. It means the work is living inside their broader system and getting reused across their leadership programs, exactly what these deliverables are designed to do.
+In parallel, the SWG proposal document and the SWG capabilities booklet were built as sales-facing pieces. Both had to read polished and trustworthy. The capabilities booklet went through a proper editorial pass with client logos, four-pillar examples, screenshots, and corrections incorporated. By midsummer the HMH Leadership Brand and Playbook was also receiving revision rounds as new content arrived.
 
-## Where things stand
+The Illustrator files for the coaching and leadership development pieces were handed over fully layered and labeled so the team could work from clean, organized source. That kind of request is a good sign. It means the work is living inside the client's broader system and getting reused across their leadership programs.
 
-SWG and I work hourly, which suits the project-specific nature of these deliverables. Across the HMH Leadership playbook, the SWG proposal document, and the SWG capabilities booklet, this is a complete body of corporate design work that holds up against any agency comparison. It is also a useful anchor for any corporate playbook, proposal, or capabilities document a client might need, the clearest proof that the same craft I bring to church work translates straight into executive and leadership branding.
+SWG and I work hourly, which suits the project-specific nature of these deliverables. Across the HMH Leadership playbook, the SWG proposal document, and the SWG capabilities booklet, this is a complete body of corporate design work that holds up against any agency comparison.
