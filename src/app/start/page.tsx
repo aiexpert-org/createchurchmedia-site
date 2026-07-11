@@ -7,8 +7,8 @@ import { Border } from '@/components/Border'
 import { buildMetadata } from '@/lib/seo'
 
 // GHL checkout URLs
-const MONTHLY_CHECKOUT_URL = 'https://go.createchurchmedia.com/order'
-const ANNUAL_CHECKOUT_URL = 'https://go.createchurchmedia.com/order-annual'
+const MONTHLY_CHECKOUT_URL = 'https://go.createchurchmedia.com/monthly'
+const ANNUAL_CHECKOUT_URL = 'https://go.createchurchmedia.com/yearly'
 
 // noindex: this page is shared privately by Emily, not meant for public discovery
 export const metadata: Metadata = {
