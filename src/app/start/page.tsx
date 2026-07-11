@@ -69,17 +69,7 @@ export default function StartPage() {
             </FadeIn>
 
             {/* Annual */}
-            <FadeIn className="relative rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900">
-              <div
-                aria-label="$797/mo"
-                className="absolute -top-4 -right-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-cta)] shadow-lg"
-              >
-                <span className="text-center text-xs font-bold leading-tight text-neutral-950">
-                  $797
-                  <br />
-                  /mo
-                </span>
-              </div>
+            <FadeIn className="rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900">
               <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-cta)]">
                 Annual, save 20%
               </p>
