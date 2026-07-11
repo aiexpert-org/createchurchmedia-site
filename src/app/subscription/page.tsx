@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Subscription',
   description:
-    'One flat fee. Unlimited graphic design for churches. $997 a month or $9,997 annual prepay. Same designer, same access, same turn around times.',
+    'One flat fee. Unlimited graphic design for churches. $997 a month or $9,564 annual prepay. Same designer, same access, same turn around times.',
   path: '/subscription',
 })
 
@@ -68,7 +68,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: 'Is there a contract?',
     answer:
-      'There is a month-to-month option. The annual prepay tier is 12 months upfront and saves you almost $2,000.',
+      'There is a month-to-month option. The annual prepay tier is 12 months upfront and saves you $2,400.',
   },
   {
     question: 'What if I have a slow month?',
@@ -121,10 +121,22 @@ function PriceCard({
     <FadeIn
       className={
         featured
-          ? 'rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900'
-          : 'rounded-3xl bg-white p-10 text-neutral-950 shadow-sm ring-1 ring-neutral-200'
+          ? 'relative flex flex-col rounded-3xl bg-neutral-950 p-10 text-white shadow-xl ring-1 ring-neutral-900'
+          : 'relative flex flex-col rounded-3xl bg-white p-10 text-neutral-950 shadow-sm ring-1 ring-neutral-200'
       }
     >
+      {featured && (
+        <div
+          aria-label="Save 20%"
+          className="absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--color-cta)] shadow-lg"
+        >
+          <span className="text-center text-xs font-bold leading-tight text-neutral-950">
+            Save
+            <br />
+            20%
+          </span>
+        </div>
+      )}
       <p
         className={
           featured
@@ -156,7 +168,7 @@ function PriceCard({
           </li>
         ))}
       </ul>
-      <div className="mt-10">
+      <div className="mt-auto pt-10">
         <JoinWaitListButton
           source={source}
           variant={featured ? 'primary' : 'secondary'}
@@ -195,9 +207,9 @@ export default function SubscriptionPage() {
           />
           <PriceCard
             header="Annual prepay"
-            price="$9,997"
+            price="$9,564"
             period="year"
-            tagline="Pay for the year and save almost $2,000. Same designer, same access, same turn around times."
+            tagline="Pay for the year and save $2,400. Same designer, same access, same turn around times."
             source="subscription-annual"
             featured
           />
