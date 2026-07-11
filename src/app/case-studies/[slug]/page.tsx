@@ -11,7 +11,7 @@ import {
   getAllCaseStudySlugs,
   getCaseStudyBySlug,
 } from '@/lib/case-studies'
-import { getChurchBySlug, churchLogo } from '@/lib/churches'
+import { churchLogo } from '@/lib/churches'
 import { ArticleByline } from '@/components/EmilyAvatar'
 import { SelectedWork } from '@/components/SelectedWork'
 import { BreadcrumbJsonLd, CaseStudyJsonLd } from '@/components/JsonLd'
@@ -60,7 +60,6 @@ export default async function CaseStudyPage({
   const study = await getCaseStudyBySlug(slug)
   if (!study) notFound()
 
-  const church = getChurchBySlug(slug)
 
   return (
     <>
@@ -101,29 +100,6 @@ export default async function CaseStudyPage({
               </dt>
               <dd className="mt-1 text-neutral-900">{study.location}</dd>
             </div>
-            <div>
-              <dt className="font-semibold uppercase tracking-wider text-neutral-500">
-                Engagement
-              </dt>
-              <dd className="mt-1 text-neutral-900">{study.engagement}</dd>
-            </div>
-            {church?.url ? (
-              <div>
-                <dt className="font-semibold uppercase tracking-wider text-neutral-500">
-                  Website
-                </dt>
-                <dd className="mt-1">
-                  <a
-                    href={church.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-900 underline underline-offset-4 decoration-[var(--color-cta)] hover:decoration-2"
-                  >
-                    Visit site
-                  </a>
-                </dd>
-              </div>
-            ) : null}
           </dl>
           <ArticleByline className="mt-8" trailing={<> in {siteConfig.city}, {siteConfig.state}</>} />
           <div className="mt-8">
