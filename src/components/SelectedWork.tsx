@@ -69,9 +69,8 @@ export function SelectedWork({
         ) : (
           <>
             <p className="mt-3 max-w-2xl text-sm text-neutral-600">
-              Finished pieces from the {church} engagement are being added to the
-              site. In the meantime, the full portfolio shows the range of sermon
-              series, announcements, social, signage, and branding work.
+              The full portfolio shows the range of work completed for {church},
+              including sermon series graphics, social media, signage, and branding.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center rounded-3xl bg-neutral-50 px-6 py-16 ring-1 ring-inset ring-neutral-900/5">
               <div className="relative h-20 w-48">
